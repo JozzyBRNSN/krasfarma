@@ -1,0 +1,48 @@
+@font-face {
+	font-weight: 400;
+	font-family: 'Source Sans 3';
+	src: url(SourceSans3-Regular.ttf);
+}
+
+@font-face {
+	font-weight: 500;
+	font-family: 'Source Sans 3';
+	src: url(SourceSans3-Medium.ttf);
+}
+
+@font-face {
+	font-style: italic;
+	font-weight: 500;
+	font-family: 'Source Sans 3';
+	src: url(SourceSans3-MediumItalic.ttf);
+}
+
+@font-face {
+	font-weight: 600;
+	font-family: 'Source Sans 3';
+	src: url(SourceSans3-SemiBold.ttf);
+}
+
+@font-face {
+	font-weight: 700;
+	font-family: 'Source Sans 3';
+	src: url(SourceSans3-Bold.ttf);
+}
+
+@font-face {
+	font-weight: 400;
+	font-family: 'Geologica';
+	src: url(Geologica_Auto-Regular.ttf);
+}
+
+@font-face {
+	font-weight: 500;
+	font-family: 'Geologica';
+	src: url(Geologica_Auto-Medium.ttf);
+}
+
+@font-face {
+	font-weight: 700;
+	font-family: 'Geologica';
+	src: url(Geologica-Bold.ttf);
+}

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="icon" href="/assets/img/icon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/pharmacovigilance.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <title>Фармаконадзор</title>
+</head>
+
+<body>
+    <span class="sticky"></span>
+    <header class="header">
+        <div class="container container-header">
+            <div class="header-logo">
+                <a href="main.html">
+                    <img src="assets/img/logo.svg" alt="КрасФарма">
+                </a>
+            </div>
+            <div class="header-menu">
+                <div class="header-search desktop">
+                    <input class="header-input" type="search" placeholder="Искать на сайте">
+                </div>
+                <div class="header-langs desktop">
+                    <div class="lang-ru">
+                        <button class="lang-btn">
+                            <img src="assets/img/rulang.svg" alt="русский">
+                        </button>
+                    </div>
+                    <div class="lang-en">
+                        <button class="lang-btn">
+                            <img src="assets/img/enlang.svg" alt="английский">
+                        </button>
+                    </div>
+                </div>
+                <div class="header-autorization desktop">
+                    <div class="entrance">
+                        <button class="header-entrance__btn header-nav--hover header-text">Вход</button>
+                    </div>
+                    <div class="registration">
+                        <button class="header-registration__btn header-nav--hover header-text">Регистрация</button>
+                    </div>
+                </div>
+                <div class="header-nav">
+                    <button id="header-nav__menu" class="header-nav__menu header-text">
+                        <div class="header-nav__btn">
+                            <span id="popup-burger--top" class="header-nav__btn-span top"></span>
+                            <span id="popup-burger--middle" class="header-nav__btn-span middle"></span>
+                            <span id="popup-burger--bottom" class="header-nav__btn-span bottom"></span>
+                        </div>
+                        <div class="header-nav__btn-title">
+                            <p id="popup-btn">Меню</p>
+                        </div>
+                    </button>
+                    <ul class="header-nav__list">
+                        <div class="header-nav__items">
+                            <a class="header-nav__link header-text header-nav--hover" href="#">О компании</a>
+                        </div>
+                        <div class="header-nav__items">
+                            <a class="header-nav__link header-text header-nav--hover" href="#">Новости</a>
+                        </div>
+                        <div class="header-nav__items">
+                            <a class="header-nav__link header-text header-nav--hover" href="#">Продукция</a>
+                        </div>
+                        <div class="header-nav__items">
+                            <a class="header-nav__link header-text header-nav--hover" href="#">Информация</a>
+                        </div>
+                        <div class="header-nav__items">
+                            <a class="header-nav__link header-text header-nav--hover" href="#">Контакты</a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <section id="popup-menu" class="popup-menu">
+            <div class="popup-nav mobile">
+                <div class="header-search mobile">
+                    <input class="header-input" type="search" placeholder="Искать на сайте">
+                </div>
+                <div class="header-langs mobile">
+                    <div class="lang-ru">
+                        <button class="lang-btn">
+                            <img src="assets/img/rulang.svg" alt="русский">
+                        </button>
+                    </div>
+                    <div class="lang-en">
+                        <button class="lang-btn">
+                            <img src="assets/img/enlang.svg" alt="английский">
+                        </button>
+                    </div>
+                </div>
+                <div class="header-autorization mobile">
+                    <div class="entrance">
+                        <button class="header-entrance__btn header-nav--hover header-text">Вход</button>
+                    </div>
+                    <div class="registration">
+                        <button class="header-registration__btn header-nav--hover header-text">Регистрация</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container-popup">
+                <div class="popup-about">
+                    <ul class="popup-list">
+                        <h2 class="popup-title">O компании</h2>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">О нас</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Новости</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Миссия</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">История</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Раскрытие информации</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Производство</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Система качества</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Фармаконадзор</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Персонал</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popup-products">
+                    <ul class="popup-list">
+                        <h2 class="popup-title">Продукция</h2>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Антимикробные препараты</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Противотуберкулезные препараты</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Инфузионные растворы</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Средства для парентерального питания</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Местные анастетики</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Лекартсвенные препараты других групп</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link popup-more" href="#">Показать еще</a>
+                            <button class="popup-more__btn">
+                                <div class="next"></div>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popup-info">
+                    <ul class="popup-list">
+                        <h2 class="popup-title">Информация</h2>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Социальная ответственность</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Инвесторам</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Информационные таблицы</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Пособия для врачей</a>
+                        </li>
+                        <li class="popup-item">
+                            <a class="popup-link" href="#">Статьи и обзоры</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popup-contacts">
+                    <ul class="popup-list">
+                        <h2 class="popup-title">Контакты</h2>
+                        <div class="footer-contacts__phone popup">
+                            <p>Адрес:</p>
+                            <p class="popup-link">Москва, ул. Воронцовская, д.20</p>
+                        </div>
+                        <div class="footer-contacts__phone popup">
+                            <p>Телефон:</p>
+                            <a class="popup-link" href="tel:+74957879599">+7 (495) 787-95-99</a>
+                        </div>
+                        <li class="footer-contacts__phone popup">
+                            <p>Мы в соц. сетях</p>
+                        </li>
+                        <a href="https://vk.com/club132521658">
+                            <img class="popup-social" src="assets/img/popup_social.svg" alt="Красфарма VK">
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="main">
+        <section class="main-cover">
+            <div class="main-cover--background"></div>
+            <div class="main-title">
+                Фармаконадзор
+            </div>
+        </section>
+        <div class="container container-main">
+            <div class="main-links">
+                <a href="main.html">Главная</a>
+                <span class="arrow next"></span>
+                <a href="#">О компании</a>
+                <span class="arrow next"></span>
+                <a href="#">Фармаконадзор</a>
+            </div>
+            <section class="main-about">
+                <div class="main-about__content">
+                    <div class="main-about__links">
+                        <img class="main-about__img" src="/assets/img/фармаконадзор.png" alt="Ингастин">
+                        <div class="main-about__text--mobile">
+                            <p class="main-text">
+                                <b>Безусловным приоритетом</b> ПАО «Красфарма» является благополучие пациентов. Для
+                                реализации этой цели в Компании создана и
+                                функционирует Служба фармаконадзора, задачи которой - как можно более раннее выявление
+                                проблем безопасности
+                                лекарственных препаратов, мониторинг побочных реакций, определение факторов риска при
+                                применении продукции Компании и их
+                                количественная оценка, а также контроль соотношения «риск-польза» при применении
+                                лекарственных препаратов.
+                            </p>
+                            <p class="main-text">
+                                <b>ПАО «Красфарма»</b>, являясь одним из ведущих российских производителей лекарственных
+                                препаратов для госпитального сектора и
+                                принимая на себя высокую ответственность перед пациентами и медицинскими специалистами
+                                за качество и безопасность своей
+                                продукции, внедрило и поддерживает «Правила надлежащей практики фармаконадзора». Система
+                                фармаконадзора ПАО «Красфарма»
+                                встроена в общую систему контроля качества компании в целом и работает в постоянном
+                                контакте с регуляторными органами.
+                            <p class="main-text">
+                                <b>Первичными</b>
+                                – и самыми важными - звеньями фармаконадзора являются выявление и репортирование о
+                                нежелательных реакциях
+                                (НР). Информативное и достоверное сообщение о НР является основой качественное анализа.
+                            </p>
+                            <p class="main-text">
+                                <b>Лекарственный препарат Ингастин</b> пополнил ассортиментный перечень противомикробных
+                                препаратов
+                                с
+                                направленным действием в
+                                отношении резистентных патогенов. ПАО «Красфарма» - производитель таких антибиотиков,
+                                как
+                                Фосфомицин, Бакцефорт
+                                (цефоперазон+сульбактам), Сабвиксин (полимиксин В), Тигециклин-КФ (тигециклин), Ортоцид
+                                (тейкопланин).
+                            </p>
+                            <div class="main-about__quote">
+                                <a class="quote-text">
+                                    Извещение о побочном действии, нежелательной реакции или отсутствии ожидаемого
+                                    терапевтического эффекта лекарственного
+                                    средства
+                                </a>
+                                <a target="_blank"
+                                    href="https://www.figma.com/exit?url=http%3A%2F%2Fkraspharma.ru%2Ffiles%2Fobrazec.doc"
+                                    class="more-details">
+                                    <button class="more-details__btn more-details__btn--short">
+                                        <div class="arrow arrow__bold next next--bold"></div>
+                                    </button>
+                                    <p class="more-details__text">
+                                        Скачать документ
+                                    </p>
+                                </a>
+                                <img class="quote__background" src="/assets/img/quote_background.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="main-action">
+                            <a class="main-action__link" href="">
+                                <button class="action-btn">
+                                    <img src="assets/img/print.svg" alt="КрасФарма">
+                                </button>
+                                <p class="action-text">Распечатать</p>
+                            </a>
+                            <a class="main-action__link" href="">
+                                <button class="action-btn">
+                                    <img src="assets/img/article.svg" alt="КрасФарма">
+                                </button>
+                                <p class="action-text">Поделиться</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="main-about__text--desktop">
+                        <p class="main-text">
+                            <b>Безусловным приоритетом</b> ПАО «Красфарма» является благополучие пациентов. Для
+                            реализации этой цели в Компании
+                            создана и
+                            функционирует Служба фармаконадзора, задачи которой - как можно более раннее выявление
+                            проблем безопасности
+                            лекарственных препаратов, мониторинг побочных реакций, определение факторов риска при
+                            применении продукции Компании
+                            и их
+                            количественная оценка, а также контроль соотношения «риск-польза» при применении
+                            лекарственных препаратов.
+                        </p>
+                        <p class="main-text">
+                            <b>ПАО «Красфарма»</b>, являясь одним из ведущих российских производителей лекарственных
+                            препаратов для
+                            госпитального сектора и
+                            принимая на себя высокую ответственность перед пациентами и медицинскими специалистами за
+                            качество и безопасность
+                            своей
+                            продукции, внедрило и поддерживает «Правила надлежащей практики фармаконадзора». Система
+                            фармаконадзора ПАО
+                            «Красфарма»
+                            встроена в общую систему контроля качества компании в целом и работает в постоянном контакте
+                            с регуляторными
+                            органами.
+                        </p>
+                        <p class="main-text">
+                            <b>Первичными</b>
+                            – и самыми важными - звеньями фармаконадзора являются выявление и репортирование о
+                            нежелательных реакциях
+                            (НР). Информативное и достоверное сообщение о НР является основой качественное анализа.
+                        </p>
+                        <div class="main-about__quote">
+                            <a class="quote-text">
+                                Извещение о побочном действии, нежелательной реакции или отсутствии ожидаемого
+                                терапевтического эффекта лекарственного
+                                средства
+                            </a>
+                            <a target="_blank"
+                                href="https://www.figma.com/exit?url=http%3A%2F%2Fkraspharma.ru%2Ffiles%2Fobrazec.doc"
+                                class="more-details">
+                                <button class="more-details__btn more-details__btn--short">
+                                    <div class="arrow arrow__bold next next--bold"></div>
+                                </button>
+                                <p class="more-details__text">
+                                    Скачать документ
+                                </p>
+                            </a>
+                            <img class="quote__background" src="/assets/img/quote_background.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="background-figure--first">
+            <img class='background-figure--first-item' src="assets/img/background_figure1.svg"></img>
+        </div>
+        <div class="background-logo">
+            <img class="background-logo-item" src="assets/img/background_horse.svg"></img>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container container">
+            <div class="footer-content">
+                <div class="footer-link">
+                    <div class="footer-logo">
+                        <img src="assets/img/logoFooter.png" alt="КрасФарма">
+                    </div>
+                    <p class="footer-text">
+                        Мы в социальных сетях
+                    </p>
+                    <div class="footer-link__social">
+                        <a href="https://vk.com/club132521658">
+                            <img src="assets/img/vk.svg" alt="КрасФарма VK">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <ul class="footer-nav__list">
+                        <li class="footer-nav__item">
+                            <a href="#">Главная</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#">О нас</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#">Продукция</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#">Новости</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#">Информация</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="#">Раскрытие информации</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-contacts">
+                    <p class="footer-text">
+                        Найти торговое представительство:
+                    </p>
+                    <div class="footer-contacts__places">
+                        <a id="moscow" class="places-item">Москва</a>
+                        <a id="krasnoyarsk" class="places-item">Красноярск</a>
+                        <a id="stavropol" class="places-item">Ставрополь</a>
+                        <a id="all-country" class="places-item">Страны СНГ</a>
+                    </div>
+                    <div class="footer-contacts__address">
+                        <p>Адрес:</p>
+                        <p id="address">Москва, ул. Воронцовская, д.20</p>
+                    </div>
+                    <div class="footer-contacts__phone">
+                        <p>Телефон:</p>
+                        <a id="phone" class="footer-phone__link" href="tel:+74957879599">+7 (495) 787-95-99</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-data">
+                <div class="footer-data__item">
+                    © 2024 • ПАО “КРАСФАРМА”
+                </div>
+                <div class="footer-data__item">
+                    ИНН 2464010490
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module" defer src="assets/app/pharmacovigilance.js"></script>
+</body>

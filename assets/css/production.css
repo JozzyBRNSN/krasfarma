@@ -1,0 +1,193 @@
+.main-cover {
+	background-image: url(../../assets/img/production.png);
+}
+
+.main-production__cover {
+	position: relative;
+	background-image: url(../../assets/img/production_cover.png);
+	width: 100%;
+	aspect-ratio: 16/11;
+	background-size: cover;
+	background-position: center;
+	border-left: 2px solid #4f538c;
+	margin-bottom: 170px;
+}
+
+@media (max-width: 860px) {
+	.main-production__cover {
+		margin-bottom: 0;
+	}
+}
+
+.main-text.border {
+	font-size: 24px;
+	line-height: 1.5;
+	color: #4f538c;
+}
+
+.main-info__box--desktop {
+	position: absolute;
+	width: 60%;
+	bottom: -100px;
+	right: 0;
+	display: flex;
+	gap: 10px;
+	padding: 40px 30px;
+	box-shadow: 0px 24px 64px -16px #a7bee840;
+	background-color: #ffffff;
+}
+
+@media (max-width: 860px) {
+	.main-info__box--desktop {
+		display: none;
+	}
+}
+
+.main-info__box--tablet {
+	display: none;
+}
+
+@media (max-width: 860px) {
+	.main-info__box--tablet {
+		display: flex;
+		gap: 10px;
+		padding: 40px 30px;
+		box-shadow: 0px 24px 64px -16px #a7bee840;
+		background-color: #ffffff;
+	}
+}
+
+.main-info__box--desktop::before,
+.main-info__box--tablet::before {
+	content: url(../../assets/img/text_start.svg);
+}
+
+.main-info__box--desktop::after,
+.main-info__box--tablet::after {
+	content: url(../../assets/img/text_end.svg);
+	align-self: flex-end;
+}
+
+.main-production__content {
+	display: flex;
+	margin-bottom: 300px;
+	gap: 40px;
+}
+
+.main-production__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0;
+	gap: 60px;
+}
+
+@media (max-width: 680px) {
+	.main-aside {
+		max-width: 100%;
+	}
+}
+
+.main-aside__title {
+	font-size: 52px;
+}
+
+.main-aside__title span {
+	font-size: 56px;
+}
+
+@media (max-width: 860px) {
+	.main-aside__title {
+		font-size: 40px;
+	}
+
+	.main-aside__title span {
+		font-size: 40px;
+	}
+}
+
+.main-production__about--desktop {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+@media (max-width: 680px) {
+	.main-production__about--desktop {
+		display: none;
+	}
+}
+
+.main-production__about--tablet {
+	display: none;
+}
+
+@media (max-width: 680px) {
+	.main-production__about--tablet {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+}
+
+.main-production__about-cover--desktop {
+	width: 100%;
+	height: 290px;
+	border-left: 2px solid #4f538c;
+}
+
+@media (max-width: 860px) {
+	.main-production__about-cover--desktop {
+		display: none;
+	}
+}
+
+.main-production__about-cover--tablet {
+	display: none;
+}
+
+@media (max-width: 860px) {
+	.main-production__about-cover--tablet {
+		display: block;
+		width: 100%;
+		height: 290px;
+		border-left: 2px solid #4f538c;
+		margin: 60px 0;
+	}
+}
+
+.main-production__about-title {
+	font-family: 'Geologica';
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 1.25;
+	color: #4f538c;
+	margin: 20px 0;
+}
+
+@media (max-width: 860px) {
+	.main-production__about-title {
+		margin: 0 20px;
+	}
+}
+
+.main-production__list {
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #2f2f47;
+	padding-left: 30px;
+}
+
+.main-production__item {
+	list-style-type: disc;
+}
+
+.background-figure--first-item {
+	top: 1000px;
+}
+
+.background-logo-item {
+	top: -900px;
+}

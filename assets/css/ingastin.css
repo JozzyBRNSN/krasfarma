@@ -1,0 +1,177 @@
+.main-cover {
+	background-image: url(../../assets/img/ingastin_cover.png);
+}
+
+@media (max-width: 550px) {
+	.main-cover {
+		min-height: 390px;
+	}
+}
+
+.container {
+	overflow: hidden;
+}
+
+.main-title {
+	font-size: 32px;
+	font-weight: 700;
+	height: 180px;
+	width: 70%;
+	line-height: 1.25;
+}
+
+@media (max-width: 550px) {
+	.main-title {
+		top: 80px;
+		left: 82px;
+		font-size: 24px;
+	}
+}
+
+.title-date {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	font-family: 'Source Sans 3';
+	font-size: 18px;
+	font-weight: 700;
+	color: #ff781f;
+	width: 126px;
+	height: 35px;
+	background-color: #1d1934;
+}
+
+.title-date::before {
+	content: url(../../assets/img/timer.svg);
+	padding-top: 3px;
+}
+
+@media (max-width: 768px) {
+	.main-links {
+		margin-left: 18%;
+	}
+}
+
+.main-about {
+	margin: 0;
+}
+
+.main-about__content {
+	display: flex;
+	gap: 40px;
+}
+
+.main-about__content {
+	display: flex;
+	margin: 30px 0 200px;
+	gap: 40px;
+}
+
+@media (max-width: 810px) {
+	.main-about__content {
+		gap: 20px;
+	}
+}
+
+.main-about__links {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0;
+}
+
+.main-about__img {
+	width: 360px;
+	height: 240px;
+	border-left: 2px solid #4f538c;
+	margin: 0;
+}
+
+@media (max-width: 810px) {
+	.main-about__img {
+		width: 229px;
+	}
+}
+
+@media (max-width: 425px) {
+	.main-about__img {
+		width: 350px;
+	}
+}
+
+.main-about__text--desktop {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
+
+.main-about__text--mobile {
+	display: none;
+}
+
+.main-about__btn--mobile {
+	display: none;
+}
+
+@media (max-width: 630px) {
+	.main-about__text--desktop {
+		display: none;
+	}
+
+	.main-about__text--mobile {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+		margin: 20px 0;
+	}
+
+	.main-about__btn--mobile {
+		display: flex;
+	}
+}
+
+.main-about__btn,
+.main-about__btn--mobile {
+	margin-top: 60px;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Source Sans 3';
+	font-size: 18px;
+	font-weight: 500;
+	color: #ffffff;
+	background-color: #2d97c1;
+	width: 330px;
+	height: 40px;
+	border: none;
+	outline: none;
+	margin-left: 0;
+	transition: background-color 0.5s ease;
+}
+
+.main-about__btn::before,
+.main-about__btn--mobile::before {
+	content: '';
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-color: #ffffff;
+	border-bottom: 4px solid #ffffff;
+	border-left: 4px solid #ffffff;
+	margin: 0 5px;
+	transform: rotate(45deg);
+}
+
+.main-about__btn:hover,
+.main-about__btn--mobile:hover {
+	background-color: #1f7aab;
+}
+
+.background-figure--first-item {
+	top: 100px;
+}
+
+
+.background-logo-item {
+	top: -955px;
+}
