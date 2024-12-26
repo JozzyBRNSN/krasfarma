@@ -828,7 +828,7 @@ input:focus::placeholder {
 }
 
 .popup-menu.popup-show {
-	max-height: 90vh;
+	max-height: 93vh;
 }
 
 .container-popup {
