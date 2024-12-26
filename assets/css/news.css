@@ -158,7 +158,16 @@
 	font-family: 'Source Sans 3';
 	font-size: 18px;
 	font-weight: 700;
-	width: 255px;
+	white-space: nowrap;
+}
+
+@media (max-width: 390px) {
+	.main-news__pages .more-details__text {
+		font-family: 'Source Sans 3';
+		font-size: 18px;
+		font-weight: 700;
+		white-space: wrap;
+	}
 }
 
 .main-news__pages-list {

@@ -7,7 +7,7 @@ import CitySelector from './modules/footerAddress.js'
 document.addEventListener('DOMContentLoaded', () => {
 	const stickyHeader = new StickyHeader({
 		stickyPointSelector: '.sticky',
-		headerSelector: '.header'
+		headerSelector: '.header',
 	})
 
 	const popupHeader = new PopupHeader({

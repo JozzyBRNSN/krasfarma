@@ -34,18 +34,35 @@ class CoverSlider {
 	}
 
 	showSlide(index) {
-		this.slides.forEach(slide => slide.classList.remove('slider-show'))
-		this.borders.forEach(border => border.classList.remove('slider-show'))
-		this.slogans.forEach(slogan => slogan.classList.remove('slider-show'))
-		this.numbers.forEach(number => number.classList.remove('slider-show'))
-		this.throbbers.forEach(throbber => throbber.classList.remove('slider-show'))
+		requestAnimationFrame(() => {
+			this.slides.forEach(slide => slide.classList.remove('slider-show'))
+			this.borders.forEach(border => border.classList.remove('slider-show'))
+			this.slogans.forEach(slogan => slogan.classList.remove('slider-show'))
+			this.numbers.forEach(number => number.classList.remove('slider-show'))
+			this.throbbers.forEach(throbber =>
+				throbber.classList.remove('slider-show')
+			)
 
-		this.slides[index].classList.add('slider-show')
-		this.borders[index].classList.add('slider-show')
-		this.slogans[index].classList.add('slider-show')
-		this.numbers[index].classList.add('slider-show')
-		this.throbbers[index].classList.add('slider-show')
-		this.sliderIndex = index
+			this.slides[index].classList.add('slider-show')
+			this.borders[index].classList.add('slider-show')
+			this.slogans[index].classList.add('slider-show')
+			this.numbers[index].classList.add('slider-show')
+			this.throbbers[index].classList.add('slider-show')
+			this.sliderIndex = index
+		})
+	}
+
+	waitForAnimation() {
+		const activeSlide = this.slides[this.sliderIndex]
+
+		const onTransitionEnd = () => {
+			this.isAnimating = false
+			activeSlide.removeEventListener('transitionend', onTransitionEnd)
+			activeSlide.removeEventListener('animationend', onTransitionEnd)
+		}
+
+		activeSlide.addEventListener('transitionend', onTransitionEnd)
+		activeSlide.addEventListener('animationend', onTransitionEnd)
 	}
 
 	nextSlide() {
@@ -55,9 +72,7 @@ class CoverSlider {
 		const nextSlide = (this.sliderIndex + 1) % this.slides.length
 		this.showSlide(nextSlide)
 
-		setTimeout(() => {
-			this.isAnimating = false
-		}, 100)
+		this.waitForAnimation()
 	}
 
 	previousSlide() {
@@ -68,9 +83,7 @@ class CoverSlider {
 			(this.sliderIndex - 1 + this.slides.length) % this.slides.length
 		this.showSlide(prevSlide)
 
-		setTimeout(() => {
-			this.isAnimating = false
-		}, 100)
+		this.waitForAnimation()
 	}
 
 	handleControlClick(event) {

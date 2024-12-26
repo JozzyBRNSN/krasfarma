@@ -2,7 +2,12 @@
 	margin: 0 auto;
 }
 
+html::-webkit-scrollbar {
+	display: none;
+}
+
 body {
+	position: relative;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -11,12 +16,6 @@ body {
 
 .hidden {
 	overflow: hidden;
-}
-
-@media (max-width: 768px) {
-	html::-webkit-scrollbar {
-		display: none;
-	}
 }
 
 a {
@@ -129,14 +128,19 @@ img {
 		-100px 1000px 100px 100px rgba(195, 224, 246, 0.2) inset;
 }
 
-.background-confid {
+.background-confid__item {
 	position: absolute;
 	z-index: -1;
-	left: 24%;
-	bottom: 0;
+	right: 20%;
+	bottom: -190px;
 	margin: 0;
-	top: 0;
 	background: inherit;
+}
+
+@media (max-width: 425px) {
+	.background-confid {
+		display: none;
+	}
 }
 
 .more-details,
@@ -165,6 +169,7 @@ img {
 	font-weight: 500;
 	color: #231e44;
 	margin: 0;
+	white-space: nowrap;
 }
 
 .more-details__btn {
@@ -317,6 +322,11 @@ img {
 	background: #7481bf;
 	border: none;
 	margin: 0;
+	transition: background .2s ease;
+}
+
+.action-btn:hover {
+	background: #4f538c;
 }
 
 .action-btn img {
@@ -362,10 +372,7 @@ img {
 	font-weight: 400;
 	color: #7481bf;
 	outline: none;
-}
-
-.main-links a:nth-child(3) {
-	min-width: 106px;
+	white-space: nowrap;
 }
 
 .main-links .arrow {
@@ -384,8 +391,14 @@ img {
 
 .main-links a:last-child {
 	color: #332e59;
+}
+
+.main-links a:nth-child(5) {
+	color: transparent;
+	background: inherit;
 	min-width: 1000px;
-	background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+	background-image: linear-gradient(to left, #ffffff -25%, #332e59 100%);
+	background-clip: text;
 }
 
 .main-text {

@@ -92,6 +92,11 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #7481bf;
+	transition: color .5s ease;
+}
+
+.footer-nav__item:hover a {
+	color: #f5f8fc;
 }
 
 @media (max-width: 1250px) {

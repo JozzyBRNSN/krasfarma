@@ -15,7 +15,6 @@ class CitySelector {
 	constructor(cityButtonsConfig) {
 		this.lastSelectedButton = null
 		this.firstButtonElement = null
-
 		cityButtonsConfig.forEach(({ buttonId, contactInfo }, index) => {
 			const buttonElement = document.getElementById(buttonId)
 
@@ -29,7 +28,6 @@ class CitySelector {
 					contactInfo.phoneHref
 				)
 			}
-
 			buttonElement.addEventListener('click', () => {
 				const contactInfoInstance = new ContactInfo('address', 'phone')
 				contactInfoInstance.updateContactInfo(
