@@ -7,7 +7,6 @@ html::-webkit-scrollbar {
 }
 
 body {
-	position: relative;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -29,6 +28,10 @@ button {
 
 img {
 	object-fit: cover;
+}
+
+.main {
+	position: relative;
 }
 
 .container {
@@ -152,6 +155,7 @@ img {
 	align-self: flex-end;
 	gap: 10px;
 	margin: 0;
+	z-index: 1;
 }
 
 .more-details:hover .more-details__text:not(.slogan-text) {
@@ -322,7 +326,7 @@ img {
 	background: #7481bf;
 	border: none;
 	margin: 0;
-	transition: background .2s ease;
+	transition: background 0.2s ease;
 }
 
 .action-btn:hover {

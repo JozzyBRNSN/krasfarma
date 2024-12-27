@@ -1,9 +1,10 @@
 class PopupHeader {
-	constructor({ menuButtonId, popupId, buttonId, burgerIds }) {
+	constructor({ menuButtonId, popupId, buttonId, burgerIds, shadowMenu }) {
 		this.menuButton = this.getElementByIdWithCheck(menuButtonId)
 		this.popupMenu = this.getElementByIdWithCheck(popupId)
 		this.popupButton = this.getElementByIdWithCheck(buttonId)
 		this.burgerElements = burgerIds.map(id => this.getElementByIdWithCheck(id))
+		this.shadowMenu = document.querySelector(shadowMenu)
 
 		this.init()
 	}
@@ -29,6 +30,7 @@ class PopupHeader {
 			this.popupMenu.classList.toggle('popup-show')
 		}
 
+		this.shadowMenu.classList.toggle('popup-show')
 		document.body.classList.toggle('hidden')
 
 		if (this.popupButton) {

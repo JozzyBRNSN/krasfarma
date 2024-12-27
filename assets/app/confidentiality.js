@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			'popup-burger--top',
 			'popup-burger--middle',
 			'popup-burger--bottom',
-		]
+		],
+		shadowMenu: '.popup-shadow',
 	})
 
 	function createContactInfo(address, phone) {

@@ -158,6 +158,12 @@
 	}
 }
 
+@media (max-width: 350px) {
+	.more-details__text {
+		font-size: 14px;
+	}
+}
+
 .main-cover__content .more-details__btn {
 	background: #4f538c;
 	transition: background 0.5s ease;
@@ -970,6 +976,7 @@
 .news-article__item--title {
 	display: flex;
 	justify-content: space-between;
+	gap: 10px;
 	margin: 0;
 }
 

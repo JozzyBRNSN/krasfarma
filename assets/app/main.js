@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			'popup-burger--middle',
 			'popup-burger--bottom',
 		],
+		shadowMenu: '.popup-shadow',
 	})
 
 	const sliderCover = new CoverSlider({
