@@ -176,7 +176,7 @@
 	margin: 40px 0 10px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
 	.certificates-popup__item {
 		width: 768px;
 	}

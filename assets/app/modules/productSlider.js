@@ -47,7 +47,7 @@ class ProductSlider {
 	}
 
 	updateButtonState() {
-		if (window.innerWidth >= 1440) this.cardsToShow = 4
+		if (window.innerWidth > 1440) this.cardsToShow = 4
 		if (window.innerWidth < 1440) this.cardsToShow = 3
 		if (window.innerWidth < 945) this.cardsToShow = 2
 		if (window.innerWidth < 610) this.cardsToShow = 1

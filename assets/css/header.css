@@ -930,13 +930,16 @@ a {
 
 .popup-shadow {
 	position: absolute;
-	transition: background 1s ease;
-	background-color: inherit;
+	width: 100%;
+	height: 100%;
+	background-color: #332e59c9;
+	opacity: 0;
+	z-index: 3;
+	pointer-events: none;
+	transition: opacity 1s ease;
 }
 
 .popup-shadow.popup-show {
-	background-color: #332e59c9;
-	width: 100%;
-	height: 100%;
-	z-index: 3;
+	opacity: 1;
+	pointer-events: auto;
 }
