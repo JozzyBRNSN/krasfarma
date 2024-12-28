@@ -4,7 +4,7 @@ class PopupHeader {
 		this.popupMenu = this.getElementByIdWithCheck(popupId)
 		this.popupButton = this.getElementByIdWithCheck(buttonId)
 		this.burgerElements = burgerIds.map(id => this.getElementByIdWithCheck(id))
-		this.shadowMenu = document.querySelector(shadowMenu)
+		this.shadowMenu = document.querySelectorAll(shadowMenu)
 
 		this.init()
 	}
@@ -27,10 +27,15 @@ class PopupHeader {
 
 	toggleMenu() {
 		if (this.popupMenu) {
-			this.popupMenu.classList.toggle('popup-show')
+			if (this.popupMenu.classList.contains('popup-show')) {
+				this.popupMenu.classList.remove('popup-show')
+			} else {
+				this.popupMenu.scrollTop = 0
+				this.popupMenu.classList.add('popup-show')
+			}
 		}
 
-		this.shadowMenu.classList.toggle('popup-show')
+		this.shadowMenu.forEach(shadow => shadow.classList.toggle('popup-show'))
 		document.body.classList.toggle('hidden')
 
 		if (this.popupButton) {

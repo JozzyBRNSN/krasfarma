@@ -1025,7 +1025,8 @@
 
 .info-content {
 	display: flex;
-	margin: 100px 0 200px;
+	margin: 100px 0 0;
+	padding-bottom: 200px;
 	gap: 70px;
 }
 

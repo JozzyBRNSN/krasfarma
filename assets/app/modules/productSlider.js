@@ -41,16 +41,16 @@ class ProductSlider {
 
 	updateSliderPosition() {
 		this.sliderContainer.style.transform = `translateX(-${
-			this.currentIndex * (this.cardWidth + this.cardMargin)
+			this.currentIndex * ((this.cardWidth + this.cardMargin))
 		}px)`
 		this.updateButtonState()
 	}
 
 	updateButtonState() {
-		if (window.innerWidth > 1180) this.cardsToShow = 4
-		if (window.innerWidth < 1180) this.cardsToShow = 3
-		if (window.innerWidth < 768) this.cardsToShow = 2
-		if (window.innerWidth < 550) this.cardsToShow = 1
+		if (window.innerWidth >= 1440) this.cardsToShow = 4
+		if (window.innerWidth < 1440) this.cardsToShow = 3
+		if (window.innerWidth < 945) this.cardsToShow = 2
+		if (window.innerWidth < 610) this.cardsToShow = 1
 
 		this.prevButton.disabled = this.currentIndex === 0
 
