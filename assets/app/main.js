@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		sloganSelector: '.cover-slogan__title',
 		numSelector: '.cover-slogan__num',
 		controlsSelector: '.controls',
+		controlsArrowSelector: '.cover-arrow',
 		throbberSelector: '.cover-progressbar__item',
 		hoverSelector: '.main-cover__content',
 	})

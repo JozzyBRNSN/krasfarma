@@ -5,12 +5,14 @@ class CoverSlider {
 		numSelector,
 		borderSelector,
 		controlsSelector,
+		controlsArrowSelector,
 		throbberSelector,
 		intervalTime = 3000,
 		hoverSelector,
 	}) {
 		this.slides = document.querySelectorAll(slidesSelector)
 		this.controls = document.querySelectorAll(controlsSelector)
+		this.controlsArrow = document.querySelectorAll(controlsArrowSelector)
 		this.slogans = document.querySelectorAll(sloganSelector)
 		this.numbers = document.querySelectorAll(numSelector)
 		this.throbbers = document.querySelectorAll(throbberSelector)
@@ -30,6 +32,10 @@ class CoverSlider {
 		this.showSlide(this.sliderIndex)
 		this.controls.forEach(control => {
 			control.addEventListener('click', event => this.handleControlClick(event))
+		})
+
+		this.controlsArrow.forEach(arrow => {
+			arrow.addEventListener('click', event => this.handleControlClick(event))
 		})
 	}
 
@@ -87,9 +93,15 @@ class CoverSlider {
 	}
 
 	handleControlClick(event) {
-		if (event.target.classList.contains('cover-btn--prev')) {
+		if (
+			event.target.classList.contains('cover-btn--prev') ||
+			event.target.classList.contains('controls-prev')
+		) {
 			this.previousSlide()
-		} else if (event.target.classList.contains('cover-btn--next')) {
+		} else if (
+			event.target.classList.contains('cover-btn--next') ||
+			event.target.classList.contains('controls-next')
+		) {
 			this.nextSlide()
 		}
 		this.resetSlideInterval()
