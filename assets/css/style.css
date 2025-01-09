@@ -91,12 +91,12 @@ img {
 
 .background-figure--first-item {
 	position: absolute;
-	z-index: -1;
 	right: 0;
 	bottom: 0;
 	margin: 0;
 	top: -2915px;
 	background: inherit;
+	z-index: -1;
 	box-shadow: -27px -27px 100px 100px rgba(195, 224, 246, 0.2),
 		-100px 1000px 100px 100px rgba(195, 224, 246, 0.2) inset;
 }
@@ -104,11 +104,11 @@ img {
 .background-figure--second-item {
 	position: absolute;
 	left: 0;
-	z-index: -1;
 	right: 0;
 	top: 720px;
 	bottom: 0;
 	margin: 0;
+	z-index: -1;
 	background: inherit;
 	box-shadow: 65px 0px 100px 100px rgba(195, 224, 246, 0.2),
 		100px 1000px 100px 1000px rgba(195, 224, 246, 0.2) inset;
@@ -123,21 +123,21 @@ img {
 .background-figure--third-item {
 	position: absolute;
 	right: 0;
-	z-index: -1;
 	top: 2035px;
 	bottom: 0;
 	background: inherit;
+	z-index: -1;
 	box-shadow: -27px -27px 100px 100px rgba(195, 224, 246, 0.2),
 		-100px 1000px 100px 100px rgba(195, 224, 246, 0.2) inset;
 }
 
 .background-confid__item {
 	position: absolute;
-	z-index: -1;
 	right: 20%;
 	bottom: -190px;
 	margin: 0;
 	background: inherit;
+	z-index: -1;
 }
 
 @media (max-width: 425px) {
@@ -167,8 +167,8 @@ img {
 }
 
 .more-details__text {
-	font-family: 'Geologica';
 	text-transform: uppercase;
+	font-family: 'Geologica';
 	font-size: 16px;
 	font-weight: 500;
 	color: #231e44;

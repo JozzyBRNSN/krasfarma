@@ -827,6 +827,7 @@
 }
 
 .products-services__item--title b {
+	text-transform: uppercase;
 	font-family: 'Geologica';
 	font-size: 16px;
 	font-weight: 700;
@@ -835,6 +836,7 @@
 }
 
 .products-services__item--title p {
+	text-transform: uppercase;
 	font-family: 'Source Sans 3';
 	font-size: 14px;
 	font-weight: 500;
