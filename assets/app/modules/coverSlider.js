@@ -23,9 +23,17 @@ class CoverSlider {
 		this.slideInterval = null
 		this.isAnimating = false
 
+		this.startX = 0
+		this.endX = 0
+
+		this.handleTouchStart = this.handleTouchStart.bind(this)
+		this.handleTouchEnd = this.handleTouchEnd.bind(this)
+
 		this.init()
 		this.startSlideInterval()
 		this.addHoverEffect()
+		this.setupResizeObserver()
+		this.updateSwipeListeners()
 	}
 
 	init() {
@@ -124,6 +132,58 @@ class CoverSlider {
 	resetSlideInterval() {
 		clearInterval(this.slideInterval)
 		this.startSlideInterval()
+	}
+
+	addSwipeListeners() {
+		this.slides[0].parentElement.addEventListener(
+			'touchstart',
+			this.handleTouchStart
+		)
+		this.slides[0].parentElement.addEventListener(
+			'touchend',
+			this.handleTouchEnd
+		)
+	}
+
+	removeSwipeListeners() {
+		this.slides[0].parentElement.removeEventListener(
+			'touchstart',
+			this.handleTouchStart
+		)
+		this.slides[0].parentElement.removeEventListener(
+			'touchend',
+			this.handleTouchEnd
+		)
+	}
+
+	handleTouchStart(e) {
+		this.startX = e.touches[0].clientX
+	}
+
+	handleTouchEnd(e) {
+		this.endX = e.changedTouches[0].clientX
+
+		if (this.startX - this.endX > 50) {
+			this.nextSlide()
+		} else if (this.endX - this.startX > 50) {
+			this.previousSlide()
+		}
+		this.resetSlideInterval()
+	}
+
+	setupResizeObserver() {
+		const resizeObserver = new ResizeObserver(() => {
+			this.updateSwipeListeners()
+		})
+		resizeObserver.observe(document.body)
+	}
+
+	updateSwipeListeners() {
+		if (window.innerWidth <= 680) {
+			this.addSwipeListeners()
+		} else {
+			this.removeSwipeListeners()
+		}
 	}
 }
 
