@@ -131,6 +131,7 @@
 	font-size: 24px;
 	font-weight: 700;
 	color: #4f538c;
+	margin-bottom: 10px;
 }
 
 @media (max-width: 425px) {
@@ -156,7 +157,7 @@
 	position: relative;
 	margin: 0;
 	max-height: 0;
-	overflow: hidden;
+	overflow-y: hidden;
 	transition: max-height 0.5s ease-in-out;
 }
 
@@ -177,12 +178,6 @@
 	margin: 40px 0 10px;
 }
 
-@media (max-width: 650px) {
-	.certificates-popup__item {
-		width: 768px;
-	}
-}
-
 .certificates-popup__item {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -195,6 +190,15 @@
 	.certificates-popup__item {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 20px;
+	}
+}
+
+@media (max-width: 650px) {
+	.certificates-popup__item {
+		width: 768px;
+	}
+	.certificates-popup__item-title {
+		max-width: 290px;
 	}
 }
 
