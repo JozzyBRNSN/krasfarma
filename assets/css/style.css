@@ -266,10 +266,10 @@ img {
 	font-size: 32px;
 	font-weight: 500;
 	color: #4f538c;
-	margin-top: 80px;
+	margin: 80px 0 0;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 425px) {
 	.content__title {
 		font-size: 24px;
 	}

@@ -149,10 +149,10 @@
 .main-quality__item .next {
 	border-bottom: 6px solid #ffffff;
 	border-left: 6px solid #ffffff;
-	margin-right: 17px;
+	margin-right: 34%;
 	margin-bottom: 5px;
 	transform: rotate(-45deg);
-	transition: transform 1s ease;
+	transition: transform 0.5s ease, margin-bottom 0.3s ease;
 }
 
 .quality-popup {
