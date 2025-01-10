@@ -548,7 +548,7 @@
 .products-description__title--article {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-end;
 	gap: 50px;
 	max-width: 343px;
 }
@@ -574,7 +574,6 @@
 
 @media (max-width: 1024px) {
 	.products-description__title--link {
-		align-self: self-start;
 		justify-content: end;
 		order: 1;
 		padding: 0;
