@@ -158,7 +158,7 @@
 	margin: 0;
 	max-height: 0;
 	overflow-y: hidden;
-	transition: max-height 0.5s ease-in-out;
+	transition: max-height 0.3s ease-in-out;
 }
 
 .certificates-popup.popup-article__show {
@@ -352,7 +352,7 @@
 	margin: 0;
 	max-height: 0;
 	overflow: hidden;
-	transition: max-height 0.5s ease-in-out;
+	transition: max-height 0.3s ease-in-out;
 }
 
 .network-popup.popup-article__show {
