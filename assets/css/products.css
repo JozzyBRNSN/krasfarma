@@ -1,5 +1,10 @@
 .main-cover {
+	background-image: url(../../assets/img/products_cover.png);
 	min-height: 540px;
+}
+
+.main-cover--background {
+	background-color: inherit;
 }
 
 .main-title {
