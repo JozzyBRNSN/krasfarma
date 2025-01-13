@@ -277,6 +277,7 @@
 @media (max-width: 425px) {
 	.cover-slogan {
 		font-size: 36px;
+		padding: 20px 5px;
 	}
 }
 
@@ -292,6 +293,7 @@
 	height: 200px;
 	max-width: 600px;
 	transition: opacity 0.5s linear, top 0.5s linear;
+	hyphens: auto;
 }
 
 .cover-slogan__border {
@@ -328,10 +330,9 @@
 
 @media (max-width: 425px) {
 	.cover-slogan__title {
-		width: 261px;
 		left: 100px;
 		bottom: 30px;
-		font-size: 20px;
+		font-size: 18px;
 	}
 }
 
@@ -486,6 +487,7 @@
 	text-align: left;
 	color: #4f538c;
 	border-right: 2px solid #4f538c;
+	padding-right: 20px;
 	line-height: 1.4;
 }
 

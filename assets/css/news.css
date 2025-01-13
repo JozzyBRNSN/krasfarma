@@ -29,7 +29,7 @@
 .main-news__list {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 32px;
+	grid-gap: 40px;
 }
 
 @media (max-width: 1024px) {
@@ -151,22 +151,6 @@
 	.main-news__pages {
 		flex-direction: column;
 		gap: 20px;
-	}
-}
-
-.main-news__pages .more-details__text {
-	font-family: 'Source Sans 3';
-	font-size: 18px;
-	font-weight: 700;
-	white-space: nowrap;
-}
-
-@media (max-width: 390px) {
-	.main-news__pages .more-details__text {
-		font-family: 'Source Sans 3';
-		font-size: 18px;
-		font-weight: 700;
-		white-space: wrap;
 	}
 }
 
