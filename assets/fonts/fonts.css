@@ -46,3 +46,15 @@
 	font-family: 'Geologica';
 	src: url(Geologica-Bold.ttf);
 }
+
+@font-face {
+	font-weight: 800;
+	font-family: 'Geologica';
+	src: url(Geologica_Auto-ExtraBold.ttf);
+}
+
+@font-face {
+	font-weight: 900;
+	font-family: 'Geologica';
+	src: url(Geologica_Auto-Black.ttf);
+}
