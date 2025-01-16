@@ -108,8 +108,8 @@
 	position: relative;
 	margin: 50px 0;
 	max-height: 0;
-	overflow-y: hidden;
 	justify-content: end;
+	overflow-y: hidden;
 	transition: max-height 0.3s ease-in-out;
 }
 
@@ -235,7 +235,7 @@
 
 .about-history__timeline {
 	overflow-x: auto;
-	margin: 100px 0 150px;
+	margin: 0 0 150px;
 }
 
 .about-history__timeline::-webkit-scrollbar {
@@ -815,6 +815,11 @@
 	transition: transform 0.5s ease, margin-bottom 0.3s ease;
 }
 
+.vacancy-popup .next.popup-article__show .team-vacancy__item .next {
+	margin-bottom: -5px;
+	transform: rotate(135deg);
+}
+
 .team-vacancy__item-content.popup-article__show .more-details__btn {
 	background-color: #1f7aab;
 }
@@ -828,7 +833,14 @@
 	display: flex;
 	flex-direction: column;
 	margin: 0;
-	gap: 10px;
+	gap: 20px;
+	overflow-y: hidden;
+	max-height: 0;
+	transition: max-height 0.3s ease-in-out;
+}
+
+.vacancy-popup.popup-article__show {
+	max-height: 1500px;
 }
 
 .vacancy-popup__description {
@@ -836,8 +848,83 @@
 	font-size: 20px;
 	font-weight: 700;
 	line-height: 1.25;
-	color: #FF781F;
+	color: #ff781f;
 	margin: 0;
+}
+
+.vacancy-popup__titles,
+.vacancy-popup__content {
+	display: grid;
+	grid-template-columns: 290px 1fr;
+	margin: 0;
+	padding: 0 0 10px;
+	border-bottom: 2px solid #e5e8ec;
+}
+
+.vacancy-popup__titles p {
+	font-family: 'Source Sans 3';
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.vacancy-popup__titles p:first-child {
+	color: #1f7aab;
+}
+
+.vacancy-popup__titles p:last-child {
+	color: #332e59;
+}
+
+.vacancy-popup__content-title {
+	color: #3eb7d8;
+	line-height: 1.25;
+}
+
+.vacancy-popup__content-list {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.vacancy-popup__content-list b {
+	color: #4f538c;
+	line-height: 1.25;
+	font-weight: 700;
+	margin: 0;
+}
+
+.vacancy-popup__content-item {
+	color: #4f538c;
+	line-height: 1.25;
+}
+
+.more-details__popup {
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-self: flex-end;
+	gap: 10px;
+	margin: 10px 0 0;
+	z-index: 1;
+}
+
+.more-details__popup .more-details__text {
+	text-transform: none;
+}
+
+.btn-popup .arrow.next.popup-next {
+	margin-bottom: 0;
+	transform: rotate(-135deg);
+	margin-right: 37%;
+	width: 8px;
+	height: 8px;
+}
+
+.arrow__bold {
+	width: 8px;
+	height: 8px;
 }
 
 .about-wrapper {

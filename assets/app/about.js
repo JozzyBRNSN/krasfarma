@@ -9,12 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		headerSelector: '.header',
 	})
 
-	const popupCertificates = new PopupArticle(
-		'.about-mission__popup',
-		'.mission-btn'
-	)
+	const popupMission = new PopupArticle('.about-mission__popup', '.mission-btn')
 
-	const popupNetwork = new PopupArticle('.about-values__popup', '.values-btn')
+	const popupValues = new PopupArticle('.about-values__popup', '.values-btn')
+
+	const popupVacancy = new PopupArticle(
+		'.vacancy-popup',
+		'.team-vacancy__item-content'
+	)
 
 	const popupHeader = new PopupHeader({
 		menuButtonId: 'header-nav__menu',
