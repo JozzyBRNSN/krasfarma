@@ -1,0 +1,350 @@
+.container-about {
+	display: flex;
+	flex-direction: column;
+}
+
+.preparation-about {
+	background: linear-gradient(
+		180deg,
+		rgba(167, 190, 232, 0.25) 0%,
+		rgba(167, 190, 232, 0) 100%
+	);
+}
+
+.preparation-about__content {
+	display: flex;
+	gap: 80px;
+	padding: 100px 0;
+}
+
+.preparation-about__card {
+	display: flex;
+	margin: 0;
+}
+
+.preparation-about__card-list {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin: 0;
+}
+
+.preparation-about__card-item {
+	display: flex;
+	width: 90px;
+	height: 90px;
+	background-color: #f5f8fc;
+	align-content: center;
+}
+
+.preparation-about__card-item:first-child {
+	background-color: #ffffff;
+	border-left: 2px solid #332e59;
+}
+
+.preparation-about__card-item img {
+	align-self: center;
+}
+
+.preparation-about__description {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.preparation-about__title {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin: 0;
+	font-family: 'Geologica';
+	font-size: 60px;
+	font-weight: 600;
+	line-height: 1.25;
+	color: #1d1934;
+}
+
+.preparation-about__title-volume {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 66px;
+	height: 35px;
+	background-color: #53d2eb;
+	border-left: 2px solid #1f7aab;
+	font-family: 'Geologica';
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.25;
+	color: #ffffff;
+}
+
+.preparation-about__list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 292px;
+}
+
+.preparation-about__item {
+	display: flex;
+	gap: 10px;
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.4;
+	color: #2f2f47;
+	padding-top: 10px;
+}
+
+.preparation-about__item:not(:first-child) {
+	border-top: 1px solid #e5e8ec;
+}
+
+.preparation-about__item b {
+	font-weight: 700;
+	color: #7481bf;
+	margin: 0;
+}
+
+.preparation-about__documents {
+	display: flex;
+	gap: 10px;
+	margin: 0;
+}
+
+.preparation-about__btn {
+	display: flex;
+	align-items: center;
+	width: 199px;
+	height: 60px;
+	border: none;
+	font-family: 'Geologica';
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.25;
+	text-align: start;
+	padding: 0 20px;
+	color: #ffffff;
+}
+
+.preparation-about__btn:first-child {
+	background-color: #2d97c1;
+}
+
+.preparation-about__btn:first-child::after {
+	content: url(../../assets/img/амикацин_инструкция_RU.svg);
+}
+
+.preparation-about__btn:last-child {
+	background-color: #332e59;
+}
+
+.preparation-about__btn:last-child::after {
+	content: url(../../assets/img/амикацин_инструкция_KAZ.svg);
+}
+
+.preparation-about__text {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-self: flex-end;
+	width: 66%;
+	margin: 0 0 100px;
+}
+
+.main-text {
+	font-weight: 500;
+}
+
+.preparation-about__text-title {
+	font-weight: 700;
+	color: #7481bf;
+}
+
+.preparation-description {
+	background-color: #332e59;
+	height: 320px;
+	margin-bottom: 150px;
+}
+
+.preparation-description__content {
+	padding: 60px 0;
+}
+
+.preparation-description__content-list {
+	display: grid;
+	justify-content: space-between;
+	grid-template-columns: 126px 180px 208px 106px 244px;
+}
+
+.preparation-description__content-list:nth-child(1)
+	.preparation-description__content-item {
+	color: #ffffff;
+}
+
+.preparation-description__content-list:not(:first-child) {
+	border-bottom: 1px solid #4f538c;
+}
+
+.preparation-description__content-list:nth-child(2)
+	.preparation-description__content-item,
+.preparation-description__content-list:nth-child(4)
+	.preparation-description__content-item {
+	color: #7481bf;
+}
+
+.preparation-description__content-list:nth-child(3)
+	.preparation-description__content-item,
+.preparation-description__content-list:nth-child(5)
+	.preparation-description__content-item {
+	color: #a7bee8;
+}
+
+.preparation-description__content-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+}
+
+.preparation-other {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.preparation-other__header {
+	display: flex;
+	justify-content: flex-end;
+	align-self: flex-end;
+	gap: 20px;
+	width: 66%;
+	margin: 0;
+}
+
+.preparation-other__title {
+	font-family: 'Geologica';
+	font-size: 32px;
+	font-weight: 800;
+	line-height: 1.25;
+	color: #3e3965;
+	white-space: nowrap;
+	border-bottom: 2px solid #e5e8ec;
+	width: 580px;
+	margin: 0;
+}
+
+.preparation-other__btn {
+	align-self: flex-end;
+}
+
+.more-details__btn.preparation-prev,
+.more-details__btn.preparation-next {
+	background: #f5f8fc;
+}
+
+.more-details__btn.preparation-prev .prev,
+.more-details__btn.preparation-next .next {
+	border-bottom: 2px solid #4f538c;
+	border-left: 2px solid #4f538c;
+}
+
+.more-details__btn.preparation-prev:hover,
+.more-details__btn.preparation-next:hover {
+	background: #4f538c;
+}
+
+.more-details__btn.preparation-prev:hover .prev,
+.more-details__btn.preparation-next:hover .next {
+	border-bottom: 2px solid #f5f8fc;
+	border-left: 2px solid #f5f8fc;
+}
+
+.preparation-other__list {
+	display: flex;
+	gap: 40px;
+	align-self: flex-end;
+	margin: 100px 50px 100px 0;
+}
+
+.preparation-other__item {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 320px;
+	width: 260px;
+}
+
+.preparation-other__item-content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.preparation-other__item-img {
+	width: 100%;
+	height: 200px;
+	box-shadow: 0px 16px 24px -16px #332e5940;
+}
+
+.preparation-other__item-text {
+	text-transform: uppercase;
+	font-family: 'Source Sans 3';
+	font-size: 18px;
+	font-weight: 700;
+	color: #4f538c;
+}
+
+.preparation-other__item-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Source Sans 3';
+	font-size: 18px;
+	font-weight: 500;
+	color: #ffffff;
+	background-color: #2d97c1;
+	width: 100%;
+	height: 40px;
+	border: none;
+	outline: none;
+	transition: background-color 0.5s ease;
+}
+
+.preparation-other__item-btn::after {
+	content: '';
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-color: #ffffff;
+	border-bottom: 4px solid #ffffff;
+	border-left: 4px solid #ffffff;
+	margin-left: 10px;
+	transform: rotate(-135deg);
+}
+
+.preparation-other__item-btn:hover {
+	background-color: #1f7aab;
+}
+
+.background-figure--first-item {
+	top: -40px;
+}
+
+.background-figure--second-item {
+	top: -250px;
+}
+
+.background-gradient {
+	position: absolute;
+	width: 2012px;
+	height: 2012px;
+	top: -150px;
+	left: -802px;
+	background: radial-gradient(
+		50% 50% at 50% 50%,
+		rgba(116, 129, 191, 0.3) 0%,
+		rgba(116, 129, 191, 0) 100%
+	);
+}

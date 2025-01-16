@@ -1062,6 +1062,11 @@
 	color: #2d97c1;
 }
 
+.background-confid__item {
+	right: 300px;
+	bottom: -280px;
+}
+
 .background-figure--second-item {
 	top: -115px;
 	box-shadow: none;
@@ -1093,6 +1098,17 @@
 	left: 0;
 	right: 0;
 	top: -100px;
+	bottom: 0;
+	margin: 0;
+	z-index: -1;
+	background: inherit;
+}
+
+.background-pattern__item--third {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -1180px;
 	bottom: 0;
 	margin: 0;
 	z-index: -1;
@@ -1151,6 +1167,7 @@
 	position: absolute;
 	background: url(../../assets/img/vacancy_wrapper.png);
 	background-size: cover;
+	background-position-y: 50%;
 	width: 100%;
 	height: 1836px;
 	bottom: 200px;
