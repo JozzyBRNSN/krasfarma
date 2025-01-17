@@ -3,8 +3,23 @@ import PopupHeader from './modules/popupHeader.js'
 import CoverSlider from './modules/coverSlider.js'
 import ProductSlider from './modules/productSlider.js'
 import CitySelector from './modules/footerAddress.js'
+import modalWindow from './modules/modalWindow.js'
 
 document.addEventListener('DOMContentLoaded', () => {
+	const modalRegistration = new modalWindow({
+		modalWindowSelector: '.modal-registration',
+		modalOpenButtonSelector: '.header-registration__btn',
+		modalCloseButtonSelector: '.modal-registration__close-btn',
+		modalWrapperSelector: '.modal-overlay',
+	})
+
+	const modalAutorization = new modalWindow({
+		modalWindowSelector: '.modal-autorization',
+		modalOpenButtonSelector: '.header-entrance__btn',
+		modalCloseButtonSelector: '.modal-autorization__close-btn',
+		modalWrapperSelector: '.modal-overlay',
+	})
+
 	const stickyHeader = new StickyHeader({
 		stickyPointSelector: '.sticky',
 		headerSelector: '.header',

@@ -30,6 +30,244 @@ img {
 	object-fit: cover;
 }
 
+.modal-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.modal-registration,
+.modal-autorization {
+	display: none;
+}
+
+.modal-registration {
+	width: 384px;
+	height: 454px;
+	top: 20%;
+}
+
+.modal-autorization {
+	width: 353px;
+	height: 284px;
+	top: 28%;
+}
+
+.modal-registration.open-modal,
+.modal-autorization.open-modal {
+	position: absolute;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	background-color: #ffffff;
+	border-bottom: 2px solid #3eb7d8;
+	padding: 20px;
+	z-index: 10;
+}
+
+.modal-overlay {
+	display: none;
+}
+
+.modal-overlay.open-modal {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #332e59c9;
+	z-index: 5;
+}
+
+.modal__title {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	font-family: 'Geologica';
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1;
+	color: #4f538c;
+	align-self: center;
+	margin-left: 40px;
+}
+
+.modal-registration__close-btn,
+.modal-autorization__close-btn {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-self: end;
+	justify-content: center;
+	gap: 2px;
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	overflow: hidden;
+}
+
+.modal-close__btn-item {
+	position: absolute;
+	width: 20px;
+	height: 1px;
+	background-color: #ad1700;
+	transition: background 0.3s ease;
+}
+
+.modal-close__btn-item:first-child {
+	transform: rotate(-45deg);
+}
+
+.modal-close__btn-item:last-child {
+	transform: rotate(45deg);
+}
+
+.modal-close__btn:hover .modal-close__btn-item {
+	background-color: #ff781f;
+}
+
+.modal-form {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	margin: 0;
+}
+
+.modal-input {
+	border: none;
+	border-bottom: 1px solid #e5e8ec;
+	padding-bottom: 10px;
+	margin: 0;
+}
+
+.modal-label__password,
+.modal-label__checkbox {
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.5;
+	color: #2f2f47;
+}
+
+.modal-label__checkbox {
+	position: relative;
+	display: inline-block;
+	padding-left: 35px;
+	margin-right: 10px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.modal-label__checkbox input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.modal-checkbox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 24px;
+	height: 24px;
+	border: 2px solid #4f538c;
+	background-color: #d3dff3;
+	transition: all 0.3s ease;
+}
+
+.modal-checkbox:hover {
+	border: 2px solid #332e59;
+	background-color: #a7bee8;
+}
+
+.modal-label__checkbox input:checked ~ .modal-checkbox {
+	background-color: #ffe9cf;
+	border: 2px solid #ff781f;
+	transition: all 0.3s ease;
+}
+
+.modal-label__checkbox input:checked ~ .modal-checkbox:hover {
+	background-color: #ffca89;
+	border: 2px solid #d44f0c;
+}
+
+.modal-checkbox::after {
+	content: '';
+	position: absolute;
+	display: none;
+}
+
+.modal-label__checkbox input:checked ~ .modal-checkbox::after {
+	display: block;
+}
+
+.modal-checkbox::after {
+	top: 6px;
+	left: 5px;
+	width: 12px;
+	height: 6px;
+	border-bottom: 2px solid #ff781f;
+	border-left: 2px solid #ff781f;
+	transform: rotate(-45deg);
+	transition: all 0.3s ease;
+}
+
+.modal-checkbox:hover::after {
+	border-bottom: 2px solid #d44f0c;
+	border-left: 2px solid #d44f0c;
+}
+
+.modal-label__password {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	margin: 0;
+}
+
+.modal-label__password p {
+	align-self: center;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.25;
+}
+
+.modal-checkbox {
+	align-self: flex-start;
+}
+
+.modal-registration__btn,
+.modal-autorization__btn {
+	height: 40px;
+	border: none;
+	background-color: #2d97c1;
+	font-family: 'Geologica';
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.25;
+	color: #ffffff;
+}
+
+.modal-registration__btn {
+	width: 160px;
+}
+
+.modal-autorization__btn {
+	width: 106px;
+}
+
+.modal-registration__btn::after,
+.modal-autorization__btn::after {
+	content: '';
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-color: #ffffff;
+	border-bottom: 2px solid #ffffff;
+	border-left: 2px solid #ffffff;
+	transform: rotate(-135deg);
+}
+
 .main {
 	position: relative;
 	overflow: hidden;
@@ -490,7 +728,6 @@ img {
 		font-size: 24px;
 	}
 }
-
 
 .info-content__box {
 	display: flex;
