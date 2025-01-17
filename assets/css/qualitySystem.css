@@ -196,3 +196,29 @@
 .background-figure--first-item {
 	top: 50px;
 }
+
+.background-pattern__item--first {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 550px;
+	bottom: 0;
+	margin: 0;
+	z-index: -1;
+	background: inherit;
+	box-shadow: 65px 0px 100px 100px rgba(195, 224, 246, 0.2),
+		100px 1000px 100px 1000px rgba(195, 224, 246, 0.2) inset;
+}
+
+.background-gradient__first {
+	position: absolute;
+	width: 2563px;
+	height: 2563px;
+	top: 500px;
+	left: -1000px;
+	background: radial-gradient(
+		50% 50% at 50% 50%,
+		rgba(167, 190, 232, 0.3) 0%,
+		rgba(167, 190, 232, 0) 100%
+	);
+}
