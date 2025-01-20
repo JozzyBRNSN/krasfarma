@@ -15,6 +15,52 @@
 
 <body>
   <span class="sticky"></span>
+  <div class="modal-wrapper">
+    <section class="modal-registration">
+      <h2 class="modal__title">
+        Форма регистрации
+        <div class="modal-registration__close-btn">
+          <span class="modal-close__btn-item"></span>
+          <span class="modal-close__btn-item"></span>
+        </div>
+      </h2>
+      <form class="modal-form" action="">
+        <input class="modal-input" type="text" id="username" name="username" placeholder="Ваше имя" required>
+        <input class="modal-input" type="email" id="email" name="email" placeholder="Ваш email" required>
+        <input class="modal-input" type="number" id="phone" name="phone" placeholder="Ваш номер телефона" required>
+        <input class="modal-input" type="text" id="youAddress" name="address" placeholder="Ваш адрес" required>
+        <label class="modal-label__checkbox" for="checkbox">
+          <input type="checkbox" name="checkbox" id="checkbox">
+          <span class="modal-checkbox"></span>
+          Подтверждаю согласие на обработку персональных данных.
+        </label>
+        <button class="modal-registration__btn">
+          Регистрация
+        </button>
+      </form>
+    </section>
+    <div class="modal-overlay"></div>
+    <section class="modal-autorization">
+      <h2 class="modal__title">
+        Форма авторизации
+        <div class="modal-autorization__close-btn">
+          <span class="modal-close__btn-item"></span>
+          <span class="modal-close__btn-item"></span>
+        </div>
+      </h2>
+      <form class="modal-form" action="">
+        <input class="modal-input" type="text" id="username" name="username" placeholder="Ваше имя" required>
+        <label class="modal-label__password" for="password">
+          <input class="modal-input" type="password" id="password" name="password" placeholder="Ваш пароль" required>
+          <p>Забыли пароль?</p>
+        </label>
+        <button class="modal-autorization__btn">
+          Войти
+        </button>
+      </form>
+    </section>
+    <div class="modal-overlay"></div>
+  </div>
   <header class="header">
     <div class="container container-header">
       <div class="header-logo">

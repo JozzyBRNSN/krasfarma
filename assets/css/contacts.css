@@ -1,0 +1,205 @@
+.main-cover {
+	background-image: url(../../assets/img/contacts_cover.png);
+	min-height: 480px;
+}
+
+.contacts {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	margin-bottom: 300px;
+  margin-top: -80px;
+}
+
+.contacts-item {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	margin: 0;
+}
+
+.contacts-title {
+	display: flex;
+	align-self: flex-end;
+	width: 65.5%;
+	font-family: 'Geologica';
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 1.25;
+	color: #4f538c;
+	align-items: end;
+	height: 120px;
+}
+
+.contacts-title:not(:first-child) {
+}
+
+.contacts-content {
+	display: flex;
+	gap: 40px;
+	margin: 0;
+}
+
+.contacts-map,
+.contacts-manager,
+.contacts-address,
+.contacts-secretariat {
+	margin: 0;
+}
+
+.contacts-map {
+	border-left: 2px solid #4f538c;
+	height: 280px;
+}
+
+.contacts-description {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	gap: 8px;
+}
+
+.contacts-manager__title,
+.contacts-address__title,
+.contacts-secretariat__title {
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.5;
+	color: #2f2f47;
+}
+
+.contacts-manager__name {
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.5;
+	color: #4f538c;
+}
+
+.contacts-address__details {
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #4f538c;
+}
+
+.contacts-communications {
+	display: flex;
+	gap: 10px;
+}
+
+.contacts-communications__labels {
+	margin: 0;
+}
+
+.contacts-communications__details {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+}
+
+.contacts-communications__details a {
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #4f538c;
+}
+
+.contacts-phone,
+.contacts-email,
+.contacts-fax {
+	display: flex;
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.5;
+	color: #332e59;
+	width: 150px;
+	gap: 10px;
+	align-items: center;
+}
+
+.contacts-phone::before {
+	content: url(../../assets/img/contacts_phone.svg);
+	height: 25px;
+}
+
+.contacts-email::before {
+	content: url(../../assets/img/contacts_email.svg);
+	height: 25px;
+}
+
+.contacts-fax::before {
+	content: url(../../assets/img/contacts_fax.svg);
+	height: 25px;
+}
+
+.next {
+	border-bottom: 6px solid #ffffff;
+	border-left: 6px solid #ffffff;
+	margin-right: 20px;
+}
+
+.more-details {
+	align-self: flex-start;
+}
+
+.more-details__text {
+	text-transform: none;
+	color: #332e59;
+}
+
+.background-figure--first-item {
+	top: 500px;
+}
+
+.background-gradient__first {
+	position: absolute;
+	width: 2563px;
+	height: 2563px;
+	top: -2100px;
+	left: -1000px;
+	background: radial-gradient(
+		50% 50% at 50% 50%,
+		rgba(167, 190, 232, 0.3) 0%,
+		rgba(167, 190, 232, 0) 100%
+	);
+}
+
+.background-gradient__second {
+	position: absolute;
+	width: 1763px;
+	height: 1763px;
+	top: -600px;
+	right: -1000px;
+	background: radial-gradient(
+		50% 50% at 50% 50%,
+		rgba(124, 235, 255, 0.15) 0%,
+		rgba(124, 235, 255, 0) 100%
+	);
+}
+
+.background-pattern__item--first {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -1730px;
+	bottom: 0;
+	margin: 0;
+	z-index: -1;
+	background: inherit;
+}
+
+.background-logo-item {
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	top: -550px;
+	bottom: 0;
+	margin: 0;
+	background: inherit;
+}

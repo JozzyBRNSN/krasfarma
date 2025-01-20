@@ -15,6 +15,52 @@
 
 <body>
   <span class="sticky"></span>
+  <div class="modal-wrapper">
+    <section class="modal-registration">
+      <h2 class="modal__title">
+        Форма регистрации
+        <div class="modal-registration__close-btn">
+          <span class="modal-close__btn-item"></span>
+          <span class="modal-close__btn-item"></span>
+        </div>
+      </h2>
+      <form class="modal-form" action="">
+        <input class="modal-input" type="text" id="username" name="username" placeholder="Ваше имя" required>
+        <input class="modal-input" type="email" id="email" name="email" placeholder="Ваш email" required>
+        <input class="modal-input" type="number" id="phone" name="phone" placeholder="Ваш номер телефона" required>
+        <input class="modal-input" type="text" id="youAddress" name="address" placeholder="Ваш адрес" required>
+        <label class="modal-label__checkbox" for="checkbox">
+          <input type="checkbox" name="checkbox" id="checkbox">
+          <span class="modal-checkbox"></span>
+          Подтверждаю согласие на обработку персональных данных.
+        </label>
+        <button class="modal-registration__btn">
+          Регистрация
+        </button>
+      </form>
+    </section>
+    <div class="modal-overlay"></div>
+    <section class="modal-autorization">
+      <h2 class="modal__title">
+        Форма авторизации
+        <div class="modal-autorization__close-btn">
+          <span class="modal-close__btn-item"></span>
+          <span class="modal-close__btn-item"></span>
+        </div>
+      </h2>
+      <form class="modal-form" action="">
+        <input class="modal-input" type="text" id="username" name="username" placeholder="Ваше имя" required>
+        <label class="modal-label__password" for="password">
+          <input class="modal-input" type="password" id="password" name="password" placeholder="Ваш пароль" required>
+          <p>Забыли пароль?</p>
+        </label>
+        <button class="modal-autorization__btn">
+          Войти
+        </button>
+      </form>
+    </section>
+    <div class="modal-overlay"></div>
+  </div>
   <header class="header">
     <div class="container container-header">
       <div class="header-logo">
@@ -363,17 +409,9 @@
             <div class="about-history__date-title">
               Ключевые даты
             </div>
-            <div class="about-history__btn">
-              <button class="more-details__btn history-prev products-btn">
-                <div class="arrow prev"></div>
-              </button>
-              <button class="more-details__btn history-next products-btn">
-                <div class="arrow next"></div>
-              </button>
-            </div>
           </div>
         </div>
-        <div class="about-history__timeline">
+        <div class="about-history__timeline" data-simplebar>
           <ul class="about-history__list">
             <div class="first-row">
               <li class="about-history__item">
@@ -633,14 +671,23 @@
               <p>Генеральный директор ПАО «Красфарма»</p>
             </div>
           </div>
-          <div class="info-content__box">
-            <p class="about-history__quote-text">
-              Честность, целостность и высокие стандарты ведения бизнеса остаются самыми главными принципами, на основе
-              которых мы
-              продолжаем строить новую компанию «Красфарма». Как и прежде, наша миссия – это предоставление
-              инновационных
-              фармацевтических продуктов для сохранения и улучшения качества жизни.
-            </p>
+          <div class="about-history__quote-content">
+            <div class="info-content__box-quote">
+              <p class="about-history__quote-text">
+                Честность, целостность и высокие стандарты ведения бизнеса остаются самыми главными принципами, на
+                основе
+                которых мы
+                продолжаем строить новую компанию «Красфарма». Как и прежде, наша миссия – это предоставление
+                инновационных
+                фармацевтических продуктов для сохранения и улучшения качества жизни.
+              </p>
+            </div>
+            <a class="about-history__quote-link" href="">
+              <button class="link-btn">
+                <img src="assets/img/article.svg" alt="КрасФарма">
+              </button>
+              <p class="link-text">Полное обращение</p>
+            </a>
           </div>
         </div>
       </section>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=1">
+  <link rel="icon" href="/assets/img/icon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/contacts.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <title>Контакты</title>
+</head>
+
+<body>
+  <span class="sticky"></span>
+  <div class="modal-wrapper">
+    <section class="modal-registration">
+      <h2 class="modal__title">
+        Форма регистрации
+        <div class="modal-registration__close-btn">
+          <span class="modal-close__btn-item"></span>
+          <span class="modal-close__btn-item"></span>
+        </div>
+      </h2>
+      <form class="modal-form" action="">
+        <input class="modal-input" type="text" id="username" name="username" placeholder="Ваше имя" required>
+        <input class="modal-input" type="email" id="email" name="email" placeholder="Ваш email" required>
+        <input class="modal-input" type="number" id="phone" name="phone" placeholder="Ваш номер телефона" required>
+        <input class="modal-input" type="text" id="youAddress" name="address" placeholder="Ваш адрес" required>
+        <label class="modal-label__checkbox" for="checkbox">
+          <input type="checkbox" name="checkbox" id="checkbox">
+          <span class="modal-checkbox"></span>
+          Подтверждаю согласие на обработку персональных данных.
+        </label>
+        <button class="modal-registration__btn">
+          Регистрация
+        </button>
+      </form>
+    </section>
+    <div class="modal-overlay"></div>
+    <section class="modal-autorization">
+      <h2 class="modal__title">
+        Форма авторизации
+        <div class="modal-autorization__close-btn">
+          <span class="modal-close__btn-item"></span>
+          <span class="modal-close__btn-item"></span>
+        </div>
+      </h2>
+      <form class="modal-form" action="">
+        <input class="modal-input" type="text" id="username" name="username" placeholder="Ваше имя" required>
+        <label class="modal-label__password" for="password">
+          <input class="modal-input" type="password" id="password" name="password" placeholder="Ваш пароль" required>
+          <p>Забыли пароль?</p>
+        </label>
+        <button class="modal-autorization__btn">
+          Войти
+        </button>
+      </form>
+    </section>
+    <div class="modal-overlay"></div>
+  </div>
+  <header class="header">
+    <div class="container container-header">
+      <div class="header-logo">
+        <a href="main.html">
+          <img src="assets/img/logo.svg" alt="КрасФарма">
+        </a>
+      </div>
+      <div class="header-menu">
+        <div class="header-search desktop">
+          <input class="header-input" type="search" placeholder="Искать на сайте">
+        </div>
+        <div class="header-langs desktop">
+          <div class="lang-ru">
+            <button class="lang-btn">
+              <img src="assets/img/rulang.svg" alt="русский">
+            </button>
+          </div>
+          <div class="lang-en">
+            <button class="lang-btn">
+              <img src="assets/img/enlang.svg" alt="английский">
+            </button>
+          </div>
+        </div>
+        <div class="header-autorization desktop">
+          <div class="entrance">
+            <button class="header-entrance__btn header-nav--hover header-text">Вход</button>
+          </div>
+          <div class="registration">
+            <button class="header-registration__btn header-nav--hover header-text">Регистрация</button>
+          </div>
+        </div>
+        <div class="header-nav">
+          <button id="header-nav__menu" class="header-nav__menu header-text">
+            <div class="header-nav__btn">
+              <span id="popup-burger--top" class="header-nav__btn-span top"></span>
+              <span id="popup-burger--middle" class="header-nav__btn-span middle"></span>
+              <span id="popup-burger--bottom" class="header-nav__btn-span bottom"></span>
+            </div>
+            <div class="header-nav__btn-title">
+              <p id="popup-btn">Меню</p>
+            </div>
+          </button>
+          <ul class="header-nav__list">
+            <div class="header-nav__items">
+              <a class="header-nav__link header-text header-nav--hover" href="about.html">О
+                компании</a>
+            </div>
+            <div class="header-nav__items">
+              <a class="header-nav__link header-text header-nav--hover" href="news.html">Новости</a>
+            </div>
+            <div class="header-nav__items">
+              <a class="header-nav__link header-text header-nav--hover" href="products.html">Продукция</a>
+            </div>
+            <div class="header-nav__items">
+              <a class="header-nav__link header-text header-nav--hover" href="confidentiality.html">Информация</a>
+            </div>
+            <div class="header-nav__items">
+              <a class="header-nav__link header-text header-nav--hover" href="#">Контакты</a>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <section id="popup-menu" class="popup-menu">
+      <div class="popup-nav mobile">
+        <div class="header-search mobile">
+          <input class="header-input" type="search" placeholder="Искать на сайте">
+        </div>
+        <div class="header-langs mobile">
+          <div class="lang-ru">
+            <button class="lang-btn">
+              <img src="assets/img/rulang.svg" alt="русский">
+            </button>
+          </div>
+          <div class="lang-en">
+            <button class="lang-btn">
+              <img src="assets/img/enlang.svg" alt="английский">
+            </button>
+          </div>
+        </div>
+        <div class="header-autorization mobile">
+          <div class="entrance">
+            <button class="header-entrance__btn header-nav--hover header-text">Вход</button>
+          </div>
+          <div class="registration">
+            <button class="header-registration__btn header-nav--hover header-text">Регистрация</button>
+          </div>
+        </div>
+      </div>
+      <div class="container-popup">
+        <div class="popup-about">
+          <ul class="popup-list">
+            <h2 class="popup-title">O компании</h2>
+            <li class="popup-item">
+              <a class="popup-link" href="#">О нас</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Новости</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Миссия</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">История</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Раскрытие информации</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Производство</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Система качества</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Фармаконадзор</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Персонал</a>
+            </li>
+          </ul>
+        </div>
+        <div class="popup-products">
+          <ul class="popup-list">
+            <h2 class="popup-title">Продукция</h2>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Антимикробные препараты</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Противотуберкулезные препараты</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Инфузионные растворы</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Средства для парентерального питания</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Местные анастетики</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Лекартсвенные препараты других групп</a>
+            </li>
+            <li class="popup-item__btn">
+              <a class="popup-link popup-more" href="#">Показать еще</a>
+              <button class="popup-more__btn">
+                <div class="next"></div>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="popup-info">
+          <ul class="popup-list">
+            <h2 class="popup-title">Информация</h2>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Социальная ответственность</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Инвесторам</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Информационные таблицы</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Пособия для врачей</a>
+            </li>
+            <li class="popup-item">
+              <a class="popup-link" href="#">Статьи и обзоры</a>
+            </li>
+          </ul>
+        </div>
+        <div class="popup-contacts">
+          <ul class="popup-list">
+            <h2 class="popup-title">Контакты</h2>
+            <div class="footer-contacts__phone popup">
+              <p>Адрес:</p>
+              <p class="popup-link">Москва, ул. Воронцовская, д.20</p>
+            </div>
+            <div class="footer-contacts__phone popup">
+              <p>Телефон:</p>
+              <a class="popup-link" href="tel:+74957879599">+7 (495) 787-95-99</a>
+            </div>
+            <li class="footer-contacts__phone popup">
+              <p>Мы в соц. сетях</p>
+            </li>
+            <a href="https://vk.com/club132521658">
+              <img class="popup-social" src="assets/img/popup_social.svg" alt="Красфарма VK">
+            </a>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </header>
+  <div class="background-figure--first">
+    <img class='background-figure--first-item' src="assets/img/background_figure1.svg"></img>
+    <div class="background-gradient__second"></div>
+  </div>
+  <main class="main">
+    <div class="popup-shadow"></div>
+    <section class="main-cover">
+      <div class="main-cover--background"></div>
+      <div class="main-title">
+        Контакты
+      </div>
+    </section>
+    <div class="container container-main">
+      <div class="main-links">
+        <a href="main.html">Главная</a>
+        <span class="arrow next"></span>
+        <a href="#">Контакты</a>
+      </div>
+      <section class="contacts">
+        <div class="contacts-item">
+          <h2 class="contacts-title">
+            Производство
+          </h2>
+          <div class="contacts-content">
+            <div class="contacts-map">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=92.835908%2C55.975783&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjQyMDgzMxJK0KDQvtGB0YHQuNGPLCDQmtGA0LDRgdC90L7Rj9GA0YHQuiwg0YPQu9C40YbQsCA2MCDQu9C10YIg0J7QutGC0Y_QsdGA0Y8sIDIiCg38q7lCFTPnX0I%2C&z=17.11"
+                width="360" height="280" frameborder="0" allowfullscreen="true" style="position:relative;">
+              </iframe>
+            </div>
+            <div class="contacts-description">
+              <div class="contacts-manager">
+                <p class="contacts-manager__title">Офис менеджер</p>
+                <p class="contacts-manager__name">Никитина Анастасия</p>
+              </div>
+              <div class="contacts-address">
+                <p class="contacts-address__title">Адрес:</p>
+                <p class="contacts-address__details">Красноярск, ул. 60 лет Октября, зд.2</p>
+              </div>
+              <div class="contacts-secretariat">
+                <p class="contacts-secretariat__title">Секретариат:</p>
+                <div class="contacts-communications">
+                  <div class="contacts-communications__labels">
+                    <p class="contacts-phone">Телефон:</p>
+                    <p class="contacts-fax">Факс:</p>
+                    <p class="contacts-email">E-mail:</p>
+                  </div>
+                  <div class="contacts-communications__details">
+                    <a href="tel:+73912299490">+7 (391) 229-94-90</a>
+                    <a href="tel:+73912299488">+7 (391) 229-94-88</a>
+                    <a href="mailto:s_ref@kraspharma.ru">s_ref@kraspharma.ru</a>
+                  </div>
+                </div>
+              </div>
+              <div class="more-details">
+                <p class="more-details__text">
+                  Написать сообщение
+                </p>
+                <button class="more-details__btn btn-cover">
+                  <div class="arrow next cover-next"></div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts-item">
+          <h2 class="contacts-title">
+            Отдел продаж
+          </h2>
+          <div class="contacts-content">
+            <div class="contacts-map">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=37.657170%2C55.737324&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNzIyMDYwNDIwEkPQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0JLQvtGA0L7QvdGG0L7QstGB0LrQsNGPINGD0LvQuNGG0LAsIDIwIgoN8aAWQhUE815C&z=17.11"
+                width="360" height="280" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
+            </div>
+            <div class="contacts-description">
+              <div class="contacts-manager">
+                <p class="contacts-manager__title">Руководитель отдела продаж:</p>
+                <p class="contacts-manager__name">Маляева Вера Сергеевна</p>
+              </div>
+              <div class="contacts-address">
+                <p class="contacts-address__title">Адрес:</p>
+                <p class="contacts-address__details">Москва, ул. Воронцовская, д.20</p>
+              </div>
+              <div class="contacts-secretariat">
+                <div class="contacts-communications">
+                  <div class="contacts-communications__labels">
+                    <p class="contacts-phone">Телефон:</p>
+                    <p class="contacts-email">E-mail:</p>
+                  </div>
+                  <div class="contacts-communications__details">
+                    <a href="tel:+74957879598">+7 (495) 787-95-98 доб. 5525</a>
+                    <a href="mailto:m.vera@kraspharma.com">m.vera@kraspharma.com</a>
+                  </div>
+                </div>
+              </div>
+              <div class="more-details">
+                <p class="more-details__text">
+                  Написать сообщение
+                </p>
+                <button class="more-details__btn btn-cover">
+                  <div class="arrow next cover-next"></div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts-item">
+          <h2 class="contacts-title">
+            Отдел внешнеэкономической деятельности (продажи по странам СНГ и дальнего зарубежья):
+          </h2>
+          <div class="contacts-content">
+            <div class="contacts-map">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=37.657170%2C55.737324&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNzIyMDYwNDIwEkPQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0JLQvtGA0L7QvdGG0L7QstGB0LrQsNGPINGD0LvQuNGG0LAsIDIwIgoN8aAWQhUE815C&z=17.11"
+                width="360" height="280" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
+            </div>
+            <div class="contacts-description">
+              <div class="contacts-manager">
+                <p class="contacts-manager__title">Руководитель отдела внешнеэкономической деятельности:</p>
+                <p class="contacts-manager__name">Школьников Борис Владимирович</p>
+              </div>
+              <div class="contacts-address">
+                <p class="contacts-address__title">Адрес:</p>
+                <p class="contacts-address__details">Москва, ул. Воронцовская, д.20</p>
+              </div>
+              <div class="contacts-secretariat">
+                <div class="contacts-communications">
+                  <div class="contacts-communications__labels">
+                    <p class="contacts-phone">Телефон:</p>
+                    <p class="contacts-email">E-mail:</p>
+                  </div>
+                  <div class="contacts-communications__details">
+                    <a href="tel:+74957879598">+7 (495) 787-95-98 доб. 5521</a>
+                    <a href="mailto:shkolnikov@kraspharma.com">shkolnikov@kraspharma.com</a>
+                  </div>
+                </div>
+              </div>
+              <div class="more-details">
+                <p class="more-details__text">
+                  Написать сообщение
+                </p>
+                <button class="more-details__btn btn-cover">
+                  <div class="arrow next cover-next"></div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts-item">
+          <h2 class="contacts-title">
+            Сетевая организация (передача электрической энергии) (технологическое присоединение)
+          </h2>
+          <div class="contacts-content">
+            <div class="contacts-map">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=92.835908%2C55.975783&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjQyMDgzMxJK0KDQvtGB0YHQuNGPLCDQmtGA0LDRgdC90L7Rj9GA0YHQuiwg0YPQu9C40YbQsCA2MCDQu9C10YIg0J7QutGC0Y_QsdGA0Y8sIDIiCg38q7lCFTPnX0I%2C&z=17.11"
+                width="360" height="280" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
+            </div>
+            <div class="contacts-description">
+              <div class="contacts-manager">
+                <p class="contacts-manager__title">Заместитель генерального директора по энергетике:</p>
+                <p class="contacts-manager__name">Павлив Вадим Николаевич</p>
+              </div>
+              <div class="contacts-address">
+                <p class="contacts-address__title">Адрес:</p>
+                <p class="contacts-address__details">Красноярск, ул. 60 лет Октября, зд.2</p>
+              </div>
+              <div class="contacts-secretariat">
+                <div class="contacts-communications">
+                  <div class="contacts-communications__labels">
+                    <p class="contacts-phone">Телефон:</p>
+                    <p class="contacts-phone">Телефон:</p>
+                    <p class="contacts-phone">Телефон:</p>
+                    <p class="contacts-phone">Телефон:</p>
+                    <p class="contacts-email">E-mail:</p>
+                  </div>
+                  <div class="contacts-communications__details">
+                    <a href="tel:+73912041480">+7 391 204-14-80</a>
+                    <a href="tel:+73912041477">+7 391 204-14-77</a>
+                    <a href="tel:+73912041464">+7 391 204-14-64</a>
+                    <a href="tel:+73912299489">+7 391 229-94-89</a>
+                    <a href="mailto:pavliv_vn@kraspharma.ru">pavliv_vn@kraspharma.ru</a>
+                  </div>
+                </div>
+              </div>
+              <div class="more-details">
+                <p class="more-details__text">
+                  Написать сообщение
+                </p>
+                <button class="more-details__btn btn-cover">
+                  <div class="arrow next cover-next"></div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="background-pattern">
+      <img class="background-pattern__item--first" src="assets/img/Pattern1.svg">
+      <div class="background-gradient__first"></div>
+    </div>
+    <div class="background-logo">
+      <img class="background-logo-item" src="assets/img/background_horse.svg"></img>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="popup-shadow"></div>
+    <div class="footer-container container">
+      <div class="footer-content">
+        <div class="footer-link">
+          <div class="footer-logo">
+            <img src="assets/img/logoFooter.png" alt="КрасФарма">
+          </div>
+          <p class="footer-text">
+            Мы в социальных сетях
+          </p>
+          <div class="footer-link__social">
+            <a href="https://vk.com/club132521658">
+              <img src="assets/img/vk.svg" alt="КрасФарма VK">
+            </a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a href="main.html">Главная</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#">О нас</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="ingastin.html">Продукция</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="news.html">Новости</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#">Информация</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="confidentiality.html">Раскрытие информации</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-contacts">
+          <p class="footer-text">
+            Найти торговое представительство:
+          </p>
+          <div class="footer-contacts__places">
+            <a id="moscow" class="places-item">Москва</a>
+            <a id="krasnoyarsk" class="places-item">Красноярск</a>
+            <a id="stavropol" class="places-item">Ставрополь</a>
+            <a id="all-country" class="places-item">Страны СНГ</a>
+          </div>
+          <div class="footer-contacts__address">
+            <p>Адрес:</p>
+            <p id="address">Москва, ул. Воронцовская, д.20</p>
+          </div>
+          <div class="footer-contacts__phone">
+            <p>Телефон:</p>
+            <a id="phone" class="footer-phone__link" href="tel:+74957879599">+7 (495) 787-95-99</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-data">
+        <div class="footer-data__item">
+          © 2024 • ПАО “КРАСФАРМА”
+        </div>
+        <div class="footer-data__item">
+          ИНН 2464010490
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" defer src="assets/app/contacts.js"></script>
+</body>
