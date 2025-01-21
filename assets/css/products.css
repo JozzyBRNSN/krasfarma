@@ -309,3 +309,43 @@
 		rgba(109, 99, 191, 0) 100%
 	);
 }
+
+.background-figure--third,
+.background-logo {
+	display: none;
+}
+
+@media (max-width: 864px) {
+	.background-figure--first,
+	.background-figure--second {
+		display: none;
+	}
+
+	.background-figure--third,
+	.background-logo {
+		display: flex;
+	}
+}
+
+.background-logo-item {
+	top: auto;
+	bottom: -185px;
+}
+
+.background-figure--third-item {
+	top: 250px;
+	left: 0;
+}
+
+.background-gradient__third {
+	position: absolute;
+	width: 1763px;
+	height: 1763px;
+	top: -900px;
+	left: -500px;
+	background: radial-gradient(
+		50% 50% at 50% 50%,
+		rgba(124, 235, 255, 0.15) 0%,
+		rgba(124, 235, 255, 0) 100%
+	);
+}
