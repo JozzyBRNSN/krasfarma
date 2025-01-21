@@ -337,6 +337,17 @@ img {
 	}
 }
 
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background-color: rgba(45, 151, 193);
+	transition: all 0.5s ease;
+}
+
 .background-logo,
 .background-figure--first,
 .background-figure--second,
