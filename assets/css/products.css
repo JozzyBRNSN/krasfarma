@@ -111,8 +111,9 @@
 	pointer-events: none;
 }
 
-.products-item:hover .overlay {
-	opacity: 0.3;
+.products-item:nth-child(-1n + 3):hover .products-img {
+	mix-blend-mode: difference;
+	filter: hue-rotate(110deg);
 }
 
 .products-img {
@@ -120,16 +121,20 @@
 	transition: all 0.5s ease;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
-}
-
-.products-img {
 	mix-blend-mode: difference;
 	filter: hue-rotate(160deg);
 }
 
 .products-item:hover .products-img {
+	filter: hue-rotate(120deg);
+}
+
+.products-item:hover .products-img {
 	transform: scale(1.1);
+}
+
+.products-item:nth-child(-1n + 3) .products-img {
+	filter: hue-rotate(150deg);
 }
 
 .products-item__title {
