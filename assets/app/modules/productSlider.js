@@ -8,7 +8,7 @@ class ProductSlider {
 		this.sliderContainer = document.querySelector(containerSelector)
 		this.cards = document.querySelectorAll(cardsSelector)
 		this.totalCards = this.cards.length
-		this.cardWidth = 275
+		this.cardWidth = this.ca
 		this.cardMargin = 20
 		this.currentIndex = 0
 
