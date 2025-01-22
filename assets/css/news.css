@@ -6,7 +6,12 @@
 	.container-main {
 		gap: 30px;
 	}
+
+	.main-cover {
+		min-height: 290px;
+	}
 }
+
 
 .main-news {
 	display: flex;

@@ -2,6 +2,12 @@
 	background-image: url(../../assets/img/confidCover.png);
 }
 
+@media (max-width: 425px) {
+	.main-cover {
+		min-height: 290px;
+	}
+}
+
 .main-info {
 	display: flex;
 	margin-bottom: 60px;

@@ -2,19 +2,16 @@
 	background-image: url(../../assets/img/production.png);
 }
 
-@media (max-width: 860px) {
-	.main-cover {
-		min-height: 390px;
-	}
-}
-
 .production-quote {
 	display: flex;
 	gap: 50px;
+	margin: 0;
 }
 
 .production-quote__image {
-	width: 360px;
+	background-image: url(../../assets/img/production_quote.png);
+	background-size: cover;
+	min-width: 360px;
 	height: 228px;
 	border-left: 2px solid #4f538c;
 	box-shadow: 0px 24px 64px -16px #a7bee840;
@@ -44,6 +41,8 @@
 	font-size: 20px;
 	font-weight: 600;
 	line-height: 1.5;
+	hyphens: auto;
+	-moz-hyphens: auto;
 }
 
 .production-cover {
@@ -63,9 +62,8 @@
 	height: 100%;
 	width: 66%;
 	right: 0;
-	background-color: #2993cbb5;
+	background-color: #087fbdc2;
 	backdrop-filter: blur(5px);
-	padding: 40px auto;
 }
 
 .production-cover__content {
@@ -103,7 +101,6 @@
 	align-items: center;
 	align-self: flex-end;
 	gap: 10px;
-	margin: 10px 0 0;
 	z-index: 1;
 }
 
@@ -161,10 +158,14 @@
 	gap: 60px;
 }
 
-.production-about__content {
+.production-about__content--desktop {
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
+}
+
+.production-about__content--mobile {
+	display: none;
 }
 
 .production-about__list,
@@ -218,4 +219,94 @@
 		rgba(167, 190, 232, 0.3) 0%,
 		rgba(167, 190, 232, 0) 100%
 	);
+}
+
+@media (max-width: 1024px) {
+	.production-quote {
+		gap: 20px;
+	}
+
+	.production-quote__image {
+		min-width: 229px;
+		height: 240px;
+	}
+
+	.production-cover {
+		margin: 80px 0;
+	}
+
+	.production-cover__content {
+		margin: 0 20px;
+	}
+
+	.production-aside__image {
+		width: 229px;
+		height: 400px;
+	}
+
+	.production-content {
+		gap: 20px;
+	}
+}
+
+@media (max-width: 645px) {
+	.production-quote {
+		flex-direction: column;
+	}
+
+	.production-quote__image,
+	.production-aside__image {
+		margin: 0;
+		width: 100%;
+	}
+
+	.production-quote__title {
+		font-size: 30px;
+		hyphens: auto;
+		-moz-hyphens: auto;
+	}
+
+	.production-cover {
+		min-height: 838px;
+		background-position-x: 20%;
+	}
+
+	.production-cover__wrapper {
+		height: 66%;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.production-about__content--desktop {
+		display: none;
+	}
+
+	.production-about__content--mobile {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+}
+
+@media (max-width: 380px) {
+	.production-cover {
+		min-height: 900px;
+		background-position-x: 20%;
+	}
+
+	.production-cover__content {
+		gap: 10px;
+	}
+
+	.production-cover__title {
+		font-size: 28px;
+	}
+
+	.production-cover__text {
+		margin-bottom: 0;
+	}
+
+	.more-details__text {
+		display: none;
+	}
 }

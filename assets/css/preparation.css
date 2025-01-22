@@ -213,30 +213,24 @@
 	margin: 0;
 }
 
-.preparation-about__documents {
-	display: flex;
-	gap: 10px;
-	margin: 0;
-}
-
 .preparation-about__btn {
 	display: flex;
 	align-items: center;
-	width: 199px;
+	justify-content: center;
+	gap: 10px;
+	width: 100%;
 	height: 60px;
 	border: none;
 	font-family: 'Geologica';
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.25;
-	text-align: start;
 	padding: 0 20px;
+	margin-top: 20px;
 }
 
 @media (max-width: 874px) {
 	.preparation-about__btn {
-		width: 165px;
-		padding: 0 10px;
 		font-size: 14px;
 	}
 }
@@ -245,20 +239,12 @@
 	color: #ffffff;
 }
 
-.preparation-about__btn:first-child {
+.preparation-about__btn {
 	background-color: #2d97c1;
 }
 
-.preparation-about__btn:first-child::after {
+.preparation-about__btn::after {
 	content: url(../../assets/img/амикацин_инструкция_RU.svg);
-}
-
-.preparation-about__btn:last-child {
-	background-color: #332e59;
-}
-
-.preparation-about__btn:last-child::after {
-	content: url(../../assets/img/амикацин_инструкция_KAZ.svg);
 }
 
 .preparation-about__text {
