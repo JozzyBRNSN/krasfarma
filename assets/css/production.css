@@ -115,6 +115,46 @@
 
 .btn-cover {
 	background-color: #ff781f;
+	transition: background 0.3s ease;
+}
+
+.btn-cover::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 200%;
+	height: 50%;
+	background-color: #d44f0c;
+	transform: translateX(-50%) scaleX(0) skew(432deg);
+	opacity: 0;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-cover::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 200%;
+	height: 50%;
+	background-color: #d44f0c;
+	transform: translateX(-50%) scaleX(0) skew(288deg);
+	opacity: 0;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.more-details__cover:hover .btn-cover {
+	background: #d44f0c;
+}
+
+.more-details__cover:hover .btn-cover::before {
+	transform: translateX(-50%) scaleX(0.5) skew(432deg);
+	opacity: 1;
+}
+.more-details__cover:hover .btn-cover::after {
+	transform: translateX(-50%) scaleX(0.5) skew(288deg);
+	opacity: 1;
 }
 
 .btn-cover .arrow.next.cover-next {
