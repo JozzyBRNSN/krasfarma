@@ -2,6 +2,25 @@
 	background-image: url(../../assets/img/система_качества.png);
 }
 
+@media (max-width: 768px) {
+	.main-title {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 585px) {
+	.main-title {
+		left: 80px;
+		white-space: nowrap;
+	}
+}
+
+@media (max-width: 425px) {
+	.main-title {
+		font-size: 24px;
+	}
+}
+
 .main-quality {
 	margin: 0;
 }
