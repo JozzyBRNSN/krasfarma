@@ -12,13 +12,18 @@
 	}
 }
 
-
 .main-news {
 	display: flex;
 	flex-direction: column;
 	gap: 60px;
 	max-width: 100%;
-	margin: 70px 0 110px;
+	margin: 50px 0 110px;
+}
+
+@media (max-width: 860px) {
+	.main-news {
+		margin: 0 0 110px;
+	}
 }
 
 .main-news__list {
