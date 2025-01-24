@@ -5,7 +5,9 @@
 
 .modal-registration,
 .modal-autorization,
-.modal-warning {
+.modal-warning,
+.modal-recovery,
+.modal-message {
 	display: flex;
 	position: fixed;
 	justify-content: center;
@@ -18,6 +20,14 @@
 	transition: opacity 0.5s ease;
 	z-index: 20;
 	pointer-events: none;
+}
+
+.modal-recovery,
+.modal-message {
+	width: 353px;
+	height: 180px;
+	top: 30%;
+	gap: 50px;
 }
 
 .modal-registration {
@@ -40,7 +50,9 @@
 
 .modal-registration.open-modal,
 .modal-autorization.open-modal,
-.modal-warning.open-modal {
+.modal-warning.open-modal,
+.modal-recovery.open-modal,
+.modal-message.send-message {
 	opacity: 1;
 	pointer-events: auto;
 }
@@ -80,8 +92,11 @@
 	white-space: wrap;
 }
 
-.modal-registration__close-btn,
-.modal-autorization__close-btn {
+.modal-recovery .modal__title {
+	margin-left: 20px;
+}
+
+.modal-close__btn {
 	cursor: pointer;
 	display: flex;
 	flex-direction: column;
@@ -126,11 +141,13 @@
 	border-bottom: 1px solid #e5e8ec;
 	padding-bottom: 10px;
 	margin: 0;
+	outline: none;
 }
 
 .modal-label__password,
 .modal-label__checkbox,
-.modal-warning__text {
+.modal-warning__text,
+.modal-message__text {
 	font-family: 'Source Sans 3';
 	font-size: 20px;
 	font-weight: 500;
@@ -138,7 +155,8 @@
 	color: #2f2f47;
 }
 
-.modal-warning__text {
+.modal-warning__text,
+.modal-message__text {
 	text-align: center;
 }
 
@@ -173,6 +191,9 @@
 .modal-checkbox:hover {
 	border: 2px solid #332e59;
 	background-color: #a7bee8;
+}
+
+.modal-label__checkbox input:checked ~ .modal-checkbox {
 }
 
 .modal-label__checkbox input:checked ~ .modal-checkbox {
@@ -215,7 +236,7 @@
 	margin: 0;
 }
 
-.modal-label__password p {
+.modal-label__password a {
 	align-self: center;
 	font-size: 16px;
 	font-weight: 400;
@@ -225,7 +246,9 @@
 .modal-registration__btn,
 .modal-autorization__btn,
 .modal-сonfirmation__btn,
-.modal-back__btn {
+.modal-back__btn,
+.modal-recovery__btn,
+.modal-message__btn {
 	height: 40px;
 	border: none;
 	background-color: #2d97c1;
@@ -250,7 +273,9 @@
 	gap: 20px;
 }
 
-.modal-registration__btn {
+.modal-registration__btn,
+.modal-recovery__btn,
+.modal-message__btn {
 	width: 160px;
 }
 

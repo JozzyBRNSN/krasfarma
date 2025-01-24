@@ -179,7 +179,7 @@ class CoverSlider {
 	}
 
 	updateSwipeListeners() {
-		if (window.innerWidth <= 680) {
+		if (window.innerWidth <= 720) {
 			this.addSwipeListeners()
 		} else {
 			this.removeSwipeListeners()

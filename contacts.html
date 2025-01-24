@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="assets/css/header.css">
   <link rel="stylesheet" href="assets/css/contacts.css">
   <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/modal.css">
+  <link rel="stylesheet" href="assets/css/modal.css">
   <title>Контакты</title>
 </head>
 
@@ -52,11 +52,26 @@
       <form class="modal-form" action="">
         <input class="modal-input" type="text" id="username" name="username" placeholder="Ваше имя" required>
         <label class="modal-label__password" for="password">
-          <input class="modal-input" type="password" id="password" name="password" placeholder="Ваш пароль" required>
+          <input class="modal-input" type="email" id="email" name="email" placeholder="Ваш email" required>
           <p>Забыли пароль?</p>
         </label>
         <button class="modal-autorization__btn">
           Войти
+        </button>
+      </form>
+    </section>
+    <section class="modal-recovery">
+      <h2 class="modal__title">
+        Восстановление пароля
+        <div class="modal-recovery__close-btn">
+          <span class="modal-close__btn-item"></span>
+          <span class="modal-close__btn-item"></span>
+        </div>
+      </h2>
+      <form class="modal-form" action="">
+        <input class="modal-input" type="email" id="email" name="email" placeholder="Ваш email" required>
+        <button class="modal-registration__btn">
+          Отправить
         </button>
       </form>
     </section>
@@ -282,7 +297,7 @@
             <div class="contacts-map">
               <iframe
                 src="https://yandex.ru/map-widget/v1/?ll=92.835908%2C55.975783&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjQyMDgzMxJK0KDQvtGB0YHQuNGPLCDQmtGA0LDRgdC90L7Rj9GA0YHQuiwg0YPQu9C40YbQsCA2MCDQu9C10YIg0J7QutGC0Y_QsdGA0Y8sIDIiCg38q7lCFTPnX0I%2C&z=17.11"
-                width="360" height="280" frameborder="0" allowfullscreen="true" style="position:relative;">
+                width="360" height="280" frameborder="0" allowfullscreen="true">
               </iframe>
             </div>
             <div class="contacts-description">
@@ -311,14 +326,14 @@
                   </div>
                 </div>
               </div>
-              <div class="more-details">
+              <a href="mailto:s_ref@kraspharma.ru" class="more-details">
                 <p class="more-details__text">
                   Написать сообщение
                 </p>
                 <button class="more-details__btn btn-cover">
                   <div class="arrow next cover-next"></div>
                 </button>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -355,14 +370,14 @@
                   </div>
                 </div>
               </div>
-              <div class="more-details">
+              <a href="mailto:m.vera@kraspharma.com" class="more-details">
                 <p class="more-details__text">
                   Написать сообщение
                 </p>
                 <button class="more-details__btn btn-cover">
                   <div class="arrow next cover-next"></div>
                 </button>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -398,14 +413,14 @@
                   </div>
                 </div>
               </div>
-              <div class="more-details">
+              <a href="mailto:shkolnikov@kraspharma.com" class="more-details">
                 <p class="more-details__text">
                   Написать сообщение
                 </p>
                 <button class="more-details__btn btn-cover">
                   <div class="arrow next cover-next"></div>
                 </button>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -452,14 +467,14 @@
                   </div>
                 </div>
               </div>
-              <div class="more-details">
+              <a href="mailto:pavliv_vn@kraspharma.ru" class="more-details">
                 <p class="more-details__text">
                   Написать сообщение
                 </p>
                 <button class="more-details__btn btn-cover">
                   <div class="arrow next cover-next"></div>
                 </button>
-              </div>
+              </a>
             </div>
           </div>
         </div>

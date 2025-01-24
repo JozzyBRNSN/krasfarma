@@ -20,7 +20,7 @@
         <section class="modal-registration">
             <h2 class="modal__title">
                 Форма регистрации
-                <div class="modal-registration__close-btn">
+                <div class="modal-close__btn">
                     <span class="modal-close__btn-item"></span>
                     <span class="modal-close__btn-item"></span>
                 </div>
@@ -32,7 +32,7 @@
                     required>
                 <input class="modal-input" type="text" id="youAddress" name="address" placeholder="Ваш адрес" required>
                 <label class="modal-label__checkbox" for="checkbox">
-                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <input type="checkbox" class="checkbox" name="checkbox" id="checkbox">
                     <span class="modal-checkbox"></span>
                     Подтверждаю согласие на обработку персональных данных.
                 </label>
@@ -45,7 +45,7 @@
         <section class="modal-autorization">
             <h2 class="modal__title">
                 Форма авторизации
-                <div class="modal-autorization__close-btn">
+                <div class="modal-close__btn">
                     <span class="modal-close__btn-item"></span>
                     <span class="modal-close__btn-item"></span>
                 </div>
@@ -55,12 +55,42 @@
                 <label class="modal-label__password" for="password">
                     <input class="modal-input" type="password" id="password" name="password" placeholder="Ваш пароль"
                         required>
-                    <p>Забыли пароль?</p>
+                    <a class="recovery-password">Забыли пароль?</a>
                 </label>
                 <button class="modal-autorization__btn">
                     Войти
                 </button>
             </form>
+        </section>
+        <section class="modal-recovery">
+            <h2 class="modal__title">
+                Восстановление пароля
+                <div class="modal-close__btn">
+                    <span class="modal-close__btn-item"></span>
+                    <span class="modal-close__btn-item"></span>
+                </div>
+            </h2>
+            <form id="recovery-form" class="modal-form" action="">
+                <input class="modal-input" type="email" id="email" name="email" placeholder="Ваш email" required>
+                <button class="modal-recovery__btn">
+                    Отправить
+                </button>
+            </form>
+        </section>
+        <section class="modal-message">
+            <h2 class="modal__title">
+                Восстановление пароля
+                <div class="modal-close__btn">
+                    <span class="modal-close__btn-item"></span>
+                    <span class="modal-close__btn-item"></span>
+                </div>
+            </h2>
+            <p class="modal-message__text">
+                Письмо отправлено на вашу почту!
+            </p>
+            <button class="modal-message__btn">
+                Хорошо
+            </button>
         </section>
         <div class="modal-overlay"></div>
     </div>
@@ -770,7 +800,7 @@
         <div class="map">
             <iframe
                 src="https://yandex.ru/map-widget/v1/?ll=37.657170%2C55.737324&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNzIyMDYwNDIwEkPQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0JLQvtGA0L7QvdGG0L7QstGB0LrQsNGPINGD0LvQuNGG0LAsIDIwIgoN8aAWQhUE815C&z=17.07"
-                width="100%" height="456" allowfullscreen="true" style="border: none">
+                allowfullscreen="true">
             </iframe>
         </div>
         <div class="footer-container container">

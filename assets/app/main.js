@@ -4,20 +4,36 @@ import CoverSlider from './modules/coverSlider.js'
 import ProductSlider from './modules/productSlider.js'
 import CitySelector from './modules/footerAddress.js'
 import modalWindow from './modules/modalWindow.js'
+import modalMessage from './modules/modalMessage.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 	const modalRegistration = new modalWindow({
 		modalWindowSelector: '.modal-registration',
 		modalOpenButtonSelector: '.header-registration__btn',
-		modalCloseButtonSelector: '.modal-registration__close-btn',
+		modalCloseButtonSelector: '.modal-close__btn',
 		modalWrapperSelector: '.modal-overlay',
 	})
 
 	const modalAutorization = new modalWindow({
 		modalWindowSelector: '.modal-autorization',
 		modalOpenButtonSelector: '.header-entrance__btn',
-		modalCloseButtonSelector: '.modal-autorization__close-btn',
+		modalCloseButtonSelector: ['.recovery-password', '.modal-close__btn'],
 		modalWrapperSelector: '.modal-overlay',
+	})
+
+	const modalRecovery = new modalWindow({
+		modalWindowSelector: '.modal-recovery',
+		modalOpenButtonSelector: '.recovery-password',
+		modalCloseButtonSelector: ['.modal-close__btn', '.modal-recovery__btn'],
+		modalWrapperSelector: '.modal-overlay',
+	})
+
+	const modalMessages = new modalMessage({
+		modalWindowSelector: '.modal-message',
+		modalOpenButtonSelector: '.modal-recovery__btn',
+		modalCloseButtonSelector: ['.modal-close__btn', '.modal-message__btn'],
+		modalWrapperSelector: '.modal-overlay',
+		formId: 'recovery-form',
 	})
 
 	const stickyHeader = new StickyHeader({

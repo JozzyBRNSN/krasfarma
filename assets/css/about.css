@@ -292,7 +292,7 @@
 
 .about-history__timeline::-webkit-scrollbar-thumb {
 	cursor: pointer;
-	width: 6px;
+	width: 60px;
 	height: 32px;
 	background-color: #2d97c1;
 	border-radius: 30px;
@@ -659,7 +659,6 @@
 	content: url(../../assets/img/text_end.svg);
 	align-self: flex-end;
 	position: relative;
-	right: 60px;
 	top: 10px;
 }
 
@@ -922,6 +921,10 @@
 	word-break: break-word;
 }
 
+.team-vacancy__item-title span {
+	white-space: nowrap;
+}
+
 .more-details__btn {
 	transition: background 1s ease;
 }
@@ -1079,8 +1082,6 @@
 .about-wrapper__content {
 	position: absolute;
 	width: 590px;
-	margin-left: 15%;
-	top: 10%;
 	background-blend-mode: color;
 	background: #1f7aabd9;
 	background-blend-mode: screen;
@@ -1091,6 +1092,7 @@
 	backdrop-filter: blur(7px);
 	border-left: 2px solid #57d0eb;
 	padding: 10px 20px 20px 40px;
+	margin: 4% 0 5% 15%;
 }
 
 .about-wrapper__list {
@@ -1395,7 +1397,6 @@
 
 	.about-wrapper__content {
 		margin-left: 0;
-		top: 14%;
 	}
 
 	.about-wrapper__item {
@@ -1430,7 +1431,7 @@
 	}
 
 	.about-wrapper__content {
-		margin: 0 50px;
+		margin: 10% 50px;
 		width: auto;
 	}
 
@@ -1500,7 +1501,7 @@
 	}
 
 	.about-wrapper__content {
-		margin: 0 20px;
+		margin: 10% 20px;
 	}
 }
 
@@ -1592,6 +1593,10 @@
 		font-size: 16px;
 	}
 
+	.section-header {
+		gap: 10px;
+	}
+
 	.about-mission__popup-text {
 		width: 100%;
 	}
@@ -1622,10 +1627,45 @@
 	}
 
 	.about-wrapper__content {
-		top: 5%;
+		margin: 5% 10px;
 	}
 
 	.about-wrapper__text {
 		font-size: 12px;
+	}
+
+	.management-content {
+		margin: 60px 0 150px;
+	}
+
+	.management-content__item-name {
+		font-size: 20px;
+	}
+
+	.management-content__item-title {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 379px) {
+	.section-title {
+		font-size: 7vw;
+	}
+
+	.link-text {
+		font-size: 14px;
+	}
+
+	.team-vacancy__item-title {
+		font-size: 18px;
+	}
+
+	.vacancy-popup__titles,
+	.vacancy-popup__content {
+		grid-template-columns: 130px 1fr;
+	}
+
+	.about-wrapper__content {
+		margin: 2% 10px;
 	}
 }

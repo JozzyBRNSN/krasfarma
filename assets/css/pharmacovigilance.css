@@ -2,8 +2,22 @@
 	background-image: url(../../assets/img/cover.png);
 }
 
-.main-title {
-	width: 70%;
+@media (max-width: 860px) {
+	.main-title {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 585px) {
+	.main-title {
+		left: 80px;
+	}
+}
+
+@media (max-width: 425px) {
+	.main-title {
+		font-size: 24px;
+	}
 }
 
 .container {
