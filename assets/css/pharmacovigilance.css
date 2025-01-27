@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .main-cover {
 	background-image: url(../../assets/img/cover.png);
 }
@@ -175,3 +176,182 @@
 		top: -1230px;
 	}
 }
+=======
+.main-cover {
+	background-image: url(../../assets/img/cover.png);
+}
+
+@media (max-width: 860px) {
+	.main-title {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 585px) {
+	.main-title {
+		left: 80px;
+	}
+}
+
+@media (max-width: 425px) {
+	.main-title {
+		font-size: 24px;
+	}
+}
+
+.container {
+	overflow: hidden;
+}
+
+.title-date {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	font-family: 'Source Sans 3';
+	font-size: 18px;
+	font-weight: 700;
+	color: #ff781f;
+	width: 126px;
+	height: 35px;
+	background-color: #1d1934;
+}
+
+.title-date::before {
+	content: url(../../assets/img/timer.svg);
+	padding-top: 3px;
+}
+
+.main-about {
+	margin: 0;
+}
+
+.main-about__content {
+	display: flex;
+	margin: 0 0 100px;
+	gap: 40px;
+}
+
+@media (max-width: 810px) {
+	.main-about__content {
+		gap: 20px;
+	}
+}
+
+.main-about__links {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0;
+}
+
+.main-about__img {
+	width: 360px;
+	height: 240px;
+	border-left: 2px solid #4f538c;
+	margin: 0;
+}
+
+@media (max-width: 810px) {
+	.main-about__img {
+		width: 229px;
+	}
+}
+
+@media (max-width: 630px) {
+	.main-about__img {
+		width: 100%;
+	}
+}
+
+.main-about__text--desktop {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
+
+.main-about__text--mobile {
+	display: none;
+}
+
+.main-about__btn--mobile {
+	display: none;
+}
+
+@media (max-width: 630px) {
+	.main-about__text--desktop {
+		display: none;
+	}
+
+	.main-about__text--mobile {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+		margin: 20px 0;
+	}
+
+	.main-about__btn--mobile {
+		display: flex;
+	}
+}
+
+.main-about__quote {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	background-color: #ffffff;
+	padding: 20px 40px;
+	box-shadow: 0px 24px 64px -16px #a7bee840;
+}
+
+.quote__background {
+	position: absolute;
+	z-index: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.quote-text {
+	text-decoration: underline;
+	text-decoration-thickness: 0.5px;
+	font-style: italic;
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-weight: 500;
+	color: #4f538c;
+	z-index: 1;
+}
+
+.background-logo-item {
+	top: -650px;
+}
+
+@media (max-width: 768px) {
+	.background-logo-item {
+		top: -970px;
+	}
+}
+
+@media (max-width: 550px) {
+	.background-logo-item {
+		width: 80%;
+	}
+}
+
+.background-figure--first-item {
+	top: -1572px;
+}
+
+@media (max-width: 768px) {
+	.background-figure--first-item {
+		top: -970px;
+	}
+}
+
+@media (max-width: 550px) {
+	.background-figure--first-item {
+		top: -1230px;
+	}
+}
+>>>>>>> 22f5275be5b719230b17afc2b9a6c4aaa38eb1ee

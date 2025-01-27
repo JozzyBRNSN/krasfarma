@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		modalOpenButtonSelector: '.header-registration__btn',
 		modalCloseButtonSelector: '.modal-close__btn',
 		modalWrapperSelector: '.modal-overlay',
+		phoneInputSelector: '.modal-input__phone',
 	})
 
 	const modalAutorization = new modalWindow({

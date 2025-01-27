@@ -248,6 +248,9 @@
 }
 
 @media (max-width: 450px) {
+	.contacts {
+		margin: 0 0 100px;
+	}
 	.contacts-communications__labels {
 		flex-direction: column;
 	}

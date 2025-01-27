@@ -22,10 +22,16 @@
 	pointer-events: none;
 }
 
-.modal-recovery,
-.modal-message {
+.modal-recovery {
 	width: 353px;
 	height: 180px;
+	top: 30%;
+	gap: 50px;
+}
+
+.modal-message {
+	width: 353px;
+	height: 200px;
 	top: 30%;
 	gap: 50px;
 }
@@ -329,13 +335,28 @@
 	}
 
 	.modal-registration__btn,
-	.modal-autorization__btn {
+	.modal-autorization__btn,
+	.modal-recovery__btn,
+	.modal-message__btn {
 		width: 100%;
 	}
 
 	.modal-autorization {
 		width: 280px;
 		height: 280px;
+	}
+
+	.modal-recovery,
+	.modal-message {
+		width: 280px;
+	}
+
+	.modal-message {
+		height: 222px;
+	}
+
+	.modal-message .modal__title {
+		margin-left: 20px;
 	}
 
 	.modal-warning {
