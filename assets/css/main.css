@@ -19,9 +19,8 @@
 
 .cover-slider {
 	position: absolute;
-	width: 1440px;
 	height: 480px;
-	max-width: 100%;
+	width: 100%;
 	overflow: hidden;
 }
 

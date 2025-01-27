@@ -10,7 +10,6 @@ body {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	max-width: 1440px;
 }
 
 .hidden {
@@ -35,6 +34,10 @@ img {
 	overflow: hidden;
 }
 
+.main-container {
+	max-width: 1440px;
+}
+
 .container {
 	margin: 0 140px;
 }
@@ -50,6 +53,15 @@ img {
 		margin: 0 20px;
 	}
 }
+
+@media (min-width: 1440px) {
+	.main-container,
+	.footer-container {
+		margin: 0 auto;
+		max-width: 1160px;
+	}
+}
+
 
 .overlay {
 	position: absolute;
