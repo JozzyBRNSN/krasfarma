@@ -191,6 +191,9 @@
 }
 
 .main-news__pages-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	font-family: 'Source Sans 3';
 	font-size: 20px;
 	font-weight: 700;
@@ -208,7 +211,7 @@
 	}
 }
 
-.main-news__pages-btn:focus {
+.main-news__pages-btn:hover {
 	background-color: #53d2eb;
 }
 
@@ -222,7 +225,7 @@
 .main-news__pages .next {
 	border-bottom: 6px solid #ffffff;
 	border-left: 6px solid #ffffff;
-	margin-right: 20px;
+	margin-right: 26px;
 }
 
 .background-figure--first-item {

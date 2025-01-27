@@ -132,6 +132,10 @@
 	}
 }
 
+.main-about__btn {
+	display: flex;
+}
+
 .main-about__btn,
 .main-about__btn--mobile {
 	margin-top: 60px;

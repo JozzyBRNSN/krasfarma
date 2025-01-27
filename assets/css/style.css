@@ -186,6 +186,8 @@ img {
 }
 
 .more-details__btn {
+	display: flex;
+	align-items: center;
 	position: relative;
 	overflow: hidden;
 	min-width: 64px;
