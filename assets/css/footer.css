@@ -183,3 +183,7 @@
 	color: #4f538c;
 	margin: 0;
 }
+
+.details-hidden {
+	display: none;
+}
