@@ -13,12 +13,25 @@
 	background-color: inherit;
 }
 
-.main-title {
+.main-products__title {
 	height: auto;
+	position: relative;
+	font-family: 'Geologica';
+	font-size: 80px;
+	font-weight: 700;
+	color: #ffffff;
+	top: 131px;
+	margin: 0;
+}
+
+@media (max-width: 1440px) {
+	.main-products__title {
+		left: 140px;
+	}
 }
 
 @media (max-width: 768px) {
-	.main-title {
+	.main-products__title {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -26,31 +39,31 @@
 }
 
 @media (max-width: 721px) {
-	.main-title {
+	.main-products__title {
 		left: 80px;
 	}
 }
 
-@media (max-width: 768px) {
-	.main-title {
-		font-size: 52px;
+@media (max-width: 680px) {
+	.main-products__title {
+		font-size: 11.5vw;
 	}
 }
 
 @media (max-width: 570px) {
-	.main-title {
-		font-size: 42px;
+	.main-products__title {
+		top: 80px;
 	}
 }
 
 @media (max-width: 425px) {
-	.main-title {
+	.main-products__title {
 		font-size: 24px;
 	}
 }
 
 @media (max-width: 380px) {
-	.main-title {
+	.main-products__title {
 		left: 0;
 		margin: 0 20px;
 	}
@@ -74,11 +87,11 @@
 
 @media (max-width: 680px) {
 	.main-subtitle {
-		font-size: 32px;
+		font-size: 5.5vw;
 	}
 
 	.main-subtitle p {
-		font-size: 36px;
+		font-size: 6vw;
 	}
 }
 

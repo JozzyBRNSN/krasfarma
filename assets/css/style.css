@@ -62,7 +62,6 @@ img {
 	}
 }
 
-
 .overlay {
 	position: absolute;
 	top: 0;
@@ -72,6 +71,8 @@ img {
 	opacity: 0;
 	background-color: rgba(45, 151, 193);
 	transition: all 0.5s ease;
+	mix-blend-mode: color;
+	filter: saturate(200%);
 }
 
 .background-logo,
@@ -322,6 +323,7 @@ img {
 	width: 100%;
 	height: 100%;
 	background-color: #0f074dbd;
+	mix-blend-mode: darken;
 }
 
 .main-action {
@@ -420,28 +422,6 @@ img {
 	min-width: 1000px;
 	background-image: linear-gradient(to left, #ffffff -25%, #332e59 100%);
 	background-clip: text;
-}
-
-.main-title {
-	position: relative;
-	font-family: 'Geologica';
-	font-size: 80px;
-	font-weight: 700;
-	color: #ffffff;
-	height: 75px;
-	top: 131px;
-	left: 140px;
-	margin: 0;
-	width: 80%;
-}
-
-@media (max-width: 500px) {
-	.main-title {
-		font-size: 24px;
-		top: 80px;
-		left: 82px;
-		width: 158px;
-	}
 }
 
 .main-aside {

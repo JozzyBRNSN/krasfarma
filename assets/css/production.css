@@ -2,20 +2,50 @@
 	background-image: url(../../assets/img/production.png);
 }
 
+.main-production__title {
+	position: relative;
+	font-family: 'Geologica';
+	font-size: 80px;
+	font-weight: 700;
+	color: #ffffff;
+	height: 75px;
+	top: 131px;
+	margin: 0;
+}
+
+@media (max-width: 1440px) {
+	.main-production__title {
+		left: 140px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.main-production__title {
+		font-size: 7vw;
+	}
+}
+
 @media (max-width: 768px) {
-	.main-title {
+	.main-production__title {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 680px) {
+	.main-production__title {
 		font-size: 40px;
 	}
 }
 
 @media (max-width: 585px) {
-	.main-title {
+	.main-production__title {
 		left: 80px;
+		top: 80px;
 	}
 }
 
 @media (max-width: 425px) {
-	.main-title {
+	.main-production__title {
 		font-size: 24px;
 	}
 }

@@ -9,36 +9,35 @@
 	}
 }
 
-.main-title {
+.main-product__title {
 	font-weight: 800;
 	line-height: 1;
 	left: 38%;
 	top: 60px;
 	width: 0;
 	font-size: 60px;
+	position: relative;
+	font-family: 'Geologica';
+	color: #ffffff;
+	height: 75px;
+	margin: 0;
 }
 
 @media (max-width: 900px) {
-	.main-title {
+	.main-product__title {
 		left: 140px;
 	}
 }
 
 @media (max-width: 690px) {
-	.main-title {
+	.main-product__title {
 		left: 80px;
-		font-size: 48px;
-	}
-}
-
-@media (max-width: 550px) {
-	.main-title {
-		font-size: 36px;
+		font-size: 8vw;
 	}
 }
 
 @media (max-width: 425px) {
-	.main-title {
+	.main-product__title {
 		font-size: 24px;
 	}
 }

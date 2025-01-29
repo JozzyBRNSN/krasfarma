@@ -8,15 +8,48 @@
 	}
 }
 
+.main-confidentiality__title {
+	display: table-caption;
+	position: relative;
+	font-family: 'Geologica';
+	font-size: 80px;
+	font-weight: 500;
+	color: #ffffff;
+	height: 75px;
+	top: 131px;
+	margin: 0;
+}
+
+@media (max-width: 1440px) {
+	.main-confidentiality__title {
+		left: 140px;
+	}
+}
+
 @media (max-width: 768px) {
-	.main-title {
-		font-size: 32px;
+	.main-confidentiality__title {
+		font-size: 60px;
+	}
+}
+
+@media (max-width: 680px) {
+	.main-confidentiality__title {
+		font-size: 9vw;
 	}
 }
 
 @media (max-width: 585px) {
-	.main-title {
+	.main-confidentiality__title {
 		left: 80px;
+	}
+}
+
+@media (max-width: 425px) {
+	.main-confidentiality__title {
+		font-size: 24px;
+		top: 80px;
+		left: 82px;
+		width: 158px;
 	}
 }
 
