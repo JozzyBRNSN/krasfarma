@@ -137,7 +137,12 @@
 .next {
 	border-bottom: 6px solid #ffffff;
 	border-left: 6px solid #ffffff;
-	margin-right: 20px;
+	margin-right: 25px;
+}
+
+.arrow {
+	width: 8px;
+	height: 8px;
 }
 
 .more-details {

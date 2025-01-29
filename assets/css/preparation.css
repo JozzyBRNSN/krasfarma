@@ -290,13 +290,21 @@
 	}
 }
 
-.main-text {
+.preparation-about__text {
+	font-family: 'Source Sans 3';
+	font-size: 20px;
 	font-weight: 500;
+	line-height: 1.5;
+	color: #2f2f47;
 }
 
 .preparation-about__text-title {
+	font-family: 'Source Sans 3';
+	font-size: 20px;
 	font-weight: 700;
+	line-height: 1.5;
 	color: #7481bf;
+	margin: 0;
 }
 
 .preparation-description {
@@ -370,6 +378,10 @@
 	align-items: center;
 	justify-content: center;
 	height: 40px;
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.5;
 }
 
 @media (max-width: 890px) {
@@ -439,7 +451,6 @@
 		border-bottom: none;
 	}
 }
-
 
 .preparation-other__header--mobile .preparation-other__title {
 	text-transform: uppercase;

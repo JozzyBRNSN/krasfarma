@@ -275,7 +275,7 @@ img {
 	border-bottom: 2px solid #ffffff;
 	border-left: 2px solid #ffffff;
 	transform: rotate(-135deg);
-	margin-right: 22px;
+	margin-right: 28px;
 }
 
 .next--bold {
@@ -371,6 +371,11 @@ img {
 	margin: 0;
 }
 
+.main-links__container {
+	display: flex;
+	justify-content: end;
+}
+
 .main-links {
 	display: flex;
 	align-items: center;
@@ -415,19 +420,6 @@ img {
 	min-width: 1000px;
 	background-image: linear-gradient(to left, #ffffff -25%, #332e59 100%);
 	background-clip: text;
-}
-
-.main-text {
-	font-family: 'Source Sans 3';
-	font-size: 20px;
-	font-weight: 400;
-	color: #2f2f47;
-	line-height: 1.5;
-}
-
-.main-text b {
-	font-weight: 700;
-	color: #2d97c1;
 }
 
 .main-title {
