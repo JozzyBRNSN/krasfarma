@@ -9,7 +9,7 @@ class ProductSlider {
 		this.cards = document.querySelectorAll(cardsSelector)
 		this.totalCards = this.cards.length
 		this.cardWidth = 275
-		this.cardMargin = 20
+		this.cardMargin = 13
 		this.currentIndex = 0
 
 		this.prevButton = document.querySelector(prevButtonSelector)
@@ -23,17 +23,13 @@ class ProductSlider {
 
 		this.startX = 0
 		this.endX = 0
-		this.startY = 0
-		this.endY = 0
-		this.sliderContainer.addEventListener('touchstart', e =>
-			this.handleTouchStart(e)
-		)
-		this.sliderContainer.addEventListener('touchmove', e =>
-			this.handleTouchMove(e)
-		)
-		this.sliderContainer.addEventListener('touchend', () =>
-			this.handleTouchEnd()
-		)
+
+		this.handleTouchStart = this.handleTouchStart.bind(this)
+		this.handleTouchMove = this.handleTouchMove.bind(this)
+		this.handleTouchEnd = this.handleTouchEnd.bind(this)
+
+		this.setupResizeObserver()
+		this.updateSwipeListeners()
 	}
 
 	moveToPrevious() {
@@ -44,10 +40,7 @@ class ProductSlider {
 	}
 
 	moveToNext() {
-		if (
-			this.currentIndex <
-			Math.ceil((this.totalCards - this.cardsToShow) / (this.cardsToShow - 1))
-		) {
+		if (this.currentIndex < this.totalCards - 1) {
 			this.currentIndex++
 			this.updateSliderPosition()
 		}
@@ -61,51 +54,57 @@ class ProductSlider {
 	}
 
 	updateButtonState() {
-		if (window.innerWidth > 1440) this.cardsToShow = 4
-		if (window.innerWidth < 1440 && window.innerWidth >= 425)
-			this.cardsToShow = 3
-		if (window.innerWidth < 425) {
-			this.prevButton.style.display = 'none'
-			this.nextButton.style.display = 'none'
-			this.cardsToShow = 1
-		}
-		if (window.innerWidth < 945) this.cardsToShow = 2
-		if (window.innerWidth < 610) this.cardsToShow = 1
-
 		this.prevButton.disabled = this.currentIndex === 0
-
-		const maxIndex = Math.ceil(
-			(this.totalCards - this.cardsToShow) / (this.cardsToShow - 1)
-		)
-		const minIndex = Math.ceil(
-			(this.totalCards - this.cardsToShow) / this.cardsToShow
-		)
-		this.nextButton.disabled = this.currentIndex >= maxIndex
-		if (this.cardsToShow === 1)
-			this.nextButton.disabled = this.currentIndex >= minIndex
+		this.nextButton.disabled = this.currentIndex >= this.totalCards - 1
 	}
 
 	handleTouchStart(e) {
 		this.startX = e.touches[0].clientX
-		this.startY = e.touches[0].clientY
 	}
 
 	handleTouchMove(e) {
 		this.endX = e.touches[0].clientX
-		this.endY = e.touches[0].clientY
 	}
 
 	handleTouchEnd() {
 		const deltaX = this.endX - this.startX
-		const deltaY = this.endY - this.startY
 
-
-		if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+		if (Math.abs(deltaX) > 50) {
 			if (deltaX < 0) {
-				this.moveToNext() 
+				this.moveToNext()
 			} else {
-				this.moveToPrevious() 
+				this.moveToPrevious()
 			}
+		}
+	}
+
+	setupSwipeListeners() {
+		this.sliderContainer.addEventListener('touchstart', this.handleTouchStart)
+		this.sliderContainer.addEventListener('touchmove', this.handleTouchMove)
+		this.sliderContainer.addEventListener('touchend', this.handleTouchEnd)
+	}
+
+	removeSwipeListeners() {
+		this.sliderContainer.removeEventListener(
+			'touchstart',
+			this.handleTouchStart
+		)
+		this.sliderContainer.removeEventListener('touchmove', this.handleTouchMove)
+		this.sliderContainer.removeEventListener('touchend', this.handleTouchEnd)
+	}
+
+	setupResizeObserver() {
+		const resizeObserver = new ResizeObserver(() => {
+			this.updateSwipeListeners()
+		})
+		resizeObserver.observe(document.body)
+	}
+
+	updateSwipeListeners() {
+		if (window.innerWidth <= 425) {
+			this.setupSwipeListeners()
+		} else {
+			this.removeSwipeListeners()
 		}
 	}
 }
