@@ -247,19 +247,16 @@
 @media (max-width: 865px) {
 	.contacts-content {
 		gap: 10px;
-	}
-
-	.contacts-map {
-		height: 240px;
+		flex-direction: column;
 	}
 
 	.contacts-map iframe {
-		width: 229px;
-		height: 240px;
+		width: 100%;
+		height: 280px;
 	}
 
 	.contacts-title {
-		margin-left: 239px;
+		margin-left: 0;
 	}
 }
 
@@ -271,17 +268,11 @@
 }
 
 @media (max-width: 678px) {
-	.contacts-content {
-		flex-direction: column;
-	}
-
-	.contacts-map iframe {
-		width: 100%;
+	.contacts-map {
 		height: 240px;
 	}
-
-	.contacts-title {
-		margin-left: 0;
+	.contacts-map iframe {
+		height: 240px;
 	}
 
 	.main-title {
