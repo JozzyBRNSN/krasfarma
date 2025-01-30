@@ -26,16 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	const modalRecovery = new ModalRecovery({
 		modalWindowSelector: '.modal-recovery',
 		modalOpenButtonSelector: '.recovery-password',
-		modalCloseButtonSelector: ['.modal-close__btn', '.modal-recovery__btn'],
+		modalCloseButtonSelector: '.modal-close__btn',
 		modalWrapperSelector: '.modal-overlay',
+		nextModalSelector: '.modal-message'
 	})
 
 	const modalMessages = new modalMessage({
 		modalWindowSelector: '.modal-message',
-		modalOpenButtonSelector: '.modal-recovery__btn',
 		modalCloseButtonSelector: ['.modal-close__btn', '.modal-message__btn'],
 		modalWrapperSelector: '.modal-overlay',
-		formId: 'recovery-form',
+		formId: '#recovery-form',
 	})
 
 	const stickyHeader = new StickyHeader({
