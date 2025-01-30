@@ -4166,10 +4166,19 @@
 	Object.defineProperty(exports, '__esModule', { value: true })
 
 	const phoneInput = document.getElementById('phoneInput')
+
 	const maskOption = {
 		mask: '+{7}(000)000-00-00',
 		lazy: false,
 	}
 
 	const mask = new IMask(phoneInput, maskOption)
+
+	phoneInput.addEventListener('paste', event => {
+		const clipboardData = event.clipboardData || window.clipboardData
+		const pastedData = clipboardData.getData('Text')
+		const cleanedData = pastedData.replace(/\D/g, '')
+		event.preventDefault()
+		mask.value = cleanedData
+	})
 })
