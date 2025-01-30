@@ -200,9 +200,6 @@
 }
 
 .modal-label__checkbox input:checked ~ .modal-checkbox {
-}
-
-.modal-label__checkbox input:checked ~ .modal-checkbox {
 	background-color: #ffe9cf;
 	border: 2px solid #ff781f;
 	transition: all 0.3s ease;

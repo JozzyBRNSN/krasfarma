@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		modalOpenButtonSelector: '.header-registration__btn',
 		modalCloseButtonSelector: '.modal-close__btn',
 		modalWrapperSelector: '.modal-overlay',
+		submitButtonSelector: '.modal-registration__btn',
+		checkboxSelector: '.hidden-checkbox',
+		phoneInputSelector: '#phone',
 	})
 
 	const modalAuthorization = new ModalAuthorization({
@@ -28,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		modalOpenButtonSelector: '.recovery-password',
 		modalCloseButtonSelector: '.modal-close__btn',
 		modalWrapperSelector: '.modal-overlay',
-		nextModalSelector: '.modal-message'
+		nextModalSelector: '.modal-message',
 	})
 
 	const modalMessages = new modalMessage({
@@ -78,4 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		addressElementsSelector: '.footer-contacts__address p',
 		phoneLinksSelector: '.footer-phone__link',
 	})
+
+
 })

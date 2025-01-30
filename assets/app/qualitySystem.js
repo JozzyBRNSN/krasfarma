@@ -4,6 +4,8 @@ import PopupArticle from './modules/popupArticle.js'
 import ContactUpdater from './modules/footerAddress.js'
 import ModalRegistration from './modules/modalRegistration.js'
 import ModalAuthorization from './modules/modalAuthorization.js'
+import ModalRecovery from './modules/modalRecovery.js'
+import modalMessage from './modules/modalMessage.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 	const stickyHeader = new StickyHeader({
@@ -16,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		modalOpenButtonSelector: '.header-registration__btn',
 		modalCloseButtonSelector: '.modal-registration__close-btn',
 		modalWrapperSelector: '.modal-overlay',
+		submitButtonSelector: '.modal-registration__btn',
+		checkboxSelector: '.hidden-checkbox',
 	})
 
 	const modalAuthorization = new ModalAuthorization({
@@ -23,6 +27,21 @@ document.addEventListener('DOMContentLoaded', () => {
 		modalOpenButtonSelector: '.header-entrance__btn',
 		modalCloseButtonSelector: '.modal-authorization__close-btn',
 		modalWrapperSelector: '.modal-overlay',
+	})
+
+	const modalRecovery = new ModalRecovery({
+		modalWindowSelector: '.modal-recovery',
+		modalOpenButtonSelector: '.recovery-password',
+		modalCloseButtonSelector: '.modal-close__btn',
+		modalWrapperSelector: '.modal-overlay',
+		nextModalSelector: '.modal-message',
+	})
+
+	const modalMessages = new modalMessage({
+		modalWindowSelector: '.modal-message',
+		modalCloseButtonSelector: ['.modal-close__btn', '.modal-message__btn'],
+		modalWrapperSelector: '.modal-overlay',
+		formId: '#recovery-form',
 	})
 
 	const popupHeader = new PopupHeader({
@@ -41,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		'.quality-popup',
 		'.main-quality__item-content'
 	)
-	
+
 	const contactUpdater = new ContactUpdater({
 		cityElementsSelector: '.places-item',
 		addressElementsSelector: '.footer-contacts__address p',
