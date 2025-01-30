@@ -1,7 +1,8 @@
 import StickyHeader from './modules/headerSticky.js'
 import PopupHeader from './modules/popupHeader.js'
 import ContactUpdater from './modules/footerAddress.js'
-import modalWindow from './modules/modalWindow.js'
+import ModalRegistration from './modules/modalRegistration.js'
+import ModalAuthorization from './modules/modalAuthorization.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 	const stickyHeader = new StickyHeader({
@@ -9,17 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		headerSelector: '.header',
 	})
 
-	const modalRegistration = new modalWindow({
+	const modalRegistration = new ModalRegistration({
 		modalWindowSelector: '.modal-registration',
 		modalOpenButtonSelector: '.header-registration__btn',
 		modalCloseButtonSelector: '.modal-registration__close-btn',
 		modalWrapperSelector: '.modal-overlay',
 	})
 
-	const modalAutorization = new modalWindow({
-		modalWindowSelector: '.modal-autorization',
+	const modalAuthorization = new ModalAuthorization({
+		modalWindowSelector: '.modal-authorization',
 		modalOpenButtonSelector: '.header-entrance__btn',
-		modalCloseButtonSelector: '.modal-autorization__close-btn',
+		modalCloseButtonSelector: '.modal-authorization__close-btn',
 		modalWrapperSelector: '.modal-overlay',
 	})
 

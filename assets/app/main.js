@@ -3,26 +3,27 @@ import PopupHeader from './modules/popupHeader.js'
 import CoverSlider from './modules/coverSlider.js'
 import ProductSlider from './modules/productSlider.js'
 import ContactUpdater from './modules/footerAddress.js'
-import modalWindow from './modules/modalWindow.js'
+import ModalRegistration from './modules/modalRegistration.js'
+import ModalAuthorization from './modules/modalAuthorization.js'
+import ModalRecovery from './modules/modalRecovery.js'
 import modalMessage from './modules/modalMessage.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-	const modalRegistration = new modalWindow({
+	const modalRegistration = new ModalRegistration({
 		modalWindowSelector: '.modal-registration',
 		modalOpenButtonSelector: '.header-registration__btn',
 		modalCloseButtonSelector: '.modal-close__btn',
 		modalWrapperSelector: '.modal-overlay',
-		phoneInputSelector: '.modal-input__phone',
 	})
 
-	const modalAutorization = new modalWindow({
-		modalWindowSelector: '.modal-autorization',
+	const modalAuthorization = new ModalAuthorization({
+		modalWindowSelector: '.modal-authorization',
 		modalOpenButtonSelector: '.header-entrance__btn',
 		modalCloseButtonSelector: ['.recovery-password', '.modal-close__btn'],
 		modalWrapperSelector: '.modal-overlay',
 	})
 
-	const modalRecovery = new modalWindow({
+	const modalRecovery = new ModalRecovery({
 		modalWindowSelector: '.modal-recovery',
 		modalOpenButtonSelector: '.recovery-password',
 		modalCloseButtonSelector: ['.modal-close__btn', '.modal-recovery__btn'],

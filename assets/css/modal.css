@@ -4,7 +4,7 @@
 }
 
 .modal-registration,
-.modal-autorization,
+.modal-authorization,
 .modal-warning,
 .modal-recovery,
 .modal-message {
@@ -42,7 +42,7 @@
 	top: 20%;
 }
 
-.modal-autorization {
+.modal-authorization {
 	width: 353px;
 	height: 284px;
 	top: 28%;
@@ -55,7 +55,7 @@
 }
 
 .modal-registration.open-modal,
-.modal-autorization.open-modal,
+.modal-authorization.open-modal,
 .modal-warning.open-modal,
 .modal-recovery.open-modal,
 .modal-message.send-message {
@@ -250,7 +250,7 @@
 }
 
 .modal-registration__btn,
-.modal-autorization__btn,
+.modal-authorization__btn,
 .modal-сonfirmation__btn,
 .modal-back__btn,
 .modal-recovery__btn,
@@ -285,7 +285,7 @@
 	width: 160px;
 }
 
-.modal-autorization__btn {
+.modal-authorization__btn {
 	width: 106px;
 }
 
@@ -294,7 +294,7 @@
 }
 
 .modal-registration__btn::after,
-.modal-autorization__btn::after,
+.modal-authorization__btn::after,
 .modal-сonfirmation__btn::after {
 	content: '';
 	display: inline-block;
@@ -335,13 +335,13 @@
 	}
 
 	.modal-registration__btn,
-	.modal-autorization__btn,
+	.modal-authorization__btn,
 	.modal-recovery__btn,
 	.modal-message__btn {
 		width: 100%;
 	}
 
-	.modal-autorization {
+	.modal-authorization {
 		width: 280px;
 		height: 280px;
 	}
