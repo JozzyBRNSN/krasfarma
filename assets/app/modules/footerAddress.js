@@ -5,10 +5,9 @@ class ContactUpdater {
 		this.phoneLinks = document.querySelectorAll(phoneLinksSelector)
 
 		this.init()
-		this.showDefaultContactInfo() // Показываем информацию для Москвы при загрузке
+		this.showDefaultContactInfo() 
 	}
 
-	// Инициализация событий для элементов выбора городов
 	init() {
 		this.citySelectionElements.forEach(cityElement => {
 			cityElement.addEventListener('click', () => {
@@ -17,58 +16,47 @@ class ContactUpdater {
 		})
 	}
 
-	// Обновление информации о контактах в зависимости от выбранного города
+
 	updateContactInfo(cityElement) {
-		const cityId = cityElement.id // Получаем идентификатор выбранного города
-
-		// Скрываем все адреса и телефоны
+		const cityId = cityElement.id 
 		this.hideAllContactInfo()
-
-		// Отображаем адрес и телефон для выбранного города
 		this.showContactInfoForCity(cityId)
-
-		// Обновляем цвет текста выбранного города
 		this.updateCityTextColor(cityElement)
 	}
 
-	// Скрытие всех адресов и телефонов
 	hideAllContactInfo() {
 		this.addressElements.forEach(address => {
-			address.classList.add('details-hidden') // Скрываем адрес
+			address.classList.add('details-hidden')
 		})
 		this.phoneLinks.forEach(link => {
-			link.classList.add('details-hidden') // Скрываем телефон
+			link.classList.add('details-hidden')
 		})
 	}
 
-	// Отображение адреса и телефона для конкретного города
 	showContactInfoForCity(cityId) {
 		const selectedAddress = document.querySelector(`#${cityId}-address`)
 		const selectedPhone = document.querySelector(`#${cityId}-phone`)
 
 		if (selectedAddress) {
-			selectedAddress.classList.remove('details-hidden') // Показываем адрес
+			selectedAddress.classList.remove('details-hidden')
 		}
 		if (selectedPhone) {
-			selectedPhone.classList.remove('details-hidden') // Показываем телефон
+			selectedPhone.classList.remove('details-hidden')
 		}
 	}
 
-	// Обновление цвета текста для выбранного города
 	updateCityTextColor(selectedCity) {
 		this.citySelectionElements.forEach(cityElement => {
-			cityElement.style.color = '' // Сбрасываем цвет для всех городов
+			cityElement.style.color = ''
 		})
-		selectedCity.style.color = 'white' // Устанавливаем белый цвет для выбранного города
+		selectedCity.style.color = 'white'
 	}
 
-	// Показываем адрес и телефон для Москвы по умолчанию
 	showDefaultContactInfo() {
 		const defaultCityId = 'moscow'
 		this.showContactInfoForCity(defaultCityId)
-		this.updateCityTextColor(document.getElementById(defaultCityId)) // Устанавливаем цвет для Москвы
+		this.updateCityTextColor(document.getElementById(defaultCityId)) 
 	}
 }
 
-// Экспортируем класс
 export default ContactUpdater
