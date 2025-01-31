@@ -24,27 +24,23 @@
 
 .modal-recovery {
 	width: 353px;
-	height: 180px;
 	top: 30%;
 	gap: 50px;
 }
 
 .modal-message {
 	width: 353px;
-	height: 200px;
 	top: 30%;
 	gap: 50px;
 }
 
 .modal-registration {
 	width: 384px;
-	height: 454px;
 	top: 20%;
 }
 
 .modal-authorization {
 	width: 353px;
-	height: 284px;
 	top: 28%;
 }
 
@@ -320,7 +316,6 @@ input[type='email'] {
 @media (max-width: 768px) {
 	.modal-registration {
 		width: 280px;
-		height: 438px;
 		top: 20%;
 	}
 
@@ -343,16 +338,11 @@ input[type='email'] {
 
 	.modal-authorization {
 		width: 280px;
-		height: 280px;
 	}
 
 	.modal-recovery,
 	.modal-message {
 		width: 280px;
-	}
-
-	.modal-message {
-		height: 222px;
 	}
 
 	.modal-message .modal__title {
