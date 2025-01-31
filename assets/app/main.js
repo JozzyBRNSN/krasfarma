@@ -9,6 +9,11 @@ import ModalRecovery from './modules/modalRecovery.js'
 import modalMessage from './modules/modalMessage.js'
 
 document.addEventListener('DOMContentLoaded', () => {
+	const stickyHeader = new StickyHeader({
+		stickyPointSelector: '.sticky',
+		headerSelector: '.header',
+	})
+
 	const modalRegistration = new ModalRegistration({
 		modalWindowSelector: '.modal-registration',
 		modalOpenButtonSelector: '.header-registration__btn',
@@ -16,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		modalWrapperSelector: '.modal-overlay',
 		submitButtonSelector: '.modal-registration__btn',
 		checkboxSelector: '.hidden-checkbox',
-		phoneInputSelector: '#phone',
 	})
 
 	const modalAuthorization = new ModalAuthorization({
@@ -39,11 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		modalCloseButtonSelector: ['.modal-close__btn', '.modal-message__btn'],
 		modalWrapperSelector: '.modal-overlay',
 		formId: '#recovery-form',
-	})
-
-	const stickyHeader = new StickyHeader({
-		stickyPointSelector: '.sticky',
-		headerSelector: '.header',
 	})
 
 	const popupHeader = new PopupHeader({
@@ -81,6 +80,4 @@ document.addEventListener('DOMContentLoaded', () => {
 		addressElementsSelector: '.footer-contacts__address p',
 		phoneLinksSelector: '.footer-phone__link',
 	})
-
-
 })
