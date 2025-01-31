@@ -119,7 +119,7 @@ class ProductSlider {
 	}
 
 	updateSwipeListeners() {
-		if (window.innerWidth <= 425) {
+		if (window.innerWidth <= 1024) {
 			this.setupSwipeListeners()
 		} else {
 			this.removeSwipeListeners()
