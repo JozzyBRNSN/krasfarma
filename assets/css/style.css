@@ -378,6 +378,12 @@ img {
 	justify-content: end;
 }
 
+@media (max-width: 500px) {
+	.main-links__container {
+		justify-content: start;
+	}
+}
+
 .main-links {
 	display: flex;
 	align-items: center;
@@ -385,7 +391,6 @@ img {
 	margin: 60px 0;
 	justify-content: flex-start;
 	width: 66%;
-	overflow: hidden;
 	align-self: flex-end;
 }
 
@@ -419,9 +424,15 @@ img {
 .main-links a:nth-child(5) {
 	color: transparent;
 	background: inherit;
-	min-width: 1000px;
-	background-image: linear-gradient(to left, #ffffff -25%, #332e59 100%);
+	background-image: linear-gradient(to left, #ffffff 240px, #332e59 500px);
 	background-clip: text;
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.main-links a:nth-child(5) {
+		background-image: linear-gradient(to left, #ffffff 120px, #332e59 500px);
+	}
 }
 
 .main-aside {

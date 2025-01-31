@@ -109,6 +109,14 @@
 	transition: width 0.2s ease-in-out;
 }
 
+input[type="search"] {
+	font-family: 'Source Sans 3';
+    font-size: 16px;
+    font-weight: 400;
+    color: #332e59;
+    line-height: 1.5;
+}
+
 input::placeholder {
 	font-family: 'Geologica';
 	font-size: 16px;
@@ -528,6 +536,12 @@ a {
 	border: none;
 	outline: none;
 	padding: 3.5px;
+	margin: 0;
+}
+
+.popup-item__btn {
+	display: flex;
+	align-items: center;
 }
 
 .popup-item__btn:hover .popup-more__btn {
