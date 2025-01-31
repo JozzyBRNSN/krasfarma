@@ -20,7 +20,7 @@
         <section class="modal-registration">
             <h2 class="modal__title">
                 Форма регистрации
-                <div class="modal-registration__close-btn">
+                <div class="modal-close__btn">
                     <span class="modal-close__btn-item"></span>
                     <span class="modal-close__btn-item"></span>
                 </div>
@@ -28,10 +28,10 @@
             <form class="modal-form" action="">
                 <input class="modal-input" type="text" id="username" name="username" placeholder="Ваше имя" required>
                 <input class="modal-input" type="email" id="email" name="email" placeholder="Ваш email" required>
-                <input class="modal-input" type="tel" id="phone" name="phone" placeholder="Ваш номер телефона" required>
+                <input class="modal-input" type="tel" id="phoneInput" name="phone" placeholder="Ваш номер телефона" required>
                 <input class="modal-input" type="text" id="youAddress" name="address" placeholder="Ваш адрес" required>
                 <label class="modal-label__checkbox" for="checkbox">
-                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <input class="hidden-checkbox" type="checkbox" class="checkbox" name="checkbox" id="checkbox">
                     <span class="modal-checkbox"></span>
                     Подтверждаю согласие на обработку персональных данных.
                 </label>
@@ -44,7 +44,7 @@
         <section class="modal-authorization">
             <h2 class="modal__title">
                 Форма авторизации
-                <div class="modal-authorization__close-btn">
+                <div class="modal-close__btn">
                     <span class="modal-close__btn-item"></span>
                     <span class="modal-close__btn-item"></span>
                 </div>
@@ -52,9 +52,8 @@
             <form class="modal-form" action="">
                 <input class="modal-input" type="email" id="email" name="email" placeholder="Ваш email" required>
                 <label class="modal-label__password" for="password">
-                    <input class="modal-input" type="password" id="password" name="password" placeholder="Ваш пароль"
-                        required>
-                    <p>Забыли пароль?</p>
+                    <input class="modal-input" type="password" id="password" name="password" placeholder="Ваш пароль" required>
+                    <a class="recovery-password">Забыли пароль?</a>
                 </label>
                 <button class="modal-authorization__btn">
                     Войти
@@ -64,17 +63,32 @@
         <section class="modal-recovery">
             <h2 class="modal__title">
                 Восстановление пароля
-                <div class="modal-recovery__close-btn">
+                <div class="modal-close__btn">
                     <span class="modal-close__btn-item"></span>
                     <span class="modal-close__btn-item"></span>
                 </div>
             </h2>
-            <form class="modal-form" action="">
-                <input class="modal-input" type="email" id="email" name="email" placeholder="Ваш email" required>
-                <button class="modal-registration__btn">
+            <form id="recovery-form" class="modal-form" action="">
+                <input class="modal-input recovery-input" type="email" id="email" name="email" placeholder="Ваш email" required>
+                <button class="modal-recovery__btn">
                     Отправить
                 </button>
             </form>
+        </section>
+        <section class="modal-message">
+            <h2 class="modal__title">
+                Восстановление пароля
+                <div class="modal-close__btn">
+                    <span class="modal-close__btn-item"></span>
+                    <span class="modal-close__btn-item"></span>
+                </div>
+            </h2>
+            <p class="modal-message__text">
+                Письмо отправлено на вашу почту!
+            </p>
+            <button class="modal-message__btn">
+                Хорошо
+            </button>
         </section>
         <div class="modal-overlay"></div>
     </div>
@@ -1909,4 +1923,5 @@
         </div>
     </footer>
     <script type="module" defer src="assets/app/confidentiality.js"></script>
+    <script defer src="assets/app/imask.js"></script>
 </body>
