@@ -54,8 +54,26 @@ class ProductSlider {
 	}
 
 	updateButtonState() {
+		if (window.innerWidth > 1440) this.cardsToShow = 4
+		if (window.innerWidth < 1440)
+			this.cardsToShow = 3
+		if (window.innerWidth < 425) {
+			this.cardsToShow = 1
+		}
+		if (window.innerWidth < 945) this.cardsToShow = 2
+		if (window.innerWidth < 610) this.cardsToShow = 1
+
+		const maxIndex = Math.ceil(
+			(this.totalCards - this.cardsToShow) / (this.cardsToShow - 1)
+		)
+		const minIndex = Math.ceil(
+			(this.totalCards - this.cardsToShow) / this.cardsToShow
+		)
+
 		this.prevButton.disabled = this.currentIndex === 0
-		this.nextButton.disabled = this.currentIndex >= this.totalCards - 1
+		this.nextButton.disabled = this.currentIndex >= maxIndex
+		if (this.cardsToShow === 1)
+			this.nextButton.disabled = this.currentIndex >= minIndex  
 	}
 
 	handleTouchStart(e) {
