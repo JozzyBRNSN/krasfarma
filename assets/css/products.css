@@ -184,6 +184,7 @@
 	bottom: 0;
 	background-blend-mode: multiply;
 	background: #a7bee84d;
+	transition: background 0.5s ease;
 }
 
 .products-item::after {
@@ -208,13 +209,17 @@
 	transition: all 0.5s ease;
 	width: 100%;
 	height: 360px;
-	mix-blend-mode: difference;
+	mix-blend-mode: exclusion;
 	filter: hue-rotate(160deg) saturate(0.5);
 }
 
 .products-item:hover .products-img,
 .products-item:hover::after {
 	filter: hue-rotate(120deg);
+}
+
+.products-item:hover::before {
+	background-color: #00d9ff61;
 }
 
 .products-item:hover .products-img {
