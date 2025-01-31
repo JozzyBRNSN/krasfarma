@@ -91,6 +91,12 @@
 	}
 }
 
+@media (max-width: 500px) {
+	.main-links__container {
+		justify-content: start;
+	}
+}
+
 .main-about__links {
 	display: flex;
 	flex-direction: column;

@@ -380,7 +380,7 @@ img {
 
 @media (max-width: 500px) {
 	.main-links__container {
-		justify-content: start;
+		justify-content: center;
 	}
 }
 

@@ -728,13 +728,6 @@
 	gap: 10px;
 }
 
-@media (max-width: 425px) {
-	.products-services__btn,
-	.products-services__header span {
-		display: none;
-	}
-}
-
 .products-services__header span {
 	width: 1002px;
 	height: 2px;
