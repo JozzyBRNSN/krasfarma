@@ -17,8 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		modalOpenButtonSelector: '.header-registration__btn',
 		modalCloseButtonSelector: '.modal-close__btn',
 		modalWrapperSelector: '.modal-overlay',
-		submitButtonSelector: '.modal-registration__btn',
-		checkboxSelector: '.hidden-checkbox',
 	})
 
 	const modalAuthorization = new ModalAuthorization({
