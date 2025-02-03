@@ -341,6 +341,12 @@
 	overflow-x: auto;
 }
 
+@-moz-document url-prefix() {
+	.about-history__timeline {
+		scrollbar-color: #2d97c1 #e5e8ec;
+	}
+}
+
 .about-history__timeline::-webkit-scrollbar {
 	height: 10px;
 	width: 620px;
