@@ -9,7 +9,7 @@ class ProductSlider {
 		this.cards = document.querySelectorAll(cardsSelector)
 		this.totalCards = this.cards.length
 		this.cardWidth = 275
-		this.cardMargin = 13
+		this.cardMargin = 20
 		this.currentIndex = 0
 
 		this.prevButton = document.querySelector(prevButtonSelector)
@@ -54,12 +54,10 @@ class ProductSlider {
 	}
 
 	updateButtonState() {
-		if (window.innerWidth > 1440) this.cardsToShow = 4
-		if (window.innerWidth < 1440)
+		this.cardsToShow = 4
+		if (window.innerWidth < 1440 && window.innerWidth > 1290)
 			this.cardsToShow = 3
-		if (window.innerWidth < 425) {
-			this.cardsToShow = 1
-		}
+		if (window.innerWidth < 1290) this.cardsToShow = 3
 		if (window.innerWidth < 945) this.cardsToShow = 2
 		if (window.innerWidth < 610) this.cardsToShow = 1
 
@@ -73,7 +71,7 @@ class ProductSlider {
 		this.prevButton.disabled = this.currentIndex === 0
 		this.nextButton.disabled = this.currentIndex >= maxIndex
 		if (this.cardsToShow === 1)
-			this.nextButton.disabled = this.currentIndex >= minIndex  
+			this.nextButton.disabled = this.currentIndex >= minIndex
 	}
 
 	handleTouchStart(e) {
