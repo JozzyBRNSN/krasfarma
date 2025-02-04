@@ -7,6 +7,7 @@ import ModalRecovery from './modules/modalRecovery.js'
 import modalMessage from './modules/modalMessage.js'
 import ModalWarning from './modules/modalWarning.js'
 import PreparationSlider from './modules/preparationSlider.js'
+import PreparationCard from './modules/preparationCard.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 	const stickyHeader = new StickyHeader({
@@ -59,6 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			'popup-burger--bottom',
 		],
 		shadowMenu: '.popup-shadow',
+	})
+
+	const card = new PreparationCard({
+		cardSelector: '.preparation-about__card',
+		cardListSelector: '.preparation-about__card-list li',
+		cardMainSelector: '.preparation-about__card-main',
 	})
 
 	const slider = new PreparationSlider({

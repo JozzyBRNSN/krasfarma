@@ -11,15 +11,14 @@ class PreparationSlider {
 		this.prevButtons = document.querySelectorAll(prevButtonSelector)
 		this.nextButtons = document.querySelectorAll(nextButtonSelector)
 
-		this.cardMargin = cardMargin // Отступ между карточками
-		this.currentIndex = 0 // Текущий индекс слайдера
-		this.totalCards = this.items.length // Общее количество карточек
+		this.cardMargin = cardMargin
+		this.currentIndex = 0
+		this.totalCards = this.items.length
 
-		this.updateCardsToShow() // Обновляем количество карточек для отображения
-		this.updateButtonState() // Обновляем состояние кнопок
-		this.updateSliderPosition() // Устанавливаем начальную позицию слайдера
+		this.updateCardsToShow()
+		this.updateButtonState()
+		this.updateSliderPosition()
 
-		// Добавляем обработчики событий на кнопки
 		this.prevButtons.forEach(prev =>
 			prev.addEventListener('click', () => this.moveToPrevious())
 		)
@@ -27,7 +26,6 @@ class PreparationSlider {
 			next.addEventListener('click', () => this.moveToNext())
 		)
 
-		// Обновляем слайдер при изменении размера окна
 		window.addEventListener('resize', () => {
 			this.updateCardsToShow()
 			this.updateSliderPosition()
@@ -36,11 +34,10 @@ class PreparationSlider {
 	}
 
 	updateCardsToShow() {
-		// Проверяем ширину окна
 		const windowWidth = window.innerWidth
 
 		if (windowWidth < 426) {
-			this.cardsToShow = 4 // Устанавливаем количество карточек для отображения
+			this.cardsToShow = 4
 		} else if (windowWidth >= 723 && windowWidth < 900) {
 			this.cardsToShow = 1
 		} else if (windowWidth >= 1248 && windowWidth < 1440) {
@@ -48,7 +45,7 @@ class PreparationSlider {
 		} else if (windowWidth >= 1440) {
 			this.cardsToShow = 3
 		} else {
-			const cardWidth = this.items[0].offsetWidth // Получаем ширину первой карточки
+			const cardWidth = this.items[0].offsetWidth
 			this.cardsToShow = Math.floor(
 				(this.container.clientWidth + this.cardMargin) /
 					(cardWidth + this.cardMargin)
@@ -77,9 +74,9 @@ class PreparationSlider {
 	}
 
 	updateSliderPosition() {
-		const cardWidth = this.items[0].offsetWidth // Получаем ширину первой карточки
+		const cardWidth = this.items[0].offsetWidth
 		const offset = this.currentIndex * (cardWidth + this.cardMargin)
-		this.container.style.transform = `translateX(-${offset}px)` // Устанавливаем смещение
+		this.container.style.transform = `translateX(-${offset}px)`
 	}
 
 	updateButtonState() {
