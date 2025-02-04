@@ -71,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		nextButtonSelector: '.services-next',
 		prevButtonSelector: '.services-prev',
 		containerSelector: '.products-services__list',
-		cardsToShowNumber: 4,
 	})
 
 	const contactUpdater = new ContactUpdater({

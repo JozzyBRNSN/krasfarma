@@ -4181,4 +4181,13 @@
 		event.preventDefault()
 		mask.value = cleanedData
 	})
+
+	phoneInput.addEventListener('input', () => {
+		const inputLength = phoneInput.value.replace(/\D/g, '').length
+		if (inputLength < 11) {
+			phoneInput.setCustomValidity('Введите не менее 10 символов')
+		} else {
+			phoneInput.setCustomValidity('')
+		}
+	})
 })

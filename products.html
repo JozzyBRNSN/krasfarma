@@ -28,8 +28,9 @@
       <form class="modal-form" action="">
         <input class="modal-input" type="text" id="username" name="username" pattern="[A-Za-zА-Яа-яЁё\s\-]{2,50}"
           placeholder="Ваше имя" required>
-        <input class="modal-input" type="email" id="email" name="email" pattern=".+@.+\..+" placeholder="Ваш email"
-          required>
+        <input class="modal-input" type="email" id="email" name="email"
+          pattern="[a-zA-Z0-9._-]{1,64}@[a-zA-Z0-9.-]{1,253}\.[a-zA-Z]{2,6}" placeholder="Ваш email" minlength="5"
+          maxlength="40" required>
         <input class="modal-input" type="tel" id="phoneInput" name="phone" placeholder="Ваш номер телефона"
           minlength="16" required>
         <input class="modal-input" type="text" id="youAddress" name="address" pattern="[A-Za-z0-9А-Яа-яЁё\s,.-]{5,100}"
@@ -53,8 +54,9 @@
         </div>
       </h2>
       <form class="modal-form" action="">
-        <input class="modal-input" type="email" id="email" name="email" pattern=".+@.+\..+" placeholder="Ваш email"
-          required>
+        <input class="modal-input" type="email" id="email" name="email"
+          pattern="[a-zA-Z0-9._-]{1,64}@[a-zA-Z0-9.-]{1,253}\.[a-zA-Z]{2,6}" placeholder="Ваш email" minlength="5"
+          maxlength="40" required>
         <label class="modal-label__password" for="password">
           <input class="modal-input" type="password" id="password" name="password"
             pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}" placeholder="Ваш пароль" required>
@@ -74,8 +76,9 @@
         </div>
       </h2>
       <form id="recovery-form" class="modal-form" action="">
-        <input class="modal-input recovery-input" type="email" id="email" name="email" pattern=".+@.+\..+"
-          placeholder="Ваш email" required>
+        <input class="modal-input" type="email" id="email" name="email"
+          pattern="[a-zA-Z0-9._-]{1,64}@[a-zA-Z0-9.-]{1,253}\.[a-zA-Z]{2,6}" placeholder="Ваш email" minlength="5"
+          maxlength="40" required>
         <button class="modal-recovery__btn">
           Отправить
         </button>
