@@ -321,33 +321,7 @@
 	justify-content: space-between;
 	gap: 30px;
 	padding: 60px 0;
-}
-
-@media (max-width: 768px) {
-	.preparation-description__content {
-		overflow-x: auto;
-	}
-	.preparation-description__content::-webkit-scrollbar {
-		height: 10px;
-		width: 620px;
-	}
-
-	.preparation-description__content::-webkit-scrollbar-track {
-		background-color: #e5e8ec;
-		border-radius: 30px;
-	}
-
-	.preparation-description__content::-webkit-scrollbar-thumb {
-		cursor: pointer;
-		height: 32px;
-		background-color: #2d97c1;
-		border-radius: 30px;
-	}
-
-	.preparation-description__content::-webkit-scrollbar-button {
-		width: 64px;
-		height: 32px;
-	}
+	overflow-x: hidden;
 }
 
 .preparation-description__content-list {
@@ -376,6 +350,7 @@
 }
 
 .preparation-description__content-item {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -384,6 +359,19 @@
 	font-size: 20px;
 	font-weight: 500;
 	line-height: 1.5;
+	left: 5px;
+}
+
+ul:nth-child(1)
+	.preparation-description__content-item:not(:nth-child(1)):after {
+	content: '';
+	position: absolute;
+	left: -40px;
+	right: 0;
+	bottom: 0;
+	height: 1px;
+	width: calc(100% * 20);
+	background-color: #4f538c;
 }
 
 @media (max-width: 890px) {
@@ -518,12 +506,6 @@
 	justify-content: space-between;
 	gap: 20px;
 	min-height: 320px;
-}
-
-@media (max-width: 945px) {
-	.preparation-other__item:last-child {
-		display: none;
-	}
 }
 
 @media (max-width: 425px) {
@@ -667,5 +649,39 @@
 
 	.preparation-about__list {
 		width: auto;
+	}
+}
+
+@media (max-width: 748px) {
+	.preparation-description__content {
+		overflow-x: auto;
+		scrollbar-color: #2d97c1 #e5e8ec;
+	}
+
+	ul:nth-child(1)
+		.preparation-description__content-item:not(:nth-child(1)):after {
+		width: 728px;
+	}
+
+	.preparation-description__content::-webkit-scrollbar {
+		height: 10px;
+		width: 620px;
+	}
+
+	.preparation-description__content::-webkit-scrollbar-track {
+		background-color: #e5e8ec;
+		border-radius: 30px;
+	}
+
+	.preparation-description__content::-webkit-scrollbar-thumb {
+		cursor: pointer;
+		height: 32px;
+		background-color: #2d97c1;
+		border-radius: 30px;
+	}
+
+	.preparation-description__content::-webkit-scrollbar-button {
+		width: 64px;
+		height: 32px;
 	}
 }

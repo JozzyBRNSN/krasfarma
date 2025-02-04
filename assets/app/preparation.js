@@ -6,7 +6,7 @@ import ModalAuthorization from './modules/modalAuthorization.js'
 import ModalRecovery from './modules/modalRecovery.js'
 import modalMessage from './modules/modalMessage.js'
 import ModalWarning from './modules/modalWarning.js'
-import ProductSlider from './modules/productSlider.js'
+import PreparationSlider from './modules/preparationSlider.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 	const stickyHeader = new StickyHeader({
@@ -61,11 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		shadowMenu: '.popup-shadow',
 	})
 
-	const productSlider = new ProductSlider({
-		cardsSelector: '.preparation-other__item',
-		nextButtonSelector: '.preparation-next',
-		prevButtonSelector: '.preparation-prev',
+	const slider = new PreparationSlider({
 		containerSelector: '.preparation-other__list',
+		itemsSelector: '.preparation-other__item',
+		prevButtonSelector: '.preparation-prev',
+		nextButtonSelector: '.preparation-next',
+		cardMargin: 40,
 	})
 
 	const contactUpdater = new ContactUpdater({
