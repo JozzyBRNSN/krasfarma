@@ -292,3 +292,9 @@
 	z-index: -1;
 	background: inherit;
 }
+
+@media (max-width:380px) {
+	.more-details__text {
+		white-space: wrap;
+	}
+}

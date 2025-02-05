@@ -80,9 +80,13 @@
 	}
 }
 
-.preparation-about__card-main,
-.preparation-about__card-main img {
+.preparation-about__card-main {
 	display: flex;
+	width: 304px;
+	max-height: 420px;
+}
+
+.preparation-about__card-main img {
 	max-width: 304px;
 	max-height: 420px;
 }
@@ -197,10 +201,7 @@
 }
 
 .preparation-about__title p {
-	max-width: 330px;
 	overflow-wrap: anywhere;
-	hyphens: auto;
-	-moz-hyphens: auto;
 }
 
 @media (max-width: 712px) {
@@ -276,7 +277,10 @@
 }
 
 .preparation-about__btn a {
+	display: flex;
+	width: 121px;
 	color: #ffffff;
+	text-align: start;
 }
 
 .preparation-about__btn {
@@ -665,10 +669,6 @@ ul:nth-child(1)
 		flex-direction: column;
 	}
 
-	.preparation-about__title p {
-		max-width: none;
-	}
-
 	.preparation-about__list {
 		width: auto;
 	}
@@ -705,5 +705,11 @@ ul:nth-child(1)
 	.preparation-description__content::-webkit-scrollbar-button {
 		width: 64px;
 		height: 32px;
+	}
+}
+
+@media (max-width: 390px) {
+	.preparation-about__title {
+		font-size: 10vw;
 	}
 }

@@ -10,7 +10,7 @@ class ModalRecovery {
 		this.modalOpenButton = document.querySelectorAll(modalOpenButtonSelector)
 		this.modalCloseButton = document.querySelectorAll(modalCloseButtonSelector)
 		this.modalWrapper = document.querySelector(modalWrapperSelector)
-		this.nextModal = document.querySelector(nextModalSelector) // Следующее модальное окно
+		this.nextModal = document.querySelector(nextModalSelector)
 
 		this.init()
 	}
