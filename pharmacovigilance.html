@@ -59,8 +59,7 @@
                     minlength="5" maxlength="40" required>
                 <label class="modal-label__password" for="password">
                     <input class="modal-input" type="password" id="password" name="password"
-                        pattern="[A-Za-z\d@$!%*?&]{8,20}" placeholder="Ваш пароль"
-                        required>
+                        pattern="[A-Za-z\d@$!%*?&]{8,20}" placeholder="Ваш пароль" required>
                     <a class="recovery-password">Забыли пароль?</a>
                 </label>
                 <button type="submit" class="modal-authorization__btn">
@@ -320,7 +319,9 @@
             <section class="main-about">
                 <div class="main-about__content">
                     <div class="main-about__links">
-                        <img class="main-about__img" src="/assets/img/фармаконадзор.png" alt="Ингастин">
+                        <picture class="main-about__img">
+                            <img src="/assets/img/фармаконадзор.png" alt="Ингастин">
+                        </picture>
                         <div class="main-about__text--mobile">
 
                             <b>Безусловным приоритетом</b> ПАО «Красфарма» является благополучие пациентов. Для

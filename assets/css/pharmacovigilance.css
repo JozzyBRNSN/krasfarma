@@ -87,10 +87,11 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	gap: 40px;
 	margin: 0;
 }
 
-.main-about__img {
+.main-about__img img {
 	width: 360px;
 	height: 240px;
 	border-left: 2px solid #4f538c;
@@ -98,13 +99,13 @@
 }
 
 @media (max-width: 810px) {
-	.main-about__img {
+	.main-about__img img {
 		width: 229px;
 	}
 }
 
 @media (max-width: 630px) {
-	.main-about__img {
+	.main-about__img img {
 		width: 100%;
 	}
 }
