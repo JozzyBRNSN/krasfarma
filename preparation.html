@@ -58,8 +58,8 @@
           pattern="[a-zA-Z0-9._-]{1,64}@[a-zA-Z0-9.-]{1,253}\.[a-zA-Z]{2,6}" placeholder="Ваш email" minlength="5"
           maxlength="40" required>
         <label class="modal-label__password" for="password">
-          <input class="modal-input" type="password" id="password" name="password"
-            pattern="[A-Za-z\d@$!%*?&]{8,20}" placeholder="Ваш пароль" required>
+          <input class="modal-input" type="password" id="password" name="password" pattern="[A-Za-z\d@$!%*?&]{8,20}"
+            placeholder="Ваш пароль" required>
           <a class="recovery-password">Забыли пароль?</a>
         </label>
         <button type="submit" class="modal-authorization__btn">
@@ -327,6 +327,12 @@
     </div>
     <section class="preparation-about">
       <div class="container main-container">
+        <div class="preparation-about__title">
+          <p>Амикацин</p>
+          <div class="preparation-about__title-volume">
+            <p>1,0г</p>
+          </div>
+        </div>
         <div class="preparation-about__content">
           <div class="preparation-about__card">
             <ul class="preparation-about__card-list">
@@ -345,12 +351,7 @@
             </div>
           </div>
           <div class="preparation-about__description">
-            <div class="preparation-about__title">
-              <p>Декаметилендиметилметоксикарбонилметиламмония дихлорид</p>
-              <div class="preparation-about__title-volume">
-                <p>1,0г</p>
-              </div>
-            </div>
+
             <ul class="preparation-about__list">
               <li class="preparation-about__item">
                 <b>Торговое название:</b>
@@ -610,4 +611,5 @@
   </footer>
   <script type="module" defer src="assets/app/preparation.js"></script>
   <script defer src="assets/app/imask.js"></script>
+  <script type="module" defer src="assets/app/modules/preparationSlider.js"></script>
 </body>
