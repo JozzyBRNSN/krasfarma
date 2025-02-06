@@ -31,18 +31,28 @@ class PreparationSlider {
 			this.updateSliderPosition()
 			this.updateButtonState()
 		})
+
+		this.startX = 0
+		this.endX = 0
+
+		this.handleTouchStart = this.handleTouchStart.bind(this)
+		this.handleTouchMove = this.handleTouchMove.bind(this)
+		this.handleTouchEnd = this.handleTouchEnd.bind(this)
+
+		this.setupResizeObserver()
+		this.updateSwipeListeners()
 	}
 
 	updateCardsToShow() {
 		const windowWidth = window.innerWidth
 
-		if (windowWidth < 426) {
+		if (windowWidth < 450) {
 			this.cardsToShow = 4
 		} else if (windowWidth >= 723 && windowWidth < 900) {
 			this.cardsToShow = 1
-		} else if (windowWidth >= 1248 && windowWidth < 1440) {
+		} else if (windowWidth >= 1248 && windowWidth < 1410) {
 			this.cardsToShow = 2
-		} else if (windowWidth >= 1440) {
+		} else if (windowWidth >= 1410 && windowWidth < 1440) {
 			this.cardsToShow = 3
 		} else {
 			const cardWidth = this.items[0].offsetWidth
@@ -88,6 +98,56 @@ class PreparationSlider {
 				(button.disabled =
 					this.currentIndex >= this.totalCards - this.cardsToShow)
 		)
+	}
+
+	handleTouchStart(e) {
+		this.startX = e.touches[0].clientX
+	}
+
+	handleTouchMove(e) {
+		this.endX = e.touches[0].clientX
+	}
+
+	handleTouchEnd() {
+		const deltaX = this.endX - this.startX
+
+		if (Math.abs(deltaX) > 50) {
+			if (deltaX < 0) {
+				this.moveToNext()
+			} else {
+				this.moveToPrevious()
+			}
+		}
+	}
+
+	setupSwipeListeners() {
+		this.container.addEventListener('touchstart', this.handleTouchStart)
+		this.container.addEventListener('touchmove', this.handleTouchMove)
+		this.container.addEventListener('touchend', this.handleTouchEnd)
+	}
+
+	removeSwipeListeners() {
+		this.container.removeEventListener(
+			'touchstart',
+			this.handleTouchStart
+		)
+		this.container.removeEventListener('touchmove', this.handleTouchMove)
+		this.container.removeEventListener('touchend', this.handleTouchEnd)
+	}
+
+	setupResizeObserver() {
+		const resizeObserver = new ResizeObserver(() => {
+			this.updateSwipeListeners()
+		})
+		resizeObserver.observe(document.body)
+	}
+
+	updateSwipeListeners() {
+		if (window.innerWidth <= 1024) {
+			this.setupSwipeListeners()
+		} else {
+			this.removeSwipeListeners()
+		}
 	}
 }
 
