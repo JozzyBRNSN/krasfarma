@@ -12,6 +12,9 @@ class ModalRecovery {
 		this.modalWrapper = document.querySelector(modalWrapperSelector)
 		this.nextModal = document.querySelector(nextModalSelector)
 
+		this.emailInput = this.modalWindow.querySelector('input[type="email"]')
+		this.emailTooltip = this.modalWindow.querySelector('.recovery-tooltip')
+
 		this.init()
 	}
 
@@ -32,15 +35,27 @@ class ModalRecovery {
 	handleFormSubmit(event) {
 		event.preventDefault()
 
-		const isSuccessful = true
+		if (this.validateEmail()) {
+			const form = event.target 
 
-		if (isSuccessful) {
-			this.closeModal()
+			this.closeModal() 
 			if (this.nextModal) {
 				this.openNextModal()
 			}
+		}
+	}
+
+	validateEmail() {
+		const emailPattern =
+			/^[a-zA-Z0-9._-]{1,64}@[a-zA-Z0-9.-]{1,253}\.[a-zA-Z]{2,6}$/
+
+		if (!emailPattern.test(this.emailInput.value)) {
+			this.emailTooltip.innerText = 'Введите правильную почту'
+			this.emailTooltip.style.display = 'block'
+			return false
 		} else {
-			alert('Ошибка при отправке формы. Пожалуйста, попробуйте еще раз.')
+			this.emailTooltip.style.display = 'none' 
+			return true
 		}
 	}
 

@@ -4182,12 +4182,15 @@
 		mask.value = cleanedData
 	})
 
+	const phoneTooltip = document.querySelector('.phone-tooltip')
+
 	phoneInput.addEventListener('input', () => {
 		const inputLength = phoneInput.value.replace(/\D/g, '').length
 		if (inputLength < 11) {
-			phoneInput.setCustomValidity('Введите не менее 10 символов')
+			phoneTooltip.style.display = 'block'
+			isValid = false
 		} else {
-			phoneInput.setCustomValidity('')
+			phoneTooltip.style.display = 'none'
 		}
 	})
 })

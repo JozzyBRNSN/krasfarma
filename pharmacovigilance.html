@@ -25,19 +25,21 @@
                     <span class="modal-close__btn-item"></span>
                 </div>
             </h2>
-            <form class="modal-form" action="">
-                <input class="modal-input" type="text" id="username" name="username"
-                    pattern="[A-Za-zА-Яа-яЁё\s\-]{2,50}" placeholder="Ваше имя" required>
-                <input class="modal-input" type="email" id="email" name="email"
-                    pattern="[a-zA-Z0-9._-]{1,64}@[a-zA-Z0-9.-]{1,253}\.[a-zA-Z]{2,6}" placeholder="Ваш email"
-                    minlength="5" maxlength="40" required>
+            <form novalidate class="modal-form" action="">
+                <input class="modal-input" type="text" id="username" name="username" placeholder="Ваше имя" required>
+                <div class="username-tooltip">Введите ваше имя</div>
+                <input class="modal-input" type="email" id="email" name="email" placeholder="Ваш email" minlength="5"
+                    maxlength="40" required>
+                <div class="email-tooltip">Введите ваше имя</div>
                 <input class="modal-input" type="tel" id="phoneInput" name="phone" placeholder="Ваш номер телефона"
-                    minlength="16" required>
-                <input class="modal-input" type="text" id="youAddress" name="address"
-                    pattern="[A-Za-z0-9А-Яа-яЁё\s,.-]{5,100}" placeholder="Ваш адрес" required>
+                    required>
+                <div class="phone-tooltip">Введите не менее 10 символов</div>
+                <input class="modal-input" type="text" id="youAddress" name="address" placeholder="Ваш адрес" required>
+                <div class="address-tooltip">Введите ваше имя</div>
                 <label class="modal-label__checkbox" for="checkbox">
                     <input type="checkbox" class="checkbox" name="checkbox" id="checkbox" required>
                     Подтверждаю согласие на обработку персональных данных.
+                    <div class="checkbox-tooltip">Подтвердите согласие</div>
                 </label>
                 <button type="submit" class="modal-registration__btn">
                     Регистрация
@@ -53,13 +55,14 @@
                     <span class="modal-close__btn-item"></span>
                 </div>
             </h2>
-            <form class="modal-form" action="">
-                <input class="modal-input" type="email" id="email" name="email"
-                    pattern="[a-zA-Z0-9._-]{1,64}@[a-zA-Z0-9.-]{1,253}\.[a-zA-Z]{2,6}" placeholder="Ваш email"
-                    minlength="5" maxlength="40" required>
+            <form novalidate class="modal-form" action="">
+                <input class="modal-input" type="email" id="email" name="email" placeholder="Ваш email" minlength="5"
+                    maxlength="40" required>
+                <div class="email-tooltip">Введите правильный адрес почты</div>
                 <label class="modal-label__password" for="password">
-                    <input class="modal-input" type="password" id="password" name="password"
-                        pattern="[A-Za-z\d@$!%*?&]{8,20}" placeholder="Ваш пароль" required>
+                    <input class="modal-input" type="password" id="password" name="password" placeholder="Ваш пароль"
+                        required>
+                    <div class="password-tooltip">Введите правильный пароль</div>
                     <a class="recovery-password">Забыли пароль?</a>
                 </label>
                 <button type="submit" class="modal-authorization__btn">
@@ -75,10 +78,10 @@
                     <span class="modal-close__btn-item"></span>
                 </div>
             </h2>
-            <form id="recovery-form" class="modal-form" action="">
-                <input class="modal-input" type="email" id="email" name="email"
-                    pattern="[a-zA-Z0-9._-]{1,64}@[a-zA-Z0-9.-]{1,253}\.[a-zA-Z]{2,6}" placeholder="Ваш email"
-                    minlength="5" maxlength="40" required>
+            <form novalidate id="recovery-form" class="modal-form" action="">
+                <input class="modal-input" type="email" id="email" name="email" placeholder="Ваш email" minlength="5"
+                    maxlength="40" required>
+                <div class="recovery-tooltip">Введите правильный адрес почты</div>
                 <button type="submit" class="modal-recovery__btn">
                     Отправить
                 </button>

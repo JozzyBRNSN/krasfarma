@@ -36,12 +36,12 @@
 
 .modal-registration {
 	width: 384px;
-	top: 20%;
+	top: 10%;
 }
 
 .modal-authorization {
 	width: 353px;
-	top: 28%;
+	top: 25%;
 }
 
 .modal-warning {
@@ -320,10 +320,32 @@ input[type='checkbox']:hover::before {
 	transform: rotate(45deg);
 }
 
+.email-tooltip,
+.password-tooltip,
+.recovery-tooltip,
+.username-tooltip,
+.address-tooltip,
+.phone-tooltip,
+.checkbox-tooltip {
+	display: none;
+	font-family: 'Source Sans 3';
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.25;
+	color: #ad1700;
+	text-align: center;
+	margin-top: -10px;
+}
+
+.checkbox-tooltip {
+	margin-top: 10px;
+	margin-right: 35px;
+}
+
 @media (max-width: 768px) {
 	.modal-registration {
 		width: 280px;
-		top: 20%;
+		top: 5%;
 	}
 
 	.modal__title {
@@ -345,6 +367,7 @@ input[type='checkbox']:hover::before {
 
 	.modal-authorization {
 		width: 280px;
+		top: 20%;
 	}
 
 	.modal-recovery,
