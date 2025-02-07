@@ -551,6 +551,7 @@ a {
 .popup-more__btn .next {
 	width: 5px;
 	height: 5px;
+	margin-left: 0;
 }
 
 .popup-shadow {

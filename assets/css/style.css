@@ -521,6 +521,7 @@ img {
 	right: 0;
 	bottom: 0;
 	background-color: #190e71;
-	mix-blend-mode: color;
+	mix-blend-mode: color-dodge;
+	backdrop-filter: brightness(0.8) grayscale(1);
 	pointer-events: none;
 }
