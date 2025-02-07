@@ -205,6 +205,8 @@
 
 .preparation-about__title p {
 	overflow-wrap: anywhere;
+	hyphens: auto;
+	-moz-hyphens: auto;
 }
 
 @media (max-width: 724px) {
