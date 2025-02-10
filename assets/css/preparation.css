@@ -121,6 +121,10 @@
 	width: 90px;
 	height: 90px;
 	background-color: #f5f8fc;
+}
+
+.preparation-about__card-item picture {
+	display: flex;
 	align-content: center;
 }
 
@@ -352,41 +356,46 @@
 
 .preparation-description {
 	background-color: #332e59;
-	height: 320px;
+	min-height: 320px;
 	margin-bottom: 150px;
 }
 
 .preparation-description__content {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
-	gap: 30px;
+	gap: 5px;
 	padding: 60px 0;
 	overflow-x: hidden;
 }
 
 .preparation-description__content-list {
 	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
+	min-width: 1000px;
 }
 
-.preparation-description__content-list
-	.preparation-description__content-item:nth-child(1) {
+.preparation-description__content-list:not(:nth-child(1)) {
+	border-bottom: 1px solid #4f538c;
+}
+
+.preparation-description__content-list:nth-child(1)
+	.preparation-description__content-item {
 	color: #ffffff;
 	white-space: nowrap;
 }
 
-.preparation-description__content-list
-	.preparation-description__content-item:nth-child(2),
-.preparation-description__content-list
-	.preparation-description__content-item:nth-child(4) {
+.preparation-description__content-list:nth-child(2)
+	.preparation-description__content-item,
+.preparation-description__content-list:nth-child(4)
+	.preparation-description__content-item {
 	color: #7481bf;
 }
 
-.preparation-description__content-list
-	.preparation-description__content-item:nth-child(3),
-.preparation-description__content-list
-	.preparation-description__content-item:nth-child(5) {
+.preparation-description__content-list:nth-child(3)
+	.preparation-description__content-item,
+.preparation-description__content-list:nth-child(5)
+	.preparation-description__content-item {
 	color: #a7bee8;
 }
 
@@ -394,25 +403,15 @@
 	position: relative;
 	display: flex;
 	align-items: center;
+	text-align: center;
 	justify-content: center;
-	height: 40px;
+	min-height: 40px;
 	font-family: 'Source Sans 3';
 	font-size: 20px;
 	font-weight: 500;
 	line-height: 1.5;
 	left: 5px;
-}
-
-ul:nth-child(1)
-	.preparation-description__content-item:not(:nth-child(1)):after {
-	content: '';
-	position: absolute;
-	left: -40px;
-	right: 0;
-	bottom: 0;
-	height: 1px;
-	width: calc(100% * 20);
-	background-color: #4f538c;
+	min-width: 200px;
 }
 
 @media (max-width: 890px) {
@@ -695,7 +694,7 @@ ul:nth-child(1)
 	}
 }
 
-@media (max-width: 748px) {
+@media (max-width: 1100px) {
 	.preparation-description__content {
 		overflow-x: auto;
 		scrollbar-color: #2d97c1 #e5e8ec;
