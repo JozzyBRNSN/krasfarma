@@ -517,7 +517,7 @@
 }
 
 .products-services__item:hover .overlay {
-	opacity: 1;
+	opacity: 0.4;
 }
 
 .products-services__item:hover .services-img {
