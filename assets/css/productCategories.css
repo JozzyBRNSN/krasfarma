@@ -112,7 +112,7 @@
 
 @media (max-width: 425px) {
 	.categories-item {
-		height: 350px;
+		min-height: 350px;
 	}
 }
 
