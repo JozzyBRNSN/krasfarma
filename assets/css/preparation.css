@@ -249,6 +249,7 @@
 	color: #2f2f47;
 	padding-top: 10px;
 	overflow-wrap: anywhere;
+	white-space: nowrap;
 }
 
 .preparation-about__item:not(:first-child) {
@@ -731,5 +732,11 @@ ul:nth-child(1)
 @media (max-width: 390px) {
 	.preparation-about__title {
 		font-size: 10vw;
+	}
+
+	.preparation-about__item {
+		white-space: wrap;
+		hyphens: auto;
+		-moz-hyphens: auto;
 	}
 }
