@@ -204,6 +204,12 @@
 	}
 }
 
+@media (max-width: 425px) {
+	.categories-item__pages-list {
+		align-self: center;
+	}
+}
+
 .categories-item__pages-btn {
 	display: flex;
 	align-items: center;
