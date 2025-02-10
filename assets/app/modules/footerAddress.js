@@ -53,7 +53,7 @@ class ContactUpdater {
 	}
 
 	showDefaultContactInfo() {
-		const defaultCityId = 'moscow'
+		const defaultCityId = this.citySelectionElements[0].id
 		this.showContactInfoForCity(defaultCityId)
 		this.updateCityTextColor(document.getElementById(defaultCityId)) 
 	}
