@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const contactUpdater = new ContactUpdater({
 		cityElementsSelector: '.places-item',
-		addressElementsSelector: '.footer-address__link '
+		addressElementsSelector: '.footer-address__link',
 		phoneLinksSelector: '.footer-phone__link',
 	})
 })
