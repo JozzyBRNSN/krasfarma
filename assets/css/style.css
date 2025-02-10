@@ -419,7 +419,7 @@ img {
 	color: #332e59;
 }
 
-.main-links a:last-child {
+.main-links a:nth-child(5) {
 	color: transparent;
 	background: inherit;
 	background-image: linear-gradient(to left, #ffffff 240px, #332e59 500px);
@@ -428,7 +428,7 @@ img {
 }
 
 @media (max-width: 768px) {
-	.main-links a:last-child {
+	.main-links a:nth-child(5) {
 		background-image: linear-gradient(to left, #ffffff 120px, #332e59 500px);
 	}
 }
