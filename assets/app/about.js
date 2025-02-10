@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const contactUpdater = new ContactUpdater({
 		cityElementsSelector: '.places-item',
-		addressElementsSelector: '.footer-contacts__address p',
+		addressElementsSelector: '.footer-address__link ',
 		phoneLinksSelector: '.footer-phone__link',
 	})
 })
