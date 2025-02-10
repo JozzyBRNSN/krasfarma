@@ -4,13 +4,13 @@ class PreparationCard {
 		this.cardList = document.querySelectorAll(cardListSelector)
 		this.cardMain = document.querySelector(cardMainSelector)
 
-		this.updateMainImage(this.cardList[0].querySelector('img').src)
+		this.updateMainImage(this.cardList[0].querySelector('picture img').src)
 
 		this.highlightActiveThumbnail(this.cardList[0])
 
 		this.cardList.forEach(item => {
 			item.addEventListener('click', () => {
-				const imgSrc = item.querySelector('img').src
+				const imgSrc = item.querySelector('picture img').src
 				this.updateMainImage(imgSrc)
 				this.highlightActiveThumbnail(item)
 			})
