@@ -183,12 +183,24 @@
 	height: 8px;
 }
 
-.more-details {
+.more-details__contacts {
 	align-self: flex-start;
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-self: flex-start;
+	gap: 10px;
+	margin: 0;
+	z-index: 1;
 }
 
-.more-details__text {
-	text-transform: none;
+.more-details__contacts-text {
+	font-family: 'Geologica';
+	font-size: 16px;
+	font-weight: 500;
+	margin: 0;
+	white-space: nowrap;
 	color: #332e59;
 }
 
