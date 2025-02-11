@@ -76,7 +76,7 @@ class ModalRegistration {
 			this.usernameInput.value.length > 50
 		) {
 			this.usernameTooltip.innerText =
-				'Имя позьлователя должно содержать от 3 до 50 символов'
+				'Имя пользователя должно содержать от 3 до 50 символов'
 			this.usernameTooltip.style.display = 'block'
 			isValid = false
 		} else if (!usernamePattern.test(this.usernameInput.value)) {
