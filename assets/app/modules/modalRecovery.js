@@ -84,7 +84,7 @@ class ModalRecovery {
 	openNextModal() {
 		if (this.nextModal) {
 			this.closeModal()
-			this.nextModal.classList.add('open-modal')
+			this.nextModal.classList.add('send-message')
 			this.modalWrapper.classList.add('open-modal')
 			document.body.classList.add('hidden')
 		}
