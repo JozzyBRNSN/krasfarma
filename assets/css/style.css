@@ -87,6 +87,17 @@ img {
 	position: relative;
 }
 
+.background-logo-item {
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	top: -1220px;
+	bottom: 0;
+	margin: 0;
+	background: inherit;
+}
+
 .background-logo__about-item {
 	position: absolute;
 	left: 0;
@@ -158,7 +169,6 @@ img {
 		display: none;
 	}
 }
-
 
 .more-details,
 .more-details__cover {

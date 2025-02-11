@@ -1,0 +1,206 @@
+.main-innovation__title {
+	position: relative;
+	font-family: 'Geologica';
+	font-size: 80px;
+	font-weight: 500;
+	color: #ffffff;
+	height: 75px;
+	top: 131px;
+	margin: 0;
+}
+
+@media (max-width: 1440px) {
+	.main-innovation__title {
+		left: 140px;
+	}
+}
+
+@media (max-width: 860px) {
+	.main-innovation__title {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 680px) {
+	.main-innovation__title {
+		font-size: 6vw;
+	}
+}
+
+@media (max-width: 585px) {
+	.main-innovation__title {
+		left: 80px;
+		top: 80px;
+	}
+}
+
+@media (max-width: 425px) {
+	.main-innovation__title {
+		font-size: 24px;
+	}
+}
+
+.innovation-about {
+	margin: 0;
+}
+
+.innovation-about__content {
+	display: flex;
+	margin: 0 0 100px;
+	gap: 40px;
+}
+
+.innovation-about__links {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 40px;
+	margin: 0;
+}
+
+.innovation-about__img img {
+	width: 360px;
+	height: 240px;
+	border-left: 2px solid #4f538c;
+	margin: 0;
+}
+
+@media (max-width: 810px) {
+	.innovation-about__img img {
+		width: 229px;
+	}
+}
+
+@media (max-width: 630px) {
+	.innovation-about__img img {
+		width: 100%;
+	}
+}
+
+.innovation-info__content,
+.innovation-info__content--desktop {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+}
+
+.innovation-info__content--mobile {
+	display: none;
+}
+
+@media (max-width: 630px) {
+	.innovation-info__content--desktop {
+		display: none;
+	}
+
+	.innovation-info__content--mobile {
+		display: flex;
+		flex-direction: column;
+		gap: 60px;
+	}
+}
+
+.innovation-info__box {
+	display: flex;
+	gap: 10px;
+	padding: 40px 20px;
+	background-color: #ffffff;
+	box-shadow: 0px 24px 64px -16px #a7bee840;
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-style: italic;
+	font-weight: 600;
+	line-height: 1.5;
+	color: #4f538c;
+	border-left: 2px solid #4f538c;
+}
+
+@media (max-width: 425px) {
+	.innovation-info__box {
+		padding: 30px 20px;
+	}
+}
+
+@media (max-width: 380px) {
+	.innovation-info__box {
+		font-size: 18px;
+		hyphens: auto;
+		-moz-hyphens: auto;
+	}
+}
+
+.innovation-info__box::before {
+	content: url(../../assets/img/text_start.svg);
+}
+
+.innovation-info__box::after {
+	content: url(../../assets/img/text_end.svg);
+	align-self: flex-end;
+}
+
+.innovation-about__text {
+	display: block;
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-weight: 400;
+	color: #2f2f47;
+	line-height: 1.5;
+}
+
+.innovation-about__text b {
+	color: #2d97c1;
+	font-weight: 700;
+}
+
+.innovation-about__text span {
+	display: block;
+	margin-bottom: 40px;
+}
+
+.innovation-about__img {
+	margin: 0;
+}
+
+.innovation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.innovation-item {
+	list-style-type: disc;
+	margin-left: 30px;
+}
+
+.background-logo-item {
+	top: -650px;
+}
+
+@media (max-width: 768px) {
+	.background-logo-item {
+		top: -970px;
+	}
+}
+
+@media (max-width: 550px) {
+	.background-logo-item {
+		width: 80%;
+	}
+}
+
+.background-figure--first-item {
+	top: -1572px;
+}
+
+@media (max-width: 768px) {
+	.background-figure--first-item {
+		top: -970px;
+	}
+}
+
+@media (max-width: 550px) {
+	.background-figure--first-item {
+		top: -1230px;
+	}
+}
+
