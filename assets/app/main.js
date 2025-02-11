@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		modalCloseButtonSelector: '.modal-close__btn',
 		modalWrapperSelector: '.modal-overlay',
 		nextModalSelector: '.modal-message',
+		prevModalSelector: '.modal-authorization',
+		prevModalButtonSelector: '.modal-back__btn',
 	})
 
 	const modalMessages = new modalMessage({

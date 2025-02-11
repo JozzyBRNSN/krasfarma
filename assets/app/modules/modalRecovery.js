@@ -5,12 +5,16 @@ class ModalRecovery {
 		modalCloseButtonSelector,
 		modalWrapperSelector,
 		nextModalSelector,
+		prevModalSelector,
+		prevModalButtonSelector,
 	}) {
 		this.modalWindow = document.querySelector(modalWindowSelector)
 		this.modalOpenButton = document.querySelectorAll(modalOpenButtonSelector)
 		this.modalCloseButton = document.querySelectorAll(modalCloseButtonSelector)
 		this.modalWrapper = document.querySelector(modalWrapperSelector)
 		this.nextModal = document.querySelector(nextModalSelector)
+		this.prevModal = document.querySelector(prevModalSelector)
+		this.prevModalButton = document.querySelector(prevModalButtonSelector)
 
 		this.emailInput = this.modalWindow.querySelector('input[type="email"]')
 		this.emailTooltip = this.modalWindow.querySelector('.recovery-tooltip')
@@ -22,9 +26,17 @@ class ModalRecovery {
 		this.modalOpenButton.forEach(openButton => {
 			openButton.addEventListener('click', () => this.openModal())
 		})
+
 		this.modalCloseButton.forEach(closeButton => {
 			closeButton.addEventListener('click', () => this.closeModal())
 		})
+
+		if (this.prevModalButton) {
+			this.prevModalButton.addEventListener('click', event => {
+				event.preventDefault()
+				this.openPrevModal()
+			})
+		}
 
 		const form = this.modalWindow.querySelector('form')
 		if (form) {
@@ -36,9 +48,7 @@ class ModalRecovery {
 		event.preventDefault()
 
 		if (this.validateEmail()) {
-			const form = event.target 
-
-			this.closeModal() 
+			this.closeModal()
 			if (this.nextModal) {
 				this.openNextModal()
 			}
@@ -50,11 +60,11 @@ class ModalRecovery {
 			/^[a-zA-Z0-9._-]{1,64}@[a-zA-Z0-9.-]{1,253}\.[a-zA-Z]{2,6}$/
 
 		if (!emailPattern.test(this.emailInput.value)) {
-			this.emailTooltip.innerText = 'Введите правильную почту'
+			this.emailTooltip.innerText = 'Введите правильный адрес почты'
 			this.emailTooltip.style.display = 'block'
 			return false
 		} else {
-			this.emailTooltip.style.display = 'none' 
+			this.emailTooltip.style.display = 'none'
 			return true
 		}
 	}
@@ -73,7 +83,17 @@ class ModalRecovery {
 
 	openNextModal() {
 		if (this.nextModal) {
-			this.nextModal.classList.add('send-message')
+			this.closeModal()
+			this.nextModal.classList.add('open-modal')
+			this.modalWrapper.classList.add('open-modal')
+			document.body.classList.add('hidden')
+		}
+	}
+
+	openPrevModal() {
+		if (this.prevModal) {
+			this.closeModal()
+			this.prevModal.classList.add('open-modal')
 			this.modalWrapper.classList.add('open-modal')
 			document.body.classList.add('hidden')
 		}

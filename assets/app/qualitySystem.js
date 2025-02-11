@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		modalCloseButtonSelector: '.modal-close__btn',
 		modalWrapperSelector: '.modal-overlay',
 		nextModalSelector: '.modal-message',
+		prevModalSelector: '.modal-authorization',
+		prevModalButtonSelector: '.modal-back__btn',
 	})
 
 	const modalMessages = new modalMessage({
@@ -61,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const contactUpdater = new ContactUpdater({
 		cityElementsSelector: '.places-item',
-		addressElementsSelector: '.footer-address__link', 
+		addressElementsSelector: '.footer-address__link',
 		phoneLinksSelector: '.footer-phone__link',
 	})
 })
