@@ -85,10 +85,9 @@ img {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	z-index: -1;
 }
 
-.background-logo-item {
+.background-logo__about-item {
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -160,11 +159,6 @@ img {
 	}
 }
 
-.about-background__item {
-	position: absolute;
-	top: -80px;
-	opacity: 0.5;
-}
 
 .more-details,
 .more-details__cover {
