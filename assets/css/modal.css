@@ -375,7 +375,6 @@ input[type='checkbox']:hover::before {
 
 	.modal-registration__btn,
 	.modal-authorization__btn,
-	.modal-recovery__btn,
 	.modal-message__btn {
 		width: 100%;
 	}
@@ -389,6 +388,8 @@ input[type='checkbox']:hover::before {
 	.modal-message {
 		width: 280px;
 	}
+
+
 
 	.modal-message .modal__title {
 		margin-left: 20px;
@@ -413,7 +414,7 @@ input[type='checkbox']:hover::before {
 		flex-direction: column;
 	}
 
-	.modal-back__btn {
+	.modal-message .modal-back__btn {
 		width: 100%;
 		height: 60px;
 	}
