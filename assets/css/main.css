@@ -791,6 +791,7 @@
 		rgba(167, 190, 232, 0.3) 0%,
 		rgba(167, 190, 232, 0) 100%
 	);
+	z-index: -1;
 }
 
 .background-gradient__second {
@@ -804,6 +805,7 @@
 		rgba(124, 235, 255, 0.15) 0%,
 		rgba(124, 235, 255, 0) 100%
 	);
+	z-index: -1;
 }
 
 .background-gradient__third {
@@ -812,6 +814,7 @@
 	height: 2563px;
 	top: 400px;
 	left: -1081px;
+	z-index: -1;
 	background: radial-gradient(
 		50% 50% at 50% 50%,
 		rgba(167, 190, 232, 0.3) 0%,
