@@ -107,6 +107,53 @@
                 Хорошо
             </button>
         </section>
+        <section class="modal-share">
+            <h2 class="modal__title">
+                Поделиться
+                <div class="modal-close__btn modal-share__close-btn">
+                    <span class="modal-close__btn-item"></span>
+                    <span class="modal-close__btn-item"></span>
+                </div>
+            </h2>
+            <ul class="modal-share__list">
+                <li class="modal-share__item">
+                    <a href="https://vk.com/share.php?url=http://127.0.0.1:5500/Krasfarma/confidentiality.html"
+                        target="_blank">
+                        <img src="assets/img/share_vk.svg" alt="vk">
+                    </a>
+                </li>
+                <li class="modal-share__item">
+                    <a href="https://ok.ru/share/ok.ru?url=http://127.0.0.1:5500/Krasfarma/confidentiality.html"
+                        target="_blank">
+                        <img src="assets/img/share_ok.svg" alt="">
+                    </a>
+                </li>
+                <li class="modal-share__item">
+                    <a href="https://my.mail.ru/share/redirect?url=http://127.0.0.1:5500/Krasfarma/confidentiality.html"
+                        target="_blank">
+                        <img src="assets/img/share_mailru.svg" alt="">
+                    </a>
+                </li>
+                <li class="modal-share__item">
+                    <a href="https://twitter.com/intent/tweet?url=http://127.0.0.1:5500/Krasfarma/confidentiality.html"
+                        target="_blank">
+                        <img src="assets/img/share_twitter.svg" alt="">
+                    </a>
+                </li>
+                <li class="modal-share__item">
+                    <a href="https://www.evernote.com/clip.action?url=http://127.0.0.1:5500/Krasfarma/confidentiality.html"
+                        target="_blank">
+                        <img src="assets/img/share_evernote.svg" alt="">
+                    </a>
+                </li>
+                <li class="modal-share__item">
+                    <a href="https://www.livejournal.com/update.bml?event=http://127.0.0.1:5500/Krasfarma/confidentiality.html"
+                        target="_blank">
+                        <img src="assets/img/share_lj.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </section>
         <div class="modal-overlay"></div>
     </div>
     <header class="header">
@@ -328,7 +375,7 @@
                 <div class="main-about__content">
                     <div class="main-about__links">
                         <picture class="main-about__img">
-                            <img src="/assets/img/фармаконадзор.png" alt="Ингастин">
+                            <img src="assets/img/фармаконадзор.png" alt="Ингастин">
                         </picture>
                         <div class="main-about__text--mobile">
 
@@ -386,7 +433,7 @@
                         </div>
                         <div class="main-action">
                             <a class="main-action__link" href="">
-                                <button class="action-btn">
+                                <button onclick="window.print()" class="action-btn">
                                     <img src="assets/img/print.svg" alt="КрасФарма">
                                 </button>
                                 <p class="action-text">Распечатать</p>

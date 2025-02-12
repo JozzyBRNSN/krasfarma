@@ -6,6 +6,7 @@ import ModalRegistration from './modules/modalRegistration.js'
 import ModalAuthorization from './modules/modalAuthorization.js'
 import ModalRecovery from './modules/modalRecovery.js'
 import modalMessage from './modules/modalMessage.js'
+import ModalShare from './modules/modalShare.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 	const stickyHeader = new StickyHeader({
@@ -42,6 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		modalCloseButtonSelector: ['.modal-close__btn', '.modal-message__btn'],
 		modalWrapperSelector: '.modal-overlay',
 		formId: '#recovery-form',
+	})
+
+	const modalShare = new ModalShare({
+		modalWindowSelector: '.modal-share',
+		modalOpenButtonSelector: '.modal-share__btn',
+		modalCloseButtonSelector: '.modal-share__close-btn',
+		modalWrapperSelector: '.modal-overlay',
 	})
 
 	const popupHeader = new PopupHeader({

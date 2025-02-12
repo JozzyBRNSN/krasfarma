@@ -7,7 +7,8 @@
 .modal-authorization,
 .modal-warning,
 .modal-recovery,
-.modal-message {
+.modal-message,
+.modal-share {
 	display: flex;
 	position: fixed;
 	justify-content: center;
@@ -49,10 +50,65 @@
 	top: 28%;
 }
 
+.modal-share {
+	width: 290px;
+	height: 94px;
+	top: 35%;
+}
+
+.modal-share__list {
+	display: flex;
+	gap: 10px;
+}
+
+.modal-share__item {
+	width: 40px;
+	height: 40px;
+	background: #332e59;
+	align-items: center;
+	transition: background 0.1s ease;
+}
+
+.modal-share__item a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.3s ease;
+}
+
+.modal-share__item:nth-child(1):hover {
+	background: #0077ff;
+}
+
+.modal-share__item:nth-child(2):hover,
+.modal-share__item:nth-child(3):hover {
+	background: #f7931e;
+}
+
+.modal-share__item:nth-child(4):hover {
+	background: #000000;
+}
+
+.modal-share__item:nth-child(5):hover {
+	background: #79d624;
+}
+
+.modal-share__item:nth-child(6):hover {
+	background: #0d425a;
+}
+
+.modal-share__item a:hover {
+	transform: scale(1.1);
+}
+
 .modal-registration.open-modal,
 .modal-authorization.open-modal,
 .modal-warning.open-modal,
 .modal-recovery.open-modal,
+.modal-share.open-modal,
 .modal-message.send-message {
 	opacity: 1;
 	pointer-events: auto;
@@ -424,5 +480,9 @@ input[type='checkbox']:hover::before {
 
 	.modal-сonfirmation__btn {
 		width: 100%;
+	}
+
+	.modal-share {
+		width: 280px;
 	}
 }
