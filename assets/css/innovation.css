@@ -204,3 +204,13 @@
 	}
 }
 
+@media print {
+	.header {
+		position: static;
+	}
+
+	.header-logo img {
+		top: 10px;
+	}
+}
+

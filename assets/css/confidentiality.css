@@ -532,3 +532,15 @@
 		white-space: wrap;
 	}
 }
+
+@media print {
+	.certificates-popup,
+	.network-popup {
+		display: none;
+	}
+
+	.certificates-popup.popup-article__show,
+	.network-popup.popup-article__show {
+		display: block;
+	}
+}

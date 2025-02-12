@@ -26,6 +26,7 @@ class StickyHeader {
 
 		this.observeStickyPoint()
 		window.addEventListener('resize', this.handleResize.bind(this))
+		this.setupPrintListener()
 	}
 
 	observeStickyPoint() {
@@ -62,6 +63,21 @@ class StickyHeader {
 				this.header.classList.remove('header--sticky')
 			}
 		}
+	}
+
+	isPrinting() {
+		return window.matchMedia('print').matches
+	}
+
+	setupPrintListener() {
+		window.matchMedia('print').addEventListener('change', event => {
+			if (event.Matches) {
+				this.stopObserving()
+				this.updateStickyClasses(false)
+			} else {
+				this.observeStickyPoint()
+			}
+		})
 	}
 }
 

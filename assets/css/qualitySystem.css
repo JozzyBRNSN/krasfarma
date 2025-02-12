@@ -290,3 +290,13 @@
 		rgba(167, 190, 232, 0) 100%
 	);
 }
+
+@media print {
+	.quality-popup {
+		display: none;
+	}
+
+	.quality-popup.popup-article__show {
+		display: block;
+	}
+}

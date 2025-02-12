@@ -851,3 +851,21 @@ a {
 		max-width: 390px;
 	}
 }
+
+@media print {
+	.header {
+		position: static;
+	}
+
+	.header-logo img {
+		top: 10px;
+	}
+
+	.header.header--sticky {
+		position: static;
+	}
+
+	.header.header--sticky .header-logo img {
+		top: 20px;
+	}
+}

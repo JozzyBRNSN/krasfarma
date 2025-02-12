@@ -525,3 +525,10 @@ img {
 	backdrop-filter: brightness(0.8) grayscale(1);
 	pointer-events: none;
 }
+
+@media print {
+	.main-action {
+		display: none;
+	}
+}
+
