@@ -166,13 +166,13 @@
 
 .more-details__production-btn {
 	display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    min-width: 64px;
-    height: 32px;
-    border: none;
-    margin: 0;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	min-width: 64px;
+	height: 32px;
+	border: none;
+	margin: 0;
 	background-color: #ff781f;
 	transition: background 0.3s ease;
 }
@@ -292,8 +292,15 @@
 	top: 35px;
 }
 
-.background-logo-item {
+.background-logo__production-item {
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: -1;
 	top: -720px;
+	bottom: 0;
+	margin: 0;
+	background: inherit;
 }
 
 .background-pattern__item--first {
@@ -351,7 +358,7 @@
 }
 
 @media (max-width: 768px) {
-	.background-logo-item {
+	.background-logo__production-item {
 		top: -1550px;
 	}
 }
