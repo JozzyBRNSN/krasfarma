@@ -158,9 +158,15 @@
 	color: #2f2f47;
 }
 
-.main picture img {
+.about-main__wrapper {
+	display: block;
 	width: 100%;
 	height: 400px;
+}
+
+.about-main__wrapper img {
+	width: 100%;
+	height: 100%;
 }
 
 .about-mission {
@@ -811,6 +817,11 @@
 	border-left: 4px solid #7481bf;
 }
 
+.production-content__img img {
+	width: 100%;
+	height: 100%;
+}
+
 .production-content__text {
 	grid-area: text;
 	display: flex;
@@ -916,7 +927,7 @@
 .team-content {
 	display: flex;
 	flex-direction: column;
-	margin-top: 150px;
+	margin: 150px 0 0;
 }
 
 .team-content__text {
@@ -1261,6 +1272,7 @@
 	font-weight: 700;
 	line-height: 1.5;
 	color: #332e59;
+	margin: 0;
 }
 
 .management-content__item-title {
@@ -1269,6 +1281,7 @@
 	font-weight: 400;
 	line-height: 1.5;
 	color: #2d97c1;
+	margin: 0;
 }
 
 .background-confid__item {
@@ -1772,7 +1785,7 @@
 		width: 100%;
 	}
 
-	.main picture img {
+	.about-main__wrapper {
 		height: 320px;
 	}
 
