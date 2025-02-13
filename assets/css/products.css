@@ -1,16 +1,24 @@
-.main-cover {
+.main-products__cover {
 	background-image: url(../../assets/img/products_cover.png);
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	min-height: 540px;
 }
 
 @media (max-width: 570px) {
-	.main-cover {
+	.main-products__cover {
 		min-height: 390px;
 	}
 }
 
-.main-cover--background {
+.main-products__cover--background {
 	background-color: inherit;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	mix-blend-mode: darken;
 }
 
 .main-products__title {
