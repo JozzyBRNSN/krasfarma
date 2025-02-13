@@ -192,34 +192,47 @@
 	z-index: 1;
 }
 
-.background-logo-item {
+.background-logo__pharmcontrol-item {
 	top: -650px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	bottom: 0;
+	margin: 0;
+	background: inherit;
 }
 
 @media (max-width: 768px) {
-	.background-logo-item {
+	.background-logo__pharmcontrol-item {
 		top: -970px;
 	}
 }
 
 @media (max-width: 550px) {
-	.background-logo-item {
+	.background-logo__pharmcontrol-item {
 		width: 80%;
 	}
 }
 
-.background-figure--first-item {
+.background-figure__pharmcontrol--first-item {
 	top: -1572px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	background: inherit;
+	z-index: -1;
 }
 
 @media (max-width: 768px) {
-	.background-figure--first-item {
+	.background-figure__pharmcontrol--first-item {
 		top: -970px;
 	}
 }
 
 @media (max-width: 550px) {
-	.background-figure--first-item {
+	.background-figure__pharmcontrol--first-item {
 		top: -1230px;
 	}
 }
