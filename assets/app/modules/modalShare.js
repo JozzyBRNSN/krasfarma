@@ -14,6 +14,17 @@ class ModalShare {
 	}
 
 	init() {
+		if (
+			!this.modalOpenButton ||
+			!this.modalCloseButton ||
+			!this.modalWindow ||
+			!this.modalWrapper
+		) {
+			console.warn(
+				'Не удалось найти один или несколько элементов модального окна.'
+			)
+			return
+		}
 		this.modalOpenButton.addEventListener('click', () => this.openModal())
 
 		this.modalCloseButton.addEventListener('click', () => this.closeModal())
