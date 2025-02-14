@@ -433,7 +433,7 @@
 	position: relative;
 	margin: 0;
 	max-height: 0;
-	overflow: hidden;
+	overflow-y: hidden;
 	transition: max-height 0.3s ease-in-out;
 }
 

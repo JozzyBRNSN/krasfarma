@@ -445,3 +445,9 @@
 		display: none;
 	}
 }
+
+@media print {
+	.background-gradient__first {
+		display: none;
+	}
+}
