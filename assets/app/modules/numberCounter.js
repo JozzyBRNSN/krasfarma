@@ -1,33 +1,25 @@
 class NumberCounter {
 	constructor(elements) {
-		this.elements = elements 
-		this.animationDuration = 3000 
+		this.elements = elements
+		this.animationDuration = 3000
 		this.animationFrame = 60
 	}
 
 	startCounting() {
 		this.elements.forEach((element, index) => {
-			const targetValue = this.getTargetValue(index)
+			const targetValue = this.getTargetValue(element)
 			this.animateValue(element, targetValue, index)
 		})
 	}
 
-	getTargetValue(index) {
-		switch (index) {
-			case 0:
-				return 80 
-			case 1:
-				return 65 
-			case 2:
-				return 60 
-			default:
-				return 0
-		}
+	getTargetValue(element) {
+		// Извлекаем значение из атрибута data-target
+		return parseInt(element.getAttribute('data-target'), 10) || 0
 	}
 
 	animateValue(element, targetValue, index) {
 		const startValue = 0
-		const totalFrames = (this.animationDuration / 1000) * this.animationFrame 
+		const totalFrames = (this.animationDuration / 1000) * this.animationFrame
 		let currentFrame = 0
 
 		const easeInOutCubic = t => {

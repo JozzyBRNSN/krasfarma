@@ -1140,22 +1140,17 @@
 	font-weight: 400;
 }
 
-.vacancy-popup__content-list {
+.vacancy-popup__content-description ul {
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
 }
 
-.vacancy-popup__content-list b {
-	font-family: 'Source Sans 3';
-	font-size: 20px;
-	color: #4f538c;
-	line-height: 1.25;
-	font-weight: 700;
+.vacancy-popup__content-description b {
 	margin: 0;
 }
 
-.vacancy-popup__content-item {
+.vacancy-popup__content-description {
 	font-family: 'Source Sans 3';
 	font-size: 20px;
 	color: #4f538c;
@@ -1716,7 +1711,7 @@
 	.team-content__text,
 	.vacancy-popup__description,
 	.vacancy-popup__content-title,
-	.vacancy-popup__content-item {
+	.vacancy-popup__content-description > * {
 		font-size: 16px;
 	}
 
