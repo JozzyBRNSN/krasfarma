@@ -6,8 +6,13 @@ import ModalRegistration from './modules/modalRegistration.js'
 import ModalAuthorization from './modules/modalAuthorization.js'
 import ModalRecovery from './modules/modalRecovery.js'
 import modalMessage from './modules/modalMessage.js'
+import NumberCounter from './modules/numberCounter.js'
 
 document.addEventListener('DOMContentLoaded', () => {
+	const counters = document.querySelectorAll('.main-cover__num')
+	const numberCounter = new NumberCounter(counters)
+	numberCounter.startCounting()
+
 	const stickyHeader = new StickyHeader({
 		stickyPointSelector: '.sticky',
 		headerSelector: '.header',
