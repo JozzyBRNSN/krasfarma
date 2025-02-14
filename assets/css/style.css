@@ -339,6 +339,7 @@ img {
 }
 
 .main-action__link {
+	cursor: pointer;
 	display: flex;
 	gap: 10px;
 	margin: 0;
