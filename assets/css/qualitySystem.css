@@ -298,6 +298,10 @@
 	);
 }
 
+.product-categories__list {
+	margin-top: 0;
+}
+
 @media print {
 	.quality-popup {
 		display: none;
