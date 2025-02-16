@@ -372,7 +372,7 @@
                 <div class="section-header">
                     <h2 class="section-title">О компании</h2>
                     <span></span>
-                    <div class="more-details desktop">
+                    <div class="more-details more-details--desktop">
                         <p class="more-details__text">
                             Подробнее
                         </p>
@@ -417,7 +417,7 @@
                         </a>
                     </ul>
                 </div>
-                <div class="more-details mobile">
+                <div class="more-details more-details--mobile">
                     <p class="more-details__text">
                         Подробнее
                     </p>
@@ -457,7 +457,9 @@
                             </a>
                         </article>
                     </div>
-                    <img class="products-description__video" src="assets/img/video.png" alt="КрасФарма">
+                    <video loop muted controls class="products-description__video">
+                        <source src='assets/img/cover_slider_video.MOV'>
+                    </video>
                     <div class="products-description__text">
                         ПАО «Красфарма» – это стратегическое предприятие: стратегическое как в части экономической
                         составляющей, так и социальной значимости. А также ключевое в реализации стратегии
@@ -479,7 +481,7 @@
                     <div class="products-title section-header">
                         <h3 class="products-title__text content__title">Сбалансированный продуктовый портфель</h3>
                         <span></span>
-                        <div class="more-details desktop">
+                        <div class="more-details more-details--desktop">
                             <p class="more-details__text">
                                 Подробнее
                             </p>
@@ -493,7 +495,7 @@
                         современных и эффективных лекарственных препаратах. Следуем стратегии развития отрасли и выводим
                         на рынок фармацевтические продукты для лечения и профилактики социально значимых заболеваний.
                     </p>
-                    <div class="more-details mobile">
+                    <div class="more-details more-details--mobile">
                         <p class="more-details__text">
                             Подробнее
                         </p>
@@ -614,14 +616,14 @@
             <img class='background-figure--third-item' src="assets/img/background_figure3.svg">
         </div>
         <picture>
-            <img src="assets/img/servicesFooter.png" alt="КрасФарма">
+            <img class="main-picture__img" src="assets/img/servicesFooter.png" alt="КрасФарма">
         </picture>
         <div class="container main-container">
             <section class="main-news ">
                 <div class="news-title section-header">
                     <h2 class="section-title">Новости компании</h2>
                     <span></span>
-                    <div class="more-details desktop">
+                    <div class="more-details more-details--desktop">
                         <p class="more-details__text">
                             Все новости
                         </p>
@@ -646,14 +648,14 @@
                                 Имеется спорная точка зрения, гласящая примерно следующее: сделанные на базе
                                 интернет-аналитики выводы объективно рассмотрены соответствующими инстанциями.
                             </p>
-                            <div class="more-details">
+                            <a class="more-details">
                                 <p class="more-details__text">
                                     читать подробнее
                                 </p>
-                                <a class="more-details__btn">
+                                <span class="more-details__btn">
                                     <div class="arrow next"></div>
-                                </a>
-                            </div>
+                                    </sp>
+                            </a>
                         </div>
                         <div class="news-article__item">
                             <div class="news-article__item--title">
@@ -668,14 +670,14 @@
                                 Имеется спорная точка зрения, гласящая примерно следующее: сделанные на базе
                                 интернет-аналитики выводы объективно рассмотрены соответствующими инстанциями.
                             </p>
-                            <div class="more-details">
+                            <a class="more-details">
                                 <p class="more-details__text">
                                     читать подробнее
                                 </p>
-                                <a class="more-details__btn">
+                                <span class="more-details__btn">
                                     <div class="arrow next"></div>
-                                </a>
-                            </div>
+                                </span>
+                            </a>
                         </div>
                         <div class="news-article__item">
                             <div class="news-article__item--title">
@@ -690,17 +692,17 @@
                                 Имеется спорная точка зрения, гласящая примерно следующее: сделанные на базе
                                 интернет-аналитики выводы объективно рассмотрены соответствующими инстанциями.
                             </p>
-                            <div class="more-details">
+                            <a class="more-details">
                                 <p class="more-details__text">
                                     читать подробнее
                                 </p>
-                                <a class="more-details__btn">
+                                <span class="more-details__btn">
                                     <div class="arrow next"></div>
-                                </a>
-                            </div>
+                                </span>
+                            </a>
                         </div>
                     </div>
-                    <div class="more-details mobile">
+                    <div class="more-details more-details--mobile">
                         <p class="more-details__text">
                             Все новости
                         </p>
@@ -719,7 +721,7 @@
                 <div class="info-title section-header">
                     <h2 class="section-title">Фармаконадзор</h2>
                     <span></span>
-                    <div class="more-details desktop">
+                    <div class="more-details more-details--desktop">
                         <p class="more-details__text">
                             Подробнее
                         </p>
@@ -729,7 +731,9 @@
                     </div>
                 </div>
                 <div class="info-content">
-                    <img class="info-content__img" src="assets/img/info1.png" alt="Фармаконадзор">
+                    <picture class="info-content__img">
+                        <img src="assets/img/info1.png" alt="Фармаконадзор">
+                    </picture>
                     <p class="info-content__text">
                         Безусловным приоритетом ПАО «Красфарма» является благополучие пациентов. Для реализации этой
                         цели в Компании создана и функционирует Служба фармаконадзора, задачи которой - как можно более
@@ -737,7 +741,7 @@
                         определение факторов риска при применении продукции Компании и их количественная оценка, а также
                         контроль соотношения «риск-польза» при применении лекарственных препаратов.
                     </p>
-                    <div class="more-details mobile">
+                    <div class="more-details more-details--mobile">
                         <p class="more-details__text">
                             Подробнее
                         </p>
@@ -749,7 +753,7 @@
                 <div class="disclosure-title section-header">
                     <h2 class="section-title">Раскрытие информации</h2>
                     <span></span>
-                    <div class="more-details desktop">
+                    <div class="more-details more-details--desktop">
                         <p class="more-details__text">
                             Подробнее
                         </p>
@@ -759,7 +763,9 @@
                     </div>
                 </div>
                 <div class="info-content">
-                    <img class='info-content__img' src="assets/img/info2.png" alt="Раскрытие информации">
+                    <picture class="info-content__img">
+                        <img src="assets/img/info2.png" alt="Раскрытие информации">
+                    </picture>
                     <div class="info-content__box">
                         <p class="info-content__text border">
                             ПАО «Красфарма» является одной из крупнейших российских фармацевтических компаний,
@@ -767,7 +773,7 @@
                             препаратах – антибиотиках, инфузионных растворах, противотуберкулезных средствах.
                         </p>
                     </div>
-                    <div class="more-details mobile">
+                    <div class="more-details more-details--mobile">
                         <p class="more-details__text">
                             Подробнее
                         </p>
@@ -781,7 +787,7 @@
                 <div class="contacts-title section-header">
                     <h2 class="section-title">Контакты</h2>
                     <span></span>
-                    <div class="more-details desktop">
+                    <div class="more-details more-details--desktop">
                         <p class="more-details__text">
                             ВСЕ КОНТАКТЫ
                         </p>
@@ -798,7 +804,7 @@
                             открывает новые горизонты для своевременного выполнения сверхзадачи.
                         </p>
                     </div>
-                    <div class="more-details mobile">
+                    <div class="more-details more-details--mobile">
                         <p class="more-details__text">
                             Все контакты
                         </p>
