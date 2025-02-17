@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			'popup-burger--bottom',
 		],
 		shadowMenu: '.popup-shadow',
+		popupLinkSelectors: '.popup-link',
 	})
 
 	const contactUpdater = new ContactUpdater({
