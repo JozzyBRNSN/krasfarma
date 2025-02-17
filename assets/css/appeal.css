@@ -1,0 +1,178 @@
+.main-appeal__title {
+	position: relative;
+	font-family: 'Geologica';
+	font-size: 80px;
+	font-weight: 500;
+	color: #ffffff;
+	height: 75px;
+	top: 131px;
+	margin: 0;
+}
+
+@media (max-width: 1440px) {
+	.main-appeal__title {
+		left: 140px;
+	}
+}
+
+@media (max-width: 1290px) {
+	.main-appeal__title {
+		width: 75%;
+	}
+}
+
+@media (max-width: 860px) {
+	.main-appeal__title {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 680px) {
+	.main-appeal__title {
+		font-size: 6vw;
+	}
+}
+
+@media (max-width: 585px) {
+	.main-appeal__title {
+		left: 80px;
+		top: 80px;
+	}
+}
+
+@media (max-width: 425px) {
+	.main-appeal__title {
+		font-size: 24px;
+	}
+}
+
+.appeal-about {
+	margin: 0;
+}
+
+.appeal-about__content {
+	display: flex;
+	flex-direction: column-reverse;
+	margin: 0 0 100px;
+	gap: 80px;
+}
+
+.appeal-about__links {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+	margin: 0;
+}
+
+.appeal-info__content {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+}
+
+.appeal-about__title {
+	font-family: 'Geologica';
+	font-size: 48px;
+	font-weight: 500;
+	color: #332e59;
+	margin: 0;
+	text-align: center;
+}
+
+.appeal-about__subtitle {
+	font-family: 'Geologica';
+	font-size: 40px;
+	font-weight: 500;
+	color: #332e59;
+	margin: 0;
+}
+
+@media (max-width: 624px) {
+	.appeal-about__title {
+		font-size: 32px;
+	}
+
+	.appeal-about__subtitle {
+		font-size: 28px;
+	}
+}
+
+@media (max-width: 390px) {
+	.appeal-about__title {
+		font-size: 24px;
+	}
+
+	.appeal-about__subtitle {
+		font-size: 20px;
+	}
+}
+
+.appeal-about__text {
+	display: block;
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-weight: 400;
+	color: #2f2f47;
+	line-height: 1.5;
+}
+
+.appeal-about__text span,
+.appeal-about__subtitle span {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.background-logo__appeal-item {
+	top: -650px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	bottom: 0;
+	margin: 0;
+	background: inherit;
+}
+
+@media (max-width: 768px) {
+	.background-logo__appeal-item {
+		top: -970px;
+	}
+}
+
+@media (max-width: 550px) {
+	.background-logo__appeal-item {
+		width: 80%;
+	}
+}
+
+.background-figure__appeal--first-item {
+	top: -1572px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	background: inherit;
+	z-index: -1;
+}
+
+@media (max-width: 768px) {
+	.background-figure__appeal--first-item {
+		top: -970px;
+	}
+}
+
+@media (max-width: 550px) {
+	.background-figure__appeal--first-item {
+		top: -1230px;
+	}
+}
+
+@media print {
+	.header {
+		position: static;
+	}
+
+	.header-logo img {
+		top: 10px;
+	}
+}
