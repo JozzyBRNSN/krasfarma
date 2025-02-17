@@ -283,6 +283,10 @@
 	border-left: 2px solid #4f538c;
 }
 
+.about-content__item picture {
+	margin: 0;
+}
+
 .about-content__item--text {
 	font-family: 'Source Sans 3';
 	text-transform: uppercase;
@@ -668,7 +672,8 @@
 	margin: 0;
 }
 
-.news-article__item--heading {
+.news-article__item--heading,
+.news-article__item--heading a {
 	font-family: 'Geologica';
 	text-transform: uppercase;
 	font-size: 20px;
@@ -735,7 +740,6 @@
 	margin-bottom: 20px;
 }
 
- 
 .more-details.more-details--mobile {
 	display: none;
 }
@@ -1096,10 +1100,6 @@
 	.about-content__item img {
 		font-size: 16px;
 		height: 160px;
-	}
-
-	.about-content__item picture {
-		margin: 0;
 	}
 
 	.about-content__item--text {
