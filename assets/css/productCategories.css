@@ -241,6 +241,8 @@
 .categories-item__img {
 	width: 100%;
 	height: 200px;
+	object-fit: contain;
+	background-color: #ffffff;
 	box-shadow: 0px 16px 24px -16px #332e5940;
 }
 
@@ -250,7 +252,8 @@
 	}
 }
 
-.categories-item__text {
+.categories-item__text,
+.categories-item__text a {
 	text-transform: uppercase;
 	font-family: 'Source Sans 3';
 	font-size: 18px;
