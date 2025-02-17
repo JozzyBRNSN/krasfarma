@@ -14,7 +14,6 @@ class ModalRegistration {
 		this.emailInput = this.modalWindow.querySelector('input[type="email"]')
 		this.addressInput = this.modalWindow.querySelector('#youAddress')
 		this.phoneInput = this.modalWindow.querySelector('#phoneInput')
-		this.phoneInput = this.modalWindow.querySelector('#phoneInput')
 		this.checkbox = this.modalWindow.querySelector('#checkbox')
 
 		this.usernameTooltip = this.modalWindow.querySelector('.username-tooltip')
@@ -33,15 +32,6 @@ class ModalRegistration {
 		this.modalCloseButton.forEach(closeButton => {
 			closeButton.addEventListener('click', () => this.closeModal())
 		})
-
-		this.modalWindow
-			.querySelector('.modal-form')
-			.addEventListener('submit', event => {
-				event.preventDefault()
-				if (this.validateForm()) {
-					this.submitForm()
-				}
-			})
 	}
 
 	openModal() {
