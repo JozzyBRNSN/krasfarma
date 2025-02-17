@@ -190,6 +190,10 @@
 	height: 190px;
 }
 
+.cover-slogan a {
+	color: #ffffff;
+}
+
 .cover-slogan__title {
 	position: absolute;
 	display: flex;
