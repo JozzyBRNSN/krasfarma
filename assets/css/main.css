@@ -736,7 +736,7 @@
 }
 
  
-.more-details--mobile {
+.more-details.more-details--mobile {
 	display: none;
 }
 
@@ -980,10 +980,10 @@
 		height: auto;
 	}
 
-	.news-title .more-details--desktop {
+	.news-title .more-details.more-details--desktop {
 		display: none;
 	}
-	.news-article .more-details--mobile {
+	.news-article .more-details.more-details--mobile {
 		display: flex;
 		margin-top: 20px;
 	}
@@ -998,10 +998,10 @@
 		width: 100%;
 	}
 
-	.more-details--desktop {
+	.more-details.more-details--desktop {
 		display: none;
 	}
-	.more-details--mobile {
+	.more-details.more-details--mobile {
 		display: flex;
 		margin-top: 20px;
 	}
