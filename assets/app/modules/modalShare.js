@@ -14,19 +14,28 @@ class ModalShare {
 	}
 
 	init() {
-		if (
-			!this.modalOpenButton ||
-			!this.modalCloseButton ||
-			!this.modalWindow ||
-			!this.modalWrapper
-		) {
-			console.warn(
-				'Не удалось найти один или несколько элементов модального окна.'
-			)
+		if (!this.modalOpenButton) {
+			console.warn('Не удалось найти элемент для открытия модального окна.')
 			return
 		}
-		this.modalOpenButton.addEventListener('click', () => this.openModal())
 
+		if (!this.modalCloseButton) {
+			console.warn('Не удалось найти элемент для закрытия модального окна.')
+			return
+		}
+
+		if (!this.modalWindow) {
+			console.warn('Не удалось найти модальное окно.')
+			return
+		}
+
+		if (!this.modalWrapper) {
+			console.warn('Не удалось найти обертку модального окна.')
+			return
+		}
+
+		// Добавление слушателей событий
+		this.modalOpenButton.addEventListener('click', () => this.openModal())
 		this.modalCloseButton.addEventListener('click', () => this.closeModal())
 	}
 

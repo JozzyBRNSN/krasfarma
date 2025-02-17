@@ -10,48 +10,70 @@ class ModalAuthorization {
 		this.modalCloseButton = document.querySelectorAll(modalCloseButtonSelector)
 		this.modalWrapper = document.querySelector(modalWrapperSelector)
 
-		this.emailInput = this.modalWindow.querySelector('input[type="email"]')
-		this.passwordInput = this.modalWindow.querySelector(
-			'input[type="password"]'
-		)
-		this.emailTooltip = this.modalWindow.querySelector('.email-tooltip')
-		this.passwordTooltip = this.modalWindow.querySelector('.password-tooltip')
+		if (this.modalWindow) {
+			this.emailInput = this.modalWindow.querySelector('input[type="email"]')
+			this.passwordInput = this.modalWindow.querySelector(
+				'input[type="password"]'
+			)
+			this.emailTooltip = this.modalWindow.querySelector('.email-tooltip')
+			this.passwordTooltip = this.modalWindow.querySelector('.password-tooltip')
+		} else {
+			this.emailInput = null
+			this.passwordInput = null
+			this.emailTooltip = null
+			this.passwordTooltip = null
+			console.warn('Модальное окно не найдено.')
+		}
 
 		this.init()
 	}
 
 	init() {
-		this.modalOpenButton.forEach(openButton => {
-			openButton.addEventListener('click', () => this.openModal())
-		})
-		this.modalCloseButton.forEach(closeButton => {
-			closeButton.addEventListener('click', () => this.closeModal())
-		})
-
-		this.modalWindow
-			.querySelector('.modal-form')
-			.addEventListener('submit', event => {
-				event.preventDefault()
-				if (this.validateForm()) {
-					this.submitForm()
-				}
+		if (this.modalOpenButton.length > 0) {
+			this.modalOpenButton.forEach(openButton => {
+				openButton.addEventListener('click', () => this.openModal())
 			})
+		} else {
+			console.warn('Кнопки открытия модального окна не найдены.')
+		}
+
+		if (this.modalCloseButton.length > 0) {
+			this.modalCloseButton.forEach(closeButton => {
+				closeButton.addEventListener('click', () => this.closeModal())
+			})
+		} else {
+			console.warn('Кнопки закрытия модального окна не найдены.')
+		}
 	}
 
 	openModal() {
-		this.modalWindow.classList.add('open-modal')
-		this.modalWrapper.classList.add('open-modal')
-		document.body.classList.add('hidden')
+		if (this.modalWindow && this.modalWrapper) {
+			this.modalWindow.classList.add('open-modal')
+			this.modalWrapper.classList.add('open-modal')
+			document.body.classList.add('hidden')
+		}
 	}
 
 	closeModal() {
-		this.modalWindow.classList.remove('open-modal')
-		this.modalWrapper.classList.remove('open-modal')
-		document.body.classList.remove('hidden')
-		this.clearTooltips()
+		if (this.modalWindow && this.modalWrapper) {
+			this.modalWindow.classList.remove('open-modal')
+			this.modalWrapper.classList.remove('open-modal')
+			document.body.classList.remove('hidden')
+			this.clearTooltips()
+		}
 	}
 
 	validateForm() {
+		if (
+			!this.emailInput ||
+			!this.passwordInput ||
+			!this.emailTooltip ||
+			!this.passwordTooltip
+		) {
+			console.warn('Не все элементы формы доступны для валидации.')
+			return false
+		}
+
 		const emailPattern =
 			/^[a-zA-Z0-9._-]{1,64}@[a-zA-Z0-9.-]{1,253}\.[a-zA-Z]{2,6}$/
 		const passwordPattern = /^[A-Za-z\d@$!%*?&]{8,20}$/
@@ -85,13 +107,9 @@ class ModalAuthorization {
 		return isValid
 	}
 
-	submitForm() {
-		this.modalWindow.querySelector('.modal-form').submit() 
-	}
-
 	clearTooltips() {
-		this.emailTooltip.style.display = 'none'
-		this.passwordTooltip.style.display = 'none'
+		if (this.emailTooltip) this.emailTooltip.style.display = 'none'
+		if (this.passwordTooltip) this.passwordTooltip.style.display = 'none'
 	}
 }
 

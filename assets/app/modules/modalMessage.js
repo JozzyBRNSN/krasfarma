@@ -12,15 +12,19 @@ class ModalMessage {
 	}
 
 	init() {
-		this.modalCloseButton.forEach(closeButton => {
-			closeButton.addEventListener('click', () => this.closeModal())
-		})
+		if (this.modalCloseButton.length > 0) {
+			this.modalCloseButton.forEach(closeButton => {
+				closeButton.addEventListener('click', () => this.closeModal())
+			})
+		}
 	}
 
 	closeModal() {
-		this.modalWindow.classList.remove('send-message')
-		this.modalWrapper.classList.remove('open-modal')
-		document.body.classList.remove('hidden')
+		if (this.modalWindow && this.modalWrapper) {
+			this.modalWindow.classList.remove('send-message')
+			this.modalWrapper.classList.remove('open-modal')
+			document.body.classList.remove('hidden')
+		}
 	}
 }
 
