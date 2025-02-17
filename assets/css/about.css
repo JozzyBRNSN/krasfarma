@@ -747,6 +747,7 @@
 .info-content__box-quote {
 	display: flex;
 	padding: 20px 10px;
+	gap: 20px;
 }
 
 .info-content__box-quote::before {
@@ -1316,7 +1317,7 @@
 	position: absolute;
 	left: -140px;
 	right: auto;
-	top: -110px;
+	top: -1300px;
 	z-index: -1;
 	background: inherit;
 	box-shadow: none;
@@ -1411,46 +1412,6 @@
 
 .vacancy-wrapper {
 	z-index: -3;
-}
-
-.vacancy-wrapper__image {
-	position: absolute;
-	background: url(../../assets/img/vacancy_wrapper.png);
-	background-size: cover;
-	background-position-y: 50%;
-	width: 100%;
-	height: 1836px;
-	bottom: 200px;
-	opacity: 0.4;
-}
-
-.vacancy-wrapper__image::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: #0056f34d;
-	background-blend-mode: color;
-}
-
-.vacancy-wrapper--mask {
-	position: absolute;
-	width: 100%;
-	height: 1836px;
-	background: #b9d0fb54;
-	bottom: 200px;
-}
-
-.vacancy-wrapper--mask::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: #fdfdfda6;
 }
 
 @media (max-width: 1140px) {
