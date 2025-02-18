@@ -53,11 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const popupValues = new PopupArticle('.about-values__popup', '.values-btn')
 
-	const popupVacancy = new PopupArticle(
-		'.vacancy-popup',
-		'.team-vacancy__item-content'
-	)
-
 	const popupHeader = new PopupHeader({
 		menuButtonId: 'header-nav__menu',
 		popupId: 'popup-menu',

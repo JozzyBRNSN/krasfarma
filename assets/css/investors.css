@@ -1,0 +1,218 @@
+.main-investors__title {
+	position: relative;
+	font-family: 'Geologica';
+	font-size: 80px;
+	font-weight: 500;
+	color: #ffffff;
+	height: 75px;
+	top: 131px;
+	margin: 0;
+}
+
+@media (max-width: 1440px) {
+	.main-investors__title {
+		left: 140px;
+	}
+}
+
+@media (max-width: 1290px) {
+	.main-investors__title {
+		width: 75%;
+	}
+}
+
+@media (max-width: 860px) {
+	.main-investors__title {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 680px) {
+	.main-investors__title {
+		font-size: 6vw;
+	}
+}
+
+@media (max-width: 585px) {
+	.main-investors__title {
+		left: 80px;
+		top: 80px;
+	}
+}
+
+@media (max-width: 425px) {
+	.main-investors__title {
+		font-size: 24px;
+	}
+}
+
+.investors-about {
+	margin: 0;
+}
+
+.investors-about__content {
+	display: flex;
+	flex-direction: column-reverse;
+	margin: 0 0 100px;
+	gap: 80px;
+}
+
+.investors-about__links {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+	margin: 0;
+}
+
+.investors-info__content {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+}
+
+.investors-info__box {
+	display: flex;
+	gap: 20px;
+	padding: 40px 20px;
+	background-color: #ffffff;
+	box-shadow: 0px 24px 64px -16px #a7bee840;
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-style: italic;
+	font-weight: 600;
+	line-height: 1.5;
+	color: #4f538c;
+	border-left: 2px solid #4f538c;
+}
+
+@media (max-width: 425px) {
+	.investors-info__box {
+		padding: 20px 10px;
+        gap: 10px;
+	}
+}
+
+@media (max-width: 380px) {
+	.investors-info__box {
+		font-size: 18px;
+		hyphens: auto;
+		-moz-hyphens: auto;
+	}
+}
+
+.investors-info__box::before {
+	content: url(../../assets/img/text_start.svg);
+}
+
+.investors-info__box::after {
+	content: url(../../assets/img/text_end.svg);
+	align-self: flex-end;
+}
+
+
+.investors-about__title {
+	font-family: 'Geologica';
+	font-size: 48px;
+	font-weight: 500;
+	color: #332e59;
+	margin: 0;
+	text-align: center;
+}
+
+.investors-about__subtitle {
+	font-family: 'Geologica';
+	font-size: 40px;
+	font-weight: 500;
+	color: #332e59;
+	margin: 0;
+}
+
+@media (max-width: 624px) {
+	.investors-about__title {
+		font-size: 32px;
+	}
+
+	.investors-about__subtitle {
+		font-size: 28px;
+	}
+}
+
+@media (max-width: 390px) {
+	.investors-about__title {
+		font-size: 24px;
+	}
+
+	.investors-about__subtitle {
+		font-size: 20px;
+	}
+}
+
+.investors-about__text {
+	display: block;
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-weight: 400;
+	color: #2f2f47;
+	line-height: 1.5;
+}
+
+.investors-about__text span,
+.investors-about__subtitle span {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.background-logo__investors-item {
+	top: -650px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	bottom: 0;
+	margin: 0;
+	background: inherit;
+}
+
+@media (max-width: 768px) {
+	.background-logo__investors-item {
+		top: -970px;
+	}
+}
+
+@media (max-width: 550px) {
+	.background-logo__investors-item {
+		width: 80%;
+	}
+}
+
+.background-figure__investors--first-item {
+	top: -1572px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	background: inherit;
+	z-index: -1;
+}
+
+@media (max-width: 768px) {
+	.background-figure__investors--first-item {
+		top: -970px;
+	}
+}
+
+@media (max-width: 550px) {
+	.background-figure__investors--first-item {
+		top: -1230px;
+	}
+}
+
+@media print {
+	.header {
+		position: static;
+	}
+
+	.header-logo img {
+		top: 10px;
+	}
+}
