@@ -154,12 +154,15 @@
 	display: flex;
 	width: 304px;
 	max-height: 420px;
+	background-color: #ffffff;
+	padding: 30px 50px;
 }
 
 .preparation-about__card-main img {
 	max-width: 304px;
 	max-height: 420px;
 	object-fit: contain;
+	
 }
 
 @media (max-width: 874px) {
