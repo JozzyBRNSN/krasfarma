@@ -1,3 +1,18 @@
+.main-investors__cover {
+	background-image: url(../../assets/img/about-cover.png);
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-height: 540px;
+}
+
+@media (max-width: 425px) {
+	.main-investors__cover {
+		min-height: 390px;
+	}
+}
+
 .main-investors__title {
 	position: relative;
 	font-family: 'Geologica';
@@ -125,6 +140,11 @@
 	font-weight: 500;
 	color: #332e59;
 	margin: 0;
+	transition: color 0.5s ease;
+}
+
+.investors-about__subtitle:hover {
+	color: #7481bf;
 }
 
 @media (max-width: 624px) {

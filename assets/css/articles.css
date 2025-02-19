@@ -1,3 +1,18 @@
+.main-articles__cover {
+	background-image: url(../../assets/img/about-cover.png);
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-height: 540px;
+}
+
+@media (max-width: 425px) {
+	.main-articles__cover {
+		min-height: 390px;
+	}
+}
+
 .main-articles__title {
 	position: relative;
 	font-family: 'Geologica';

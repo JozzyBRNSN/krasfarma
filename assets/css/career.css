@@ -1,4 +1,19 @@
-.main-carrer__title {
+.main-career__cover {
+	background-image: url(../../assets/img/about-cover.png);
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-height: 540px;
+}
+
+@media (max-width: 425px) {
+	.main-career__cover {
+		min-height: 390px;
+	}
+}
+
+.main-career__title {
 	position: relative;
 	font-family: 'Geologica';
 	font-size: 80px;
@@ -10,53 +25,53 @@
 }
 
 @media (max-width: 1440px) {
-	.main-carrer__title {
+	.main-career__title {
 		left: 140px;
 	}
 }
 
 @media (max-width: 1290px) {
-	.main-carrer__title {
+	.main-career__title {
 		width: 75%;
 	}
 }
 
 @media (max-width: 860px) {
-	.main-carrer__title {
+	.main-career__title {
 		font-size: 40px;
 	}
 }
 
 @media (max-width: 680px) {
-	.main-carrer__title {
+	.main-career__title {
 		font-size: 6vw;
 	}
 }
 
 @media (max-width: 585px) {
-	.main-carrer__title {
+	.main-career__title {
 		left: 80px;
 		top: 80px;
 	}
 }
 
 @media (max-width: 425px) {
-	.main-carrer__title {
+	.main-career__title {
 		font-size: 24px;
 	}
 }
 
-.carrer-about {
+.career-about {
 	margin: 0;
 }
 
-.carrer-about__content {
+.career-about__content {
 	display: flex;
 	margin: 0 0 100px;
 	gap: 80px;
 }
 
-.carrer-about__links {
+.career-about__links {
 	display: flex;
 	justify-content: space-between;
 	align-self: flex-end;
@@ -66,18 +81,18 @@
 }
 
 @media (max-width: 900px) {
-	.carrer-about__links {
+	.career-about__links {
 		align-self: start;
 	}
 }
 
-.carrer-info__content {
+.career-info__content {
 	display: flex;
 	flex-direction: column;
 	gap: 60px;
 }
 
-.carrer-info__box {
+.career-info__box {
 	display: flex;
 	gap: 20px;
 	padding: 40px 20px;
@@ -93,30 +108,30 @@
 }
 
 @media (max-width: 425px) {
-	.carrer-info__box {
+	.career-info__box {
 		padding: 20px 10px;
 		gap: 10px;
 	}
 }
 
 @media (max-width: 380px) {
-	.carrer-info__box {
+	.career-info__box {
 		font-size: 18px;
 		hyphens: auto;
 		-moz-hyphens: auto;
 	}
 }
 
-.carrer-info__box::before {
+.career-info__box::before {
 	content: url(../../assets/img/text_start.svg);
 }
 
-.carrer-info__box::after {
+.career-info__box::after {
 	content: url(../../assets/img/text_end.svg);
 	align-self: flex-end;
 }
 
-.carrer-about__text {
+.career-about__text {
 	display: block;
 	font-family: 'Source Sans 3';
 	font-size: 20px;
@@ -125,19 +140,19 @@
 	line-height: 1.5;
 }
 
-.carrer-vacancy {
+.career-vacancy {
 	display: flex;
 	margin-bottom: 100px;
 }
 
 @media (max-width: 900px) {
-	.carrer-vacancy {
+	.career-vacancy {
 		flex-direction: column-reverse;
 		gap: 50px;
 	}
 }
 
-.background-logo__carrer-item {
+.background-logo__career-item {
 	top: -650px;
 	position: absolute;
 	left: 0;
@@ -149,18 +164,18 @@
 }
 
 @media (max-width: 768px) {
-	.background-logo__carrer-item {
+	.background-logo__career-item {
 		top: -970px;
 	}
 }
 
 @media (max-width: 550px) {
-	.background-logo__carrer-item {
+	.background-logo__career-item {
 		width: 80%;
 	}
 }
 
-.background-figure__carrer--first-item {
+.background-figure__career--first-item {
 	top: -1572px;
 	position: absolute;
 	right: 0;
@@ -171,13 +186,13 @@
 }
 
 @media (max-width: 768px) {
-	.background-figure__carrer--first-item {
+	.background-figure__career--first-item {
 		top: -970px;
 	}
 }
 
 @media (max-width: 550px) {
-	.background-figure__carrer--first-item {
+	.background-figure__career--first-item {
 		top: -1230px;
 	}
 }
