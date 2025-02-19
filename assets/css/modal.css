@@ -67,7 +67,6 @@
 	background: #332e59;
 	align-items: center;
 	transition: background 0.1s ease;
-	
 }
 
 .modal-share__item a {
@@ -125,6 +124,7 @@
 	pointer-events: none;
 	transition: opacity 0.5s ease;
 	top: 0;
+	left: 0;
 }
 
 .modal-overlay.open-modal {
