@@ -1,0 +1,242 @@
+.main-search__cover {
+	background-image: url(../../assets/img/search_cover.png);
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-height: 480px;
+}
+
+.main-search__title {
+	position: relative;
+	font-family: 'Geologica';
+	font-size: 80px;
+	font-weight: 500;
+	color: #ffffff;
+	height: 75px;
+	top: 131px;
+	margin: 0;
+}
+
+@media (max-width: 1440px) {
+	.main-search__title {
+		left: 140px;
+	}
+}
+
+@media (max-width: 768px) {
+	.main-search__title {
+		font-size: 32px;
+	}
+}
+
+@media (max-width: 680px) {
+	.main-search__title {
+		font-size: 6vw;
+	}
+}
+
+@media (max-width: 585px) {
+	.main-search__title {
+		left: 80px;
+		top: 80px;
+	}
+}
+
+.search-content {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	max-width: 100%;
+	margin-bottom: 200px;
+}
+
+@media (max-width: 768px) {
+	.search-content {
+		margin-bottom: 110px;
+	}
+}
+
+.search-form {
+	display: flex;
+	gap: 12px;
+	margin: 0;
+}
+
+.search-input {
+	margin: 0;
+	outline: none;
+	border: 1px solid #e5e8ec;
+	width: 598px;
+}
+
+.search-btn {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Source Sans 3';
+	font-size: 18px;
+	font-weight: 500;
+	color: #ffffff;
+	background-color: #2d97c1;
+	width: 150px;
+	padding: 0 10px;
+	height: 40px;
+	border: none;
+	outline: none;
+	transition: background-color 0.5s ease;
+}
+
+.search-btn::after {
+	content: '';
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-color: #ffffff;
+	border-bottom: 2px solid #ffffff;
+	border-left: 2px solid #ffffff;
+	margin-left: 10px;
+	transform: rotate(-135deg);
+}
+
+.search-info__content {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.search-info__content span {
+	width: 100%;
+	height: 2px;
+	background-color: #e5e8ec;
+}
+
+.search-info__title {
+	font-family: 'Source Sans 3';
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 28.48px;
+	color: #7481bf;
+	margin: 0;
+}
+
+.search-info__title span {
+	text-transform: uppercase;
+	font-family: 'Geologica';
+	font-size: 16px;
+	line-height: 20px;
+	color: #3e3965;
+	background-color: inherit;
+}
+
+.search-info__text {
+	font-family: 'Source Sans 3';
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 30px;
+	color: #2f2f47;
+}
+
+.search__pagination {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
+	margin: 0;
+}
+
+.search__pagination-text,
+.search__pagination-filter {
+	margin: 0;
+}
+
+.search__pagination-text p,
+.search__pagination-filter button {
+	font-family: 'Source Sans 3';
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 30px;
+	color: #332e59;
+}
+
+.search__pagination-list {
+	display: flex;
+	margin: 0;
+	gap: 20px;
+}
+
+.search__pagination-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-weight: 700;
+	color: #ffffff;
+	width: 60px;
+	height: 40px;
+	border: none;
+	background-color: #2d97c1;
+	transition: background-color 0.5s ease;
+}
+
+.search__pagination-btn:hover,
+.search__pagination-btn:focus {
+	background-color: #53d2eb;
+}
+
+.search__pagination-filter button {
+	border: none;
+	background-color: inherit;
+}
+
+.search__pagination-filter button:focus {
+	color: #7481bf;
+}
+
+.background-figure-search--first-item {
+	top: -35px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	background: inherit;
+	z-index: -1;
+}
+
+.background-pattern__item-search--first {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -258px;
+	bottom: 0;
+	margin: 0;
+	z-index: -1;
+	background: inherit;
+}
+
+@media (max-width: 425px) {
+      .main-search__cover {
+		min-height: 390px;
+	}
+
+      .main-search__title {
+		font-size: 24px;
+	}
+
+	.search-form {
+		flex-direction: column;
+	}
+
+	.search-input,
+	.search-btn {
+		width: 100%;
+	}
+
+	.search-info__text,
+	.search__pagination-text p,
+	.search__pagination-filter button {
+		font-size: 16px;
+	}
+}
