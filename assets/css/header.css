@@ -68,6 +68,7 @@
 .auth-personal {
 	display: flex;
 	align-items: center;
+	margin-left: 8px;
 }
 .auth-personal a {
 	padding-bottom: 2px;
