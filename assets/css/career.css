@@ -17,7 +17,7 @@
 	position: relative;
 	font-family: 'Geologica';
 	font-size: 80px;
-	font-weight: 500;
+	font-weight: 700;
 	color: #ffffff;
 	height: 75px;
 	top: 131px;
@@ -30,21 +30,9 @@
 	}
 }
 
-@media (max-width: 1290px) {
-	.main-career__title {
-		width: 75%;
-	}
-}
-
-@media (max-width: 860px) {
-	.main-career__title {
-		font-size: 40px;
-	}
-}
-
 @media (max-width: 680px) {
 	.main-career__title {
-		font-size: 6vw;
+		font-size: 10vw;
 	}
 }
 
