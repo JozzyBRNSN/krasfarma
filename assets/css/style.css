@@ -346,6 +346,9 @@ img {
 	align-items: center;
 	align-self: end;
 	padding-right: 20px;
+	background-color: inherit;
+	border: none;outline: none;
+
 }
 
 .action-btn {

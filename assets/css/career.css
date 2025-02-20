@@ -74,16 +74,10 @@
 .career-about__links {
 	display: flex;
 	justify-content: space-between;
-	align-self: flex-end;
+	align-self: flex-start;
 	min-width: 360px;
 	gap: 40px;
 	margin: 0;
-}
-
-@media (max-width: 900px) {
-	.career-about__links {
-		align-self: start;
-	}
 }
 
 .career-info__content {
@@ -142,14 +136,9 @@
 
 .career-vacancy {
 	display: flex;
+	flex-direction: column-reverse;
+	gap: 50px;
 	margin-bottom: 100px;
-}
-
-@media (max-width: 900px) {
-	.career-vacancy {
-		flex-direction: column-reverse;
-		gap: 50px;
-	}
 }
 
 .background-logo__career-item {
@@ -331,7 +320,7 @@
 .vacancy-popup__content {
 	display: grid;
 	grid-template-columns: 290px 1fr;
-    gap: 20px;
+	gap: 20px;
 	margin: 0;
 	padding: 0 0 10px;
 	border-bottom: 2px solid #e5e8ec;
@@ -451,17 +440,10 @@
 	height: 8px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
 	.vacancy-popup__titles,
 	.vacancy-popup__content {
-		grid-template-columns: 1fr 1fr;
-	}
-}
-
-@media (max-width: 640px) {
-	.vacancy-popup__titles,
-	.vacancy-popup__content {
-		grid-template-columns: 150px 1fr;
+		grid-template-columns: 28vw 1fr;
 	}
 }
 
@@ -488,9 +470,20 @@
 	}
 }
 
-@media (max-width: 379px) {
-	.vacancy-popup__titles,
-	.vacancy-popup__content {
-		grid-template-columns: 90px 1fr;
+@media print {
+	.header {
+		position: static;
+	}
+
+	.header-logo img {
+		top: 10px;
+	}
+
+	.vacancy-popup {
+		display: none;
+	}
+
+	.vacancy-popup.popup-article__show {
+		display: block;
 	}
 }

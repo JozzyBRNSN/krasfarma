@@ -30,6 +30,12 @@
 	}
 }
 
+@media (max-width: 900px) {
+	.main-articles__title {
+		font-size: 60px;
+	}
+}
+
 @media (max-width: 768px) {
 	.main-articles__title {
 		font-size: 32px;
