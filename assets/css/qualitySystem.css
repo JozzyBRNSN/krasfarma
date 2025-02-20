@@ -52,29 +52,16 @@
 
 .main-quality__cover img {
 	width: 100%;
-
 	height: 290px;
-	margin-bottom: 60px;
 }
 
 @media (max-width: 860px) {
-	.main-aside--tablet {
-		display: flex;
-		flex-direction: row;
-		gap: 20px;
-	}
-
 	.main-aside {
 		max-width: 224px;
 	}
 }
 
-@media (max-width: 550px) {
-	.main-aside--tablet {
-		flex-direction: column;
-		gap: 60px;
-	}
-
+@media (max-width: 680px) {
 	.main-aside {
 		max-width: none;
 	}
@@ -91,9 +78,9 @@
 	gap: 40px;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 680px) {
 	.main-quality__content {
-		gap: 0;
+		flex-direction: column;
 	}
 }
 
@@ -105,31 +92,13 @@
 	margin: 0;
 }
 
-.main-quality__list--desktop {
+.main-quality__list {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
 }
 
-@media (max-width: 860px) {
-	.main-quality__list--desktop {
-		display: none;
-	}
-}
-
-.main-quality__list--tablet {
-	display: none;
-}
-
-@media (max-width: 860px) {
-	.main-quality__list--tablet {
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-	}
-}
-
-.main-quality__description--desktop {
+.main-quality__description {
 	display: block;
 	font-family: 'Source Sans 3';
 	font-size: 20px;
@@ -139,37 +108,14 @@
 	margin-bottom: 50px;
 }
 
-.main-quality__description--desktop b,
-.main-quality__description--tablet b {
+.main-quality__description b {
 	font-weight: 700;
 	color: #2d97c1;
 }
 
-.main-quality__description--desktop span,
-.main-quality__description--tablet span {
+.main-quality__description span {
 	display: block;
 	margin-bottom: 60px;
-}
-
-@media (max-width: 860px) {
-	.main-quality__description--desktop {
-		display: none;
-	}
-}
-
-.main-quality__description--tablet {
-	display: none;
-}
-
-@media (max-width: 860px) {
-	.main-quality__description--tablet {
-		display: block;
-		font-family: 'Source Sans 3';
-		font-size: 20px;
-		font-weight: 400;
-		color: #2f2f47;
-		line-height: 1.5;
-	}
 }
 
 .main-quality__item {
@@ -300,6 +246,22 @@
 
 .product-categories__list {
 	margin-top: 0;
+}
+
+.main-action--tablet {
+	display: none;
+}
+
+@media (max-width: 680px) {
+	.main-action--tablet {
+		display: flex;
+		margin-top: 60px;
+		max-width: 210px;
+	}
+
+	.main-action--desktop {
+		display: none;
+	}
 }
 
 @media print {
