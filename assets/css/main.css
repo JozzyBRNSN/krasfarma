@@ -21,6 +21,11 @@
 	object-fit: cover;
 }
 
+.slider-img__item {
+	width: 100%;
+	height: 100%;
+}
+
 .cover-slogan__title {
 	pointer-events: none;
 }
