@@ -62,6 +62,11 @@ img {
 	}
 }
 
+.main-cover__default {
+	background-image: url(../../assets/img/about-cover.png);
+}
+
+
 .overlay {
 	position: absolute;
 	top: 0;
