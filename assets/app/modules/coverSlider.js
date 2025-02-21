@@ -49,15 +49,17 @@ class CoverSlider {
 
 	showSlide(index) {
 		requestAnimationFrame(() => {
-			this.slides.forEach(slide => slide.classList.remove('slider-show'))
+			this.slides.forEach((slide, i) => {
+				slide.style.transform = `translateX(${(i - index) * 100}%)`
+				slide.style.transition = 'transform 0.5s ease'
+			})
+
 			this.borders.forEach(border => border.classList.remove('slider-show'))
 			this.slogans.forEach(slogan => slogan.classList.remove('slider-show'))
 			this.numbers.forEach(number => number.classList.remove('slider-show'))
 			this.throbbers.forEach(throbber =>
 				throbber.classList.remove('slider-show')
 			)
-
-			this.slides[index].classList.add('slider-show')
 			this.borders[index].classList.add('slider-show')
 			this.slogans[index].classList.add('slider-show')
 			this.numbers[index].classList.add('slider-show')
@@ -72,11 +74,9 @@ class CoverSlider {
 		const onTransitionEnd = () => {
 			this.isAnimating = false
 			activeSlide.removeEventListener('transitionend', onTransitionEnd)
-			activeSlide.removeEventListener('animationend', onTransitionEnd)
 		}
 
 		activeSlide.addEventListener('transitionend', onTransitionEnd)
-		activeSlide.addEventListener('animationend', onTransitionEnd)
 	}
 
 	nextSlide() {
@@ -122,10 +122,15 @@ class CoverSlider {
 	addHoverEffect() {
 		this.hoverEl.addEventListener('mouseover', () => {
 			clearInterval(this.slideInterval)
+			this.slides[this.sliderIndex].style.transform += 'scale(1.1)'
+			this.slides[this.sliderIndex].style.transition = 'transform 0.3s ease'
 		})
 
 		this.hoverEl.addEventListener('mouseout', () => {
 			this.startSlideInterval()
+			this.slides[this.sliderIndex].style.transform = this.slides[
+				this.sliderIndex
+			].style.transform.replace(' scale(1.1)', '')
 		})
 	}
 
