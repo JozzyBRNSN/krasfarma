@@ -810,21 +810,39 @@
     <footer class="footer">
         <div class="popup-shadow"></div>
         <div class="map">
-            <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=92.835908%2C55.975783&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjQyMDgzMxJK0KDQvtGB0YHQuNGPLCDQmtGA0LDRgdC90L7Rj9GA0YHQuiwg0YPQu9C40YbQsCA2MCDQu9C10YIg0J7QutGC0Y_QsdGA0Y8sIDIiCg38q7lCFTPnX0I%2C&z=17.07"
-                allowfullscreen="true">
-            </iframe>
+            <div class="map">
+                <iframe id="krasnoyarsk-map"
+                    src="https://yandex.ru/map-widget/v1/?ll=92.835908%2C55.975783&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjQyMDgzMxJK0KDQvtGB0YHQuNGPLCDQmtGA0LDRgdC90L7Rj9GA0YHQuiwg0YPQu9C40YbQsCA2MCDQu9C10YIg0J7QutGC0Y_QsdGA0Y8sIDIiCg38q7lCFTPnX0I%2C&z=17.07"
+                    allowfullscreen="true"></iframe>
+                <iframe id="moscow-map"
+                    src="https://yandex.ru/map-widget/v1/?ll=37.6173%2C55.7558&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNzIyMDYwNDIwEkPQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0JLQvtGA0L7QvdGG0L7QstGB0LrQsNGPINGD0LvQuNGG0LAsIDIwIgoN8aAWQhUE815C&z=17.07"
+                    allowfullscreen="true" class="details-hidden"></iframe>
+                <iframe id="stavropol-map"
+                    src="https://yandex.ru/map-widget/v1/?ll=41.9681%2C45.0442&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzU0ODc4NxJF0KDQvtGB0YHQuNGPLCDQodGC0LDQstGA0L7Qv9C-0LvRjCwg0JfQsNCy0L7QtNGB0LrQsNGPINGD0LvQuNGG0LAsIDExIgoN7gYoQhXVNjRC&z=17.07"
+                    allowfullscreen="true" class="details-hidden"></iframe>
+                <iframe id="all-country-map"
+                    src="https://yandex.ru/map-widget/v1/?ll=63.5882%2C56.3293&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNzIyMDYwNDIwEkPQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0JLQvtGA0L7QvdGG0L7QstGB0LrQsNGPINGD0LvQuNGG0LAsIDIwIgoN8aAWQhUE815C&z=17.07"
+                    allowfullscreen="true" class="details-hidden"></iframe>
+            </div>
             <div class="map-contacts">
                 <div class="map-contacts__address">
                     <span>Адрес:</span>
-                    <p class="map-contacts__address-item">
-                        Москва, ул. Воронцовская, д.20
-                    </p>
+                    <p class="map-contacts__address-item krasnoyarsk-map-address details-hidden">Красноярск, ул. 60 лет
+                        Октября д.2</p>
+                    <p class="map-contacts__address-item moscow-map-address details-hidden">Москва, ул. Воронцовская,
+                        д.20</p>
+                    <p class="map-contacts__address-item stavropol-map-address details-hidden">Ставрополь, ул. Заводская
+                        11, офис 11</p>
+                    <p class="map-contacts__address-item all-country-map-address details-hidden">Москва, ул.
+                        Воронцовская, д.20</p>
                 </div>
+
                 <div class="map-contacts__phone">
                     <span>Телефон:</span>
-                    <p class="map-contacts__phone-item">
-                        +7 (495) 787-95-99
+                    <p class="map-contacts__phone-item krasnoyarsk-map-phone details-hidden">+7 (391) 261-25-90</p>
+                    <p class="map-contacts__phone-item moscow-map-phone details-hidden">+7 (495) 787-95-99</p>
+                    <p class="map-contacts__phone-item stavropol-map-phone details-hidden">+7 (8652) 22-13-41</p>
+                    <p class="map-contacts__phone-item all-country-map-phone details-hidden">+7 (495) 787-95-98 доб.5521
                     </p>
                 </div>
             </div>
