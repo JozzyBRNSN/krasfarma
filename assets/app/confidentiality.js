@@ -1,4 +1,5 @@
 import PopupArticle from './modules/popupArticle.js'
+import PopupAdaptive from './modules/popupAdaptive.js'
 import PopupHeader from './modules/popupHeader.js'
 import ContactUpdater from './modules/footerAddress.js'
 import StickyHeader from './modules/headerSticky.js'
@@ -57,10 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		'.main-certificates__item-content'
 	)
 
-	const popupNetwork = new PopupArticle(
-		'.network-popup',
-		'.main-network__item-content'
-	)
+	const popupNetwork = new PopupAdaptive('.network-popup', [
+		'.main-network__item-content',
+		'.main-network__item-content--tablet',
+	])
 
 	const popupHeader = new PopupHeader({
 		menuButtonId: 'header-nav__menu',

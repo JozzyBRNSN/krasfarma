@@ -1,6 +1,6 @@
 import StickyHeader from './modules/headerSticky.js'
 import PopupHeader from './modules/popupHeader.js'
-import PopupArticle from './modules/popupArticle.js'
+import PopupAdaptive from './modules/popupAdaptive.js'
 import ContactUpdater from './modules/footerAddress.js'
 import ModalRegistration from './modules/modalRegistration.js'
 import ModalAuthorization from './modules/modalAuthorization.js'
@@ -65,10 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		popupLinkSelectors: '.popup-link',
 	})
 
-	const popupQuality = new PopupArticle(
-		'.quality-popup',
-		'.main-quality__item-content'
-	)
+	const popupQuality = new PopupAdaptive('.quality-popup', [
+		'.main-quality__item-content',
+		'.main-quality__item-content--tablet',
+	])
 
 	const contactUpdater = new ContactUpdater({
 		cityElementsSelector: '.places-item',
