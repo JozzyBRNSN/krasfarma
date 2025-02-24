@@ -61,11 +61,8 @@
 	}
 }
 
-.appeal-about {
+.default-page {
 	margin: 0;
-}
-
-.appeal-about__content {
 	display: flex;
 	flex-direction: column-reverse;
 	margin: 0 0 100px;
