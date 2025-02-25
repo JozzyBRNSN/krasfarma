@@ -1020,8 +1020,23 @@
 	}
 
 	.main-cover__content .more-details__cover {
-		position: absolute;
-		padding: 20px 30px;
+		display: none;
+	}
+
+	.products-services__item:hover .overlay {
+		opacity: 0;
+	}
+
+	.products-services__item:hover .services-img {
+		transform: none;
+	}
+
+	.products-services__item:hover .products-services__item-btn {
+		background: #332e59;
+	}
+
+	.products-services__item:hover .products-services__item--content-text b {
+		color: #332e59;
 	}
 
 	.cover-btn {
