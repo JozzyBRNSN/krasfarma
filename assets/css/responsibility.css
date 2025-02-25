@@ -62,19 +62,18 @@
 .responsibility-mission {
 	display: flex;
 	flex-direction: column;
-	margin: 60px 0 0;
+	margin: 60px 0;
 }
 
 .responsibility-mission__popup {
-	display: flex;
-	position: relative;
 	margin: 50px 0;
 	max-height: 0;
 	overflow-y: hidden;
 	transition: max-height 0.3s ease-in-out;
 }
 
-.responsibility-mission__popup-text {
+.responsibility-mission__popup-text,
+.responsibility-mission__popup-list {
 	font-family: 'Source Sans 3';
 	font-size: 20px;
 	font-weight: 500;
@@ -82,13 +81,22 @@
 	color: #2f2f47;
 }
 
+.responsibility-mission__popup-item {
+	list-style-type: disc;
+	margin-left: 30px;
+}
+
+.responsibility-mission__popup-item::marker {
+	color: #2f2f47;
+}
+
 .responsibility-mission__popup.popup-article__show {
-	max-height: 500px;
+	max-height: 1000px;
 }
 
 .section-header {
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: auto 1fr 66px;
 	align-items: flex-end;
 	gap: 20px;
 	margin: 0;
@@ -96,7 +104,8 @@
 
 .section-title {
 	font-family: 'Geologica';
-	font-size: 48px;
+	font-size: 36px;
+	line-height: 36px;
 	font-weight: 500;
 	color: #332e59;
 	margin: 0;
@@ -105,7 +114,7 @@
 
 .section-header span {
 	height: 2px;
-	width: 1000px;
+	width: 100%;
 	background-color: #e5e8ec;
 }
 
@@ -216,6 +225,10 @@
 		display: flex;
 		justify-content: center;
 	}
+
+	.section-title {
+		white-space: wrap;
+	}
 }
 
 @media (max-width: 768px) {
@@ -239,20 +252,26 @@
 	.responsibility-mission__popup-text {
 		font-size: 16px;
 	}
+
+	.section-title {
+		font-size: 24px;
+	}
 }
 
 @media (max-width: 425px) {
-	.main-responsibility__title {
-		top: 30px;
-	}
-
 	.responsibility-mission__popup-text {
 		width: 100%;
 	}
 }
 
 @media (max-width: 379px) {
+	.main-responsibility__title {
+		font-size: 30px;	
+	}
+
 	.section-title {
 		font-size: 7vw;
+		hyphens: auto;
+		-moz-hyphens: auto;
 	}
 }
