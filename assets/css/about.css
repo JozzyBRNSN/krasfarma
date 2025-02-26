@@ -215,47 +215,11 @@
 }
 
 .more-details__btn.btn-popup {
-	background-color: #ff781f;
 	transition: background 0.3s ease;
 }
 
-.more-details__btn.btn-popup::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 200%;
-	height: 50%;
-	background-color: #d44f0c;
-	transform: translateX(-50%) scaleX(0) skew(432deg);
-	opacity: 0;
-	transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.more-details__btn.btn-popup::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 200%;
-	height: 50%;
-	background-color: #d44f0c;
-	transform: translateX(-50%) scaleX(0) skew(288deg);
-	opacity: 0;
-	transition: transform 0.3s ease, opacity 0.5s ease;
-}
-
-.more-details__popup:hover .btn-popup {
-	background: #d44f0c;
-}
-
-.more-details__popup:hover .more-details__btn.btn-popup::before {
-	transform: translateX(-50%) scaleX(0.5) skew(432deg);
-	opacity: 1;
-}
-.more-details__popup:hover .more-details__btn.btn-popup::after {
-	transform: translateX(-50%) scaleX(0.5) skew(288deg);
-	opacity: 1;
+.more-details__btn.btn-popup.popup-article__show {
+	background-color: #ff781f;
 }
 
 .more-details__btn.btn-popup .arrow.next {
@@ -1647,7 +1611,6 @@
 	.about-history__content {
 		width: 100%;
 	}
-
 
 	.about-history__quote-author {
 		font-size: 20px;
