@@ -7,6 +7,7 @@ import ModalAuthorization from './modules/modalAuthorization.js'
 import ModalRecovery from './modules/modalRecovery.js'
 import modalMessage from './modules/modalMessage.js'
 import NumberCounter from './modules/numberCounter.js'
+import DraggableScroll from './modules/draggableScroll.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 	const counters = document.querySelectorAll('.main-cover__num')
@@ -65,6 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		shadowMenu: '.popup-shadow',
 		popupLinkSelectors: '.popup-link'
 	})
+
+	const draggableScroll = new DraggableScroll('.about-history__timeline')
 
 	const contactUpdater = new ContactUpdater({
 		cityElementsSelector: '.places-item',
