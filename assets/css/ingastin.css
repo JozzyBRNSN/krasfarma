@@ -186,6 +186,7 @@
 @media (max-width: 630px) {
 	.main-about__buttons {
 		flex-direction: column-reverse;
+		gap: 100px;
 	}
 }
 
