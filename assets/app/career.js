@@ -75,4 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		addressElementsSelector: '.footer-address__link',
 		phoneLinksSelector: '.footer-phone__link',
 	})
+
+	document.querySelector('.js-print').addEventListener('click', function () {
+		window.print()
+	})
 })

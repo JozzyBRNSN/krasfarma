@@ -93,7 +93,7 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #7481bf;
-	transition: color .5s ease;
+	transition: color 0.5s ease;
 }
 
 .footer-nav__item:hover a {
@@ -186,4 +186,61 @@
 
 .details-hidden {
 	display: none;
+}
+
+/* Общие стили для футера */
+.footer {
+	position: relative;
+	background: #332e59;
+	max-width: 100%;
+}
+
+.footer-container {
+	padding: 60px 0;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 20px;
+	gap: 60px;
+	border-bottom: 1px solid #4f538c;
+}
+
+@media print {
+	.footer-container {
+		padding: 20px 0;
+	}
+
+	.footer-content {
+		padding-bottom: 10px;
+		border-bottom: none;
+	}
+
+	.footer-link,
+	.footer-nav,
+	.footer-contacts {
+		margin-bottom: 20px;
+	}
+
+	.footer-nav__list {
+		display: block;
+		height: auto;
+	}
+
+	.footer-nav__item a {
+		font-size: 18px;
+	}
+
+	.footer-contacts {
+		max-width: 100%;
+	}
+
+	.footer-contacts__places {
+		width: 100%;
+	}
+
+	.footer-data {
+		margin-top: 10px;
+	}
 }
