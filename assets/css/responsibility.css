@@ -1,5 +1,5 @@
 .main-production__cover {
-	background-image: url(../../assets/img/about-cover.png);
+	background-image: url(../../assets/img/responsibility-cover.png);
 	position: relative;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -11,14 +11,6 @@
 	.main-production__cover {
 		min-height: 390px;
 	}
-}
-
-.main-cover__production--background {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	mix-blend-mode: darken;
-	background-color: #1d16576e;
 }
 
 .main-responsibility__title {

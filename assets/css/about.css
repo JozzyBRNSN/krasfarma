@@ -382,6 +382,43 @@
 	margin: 0;
 }
 
+.about-history__btn {
+	display: flex;
+	gap: 10px;
+	align-self: flex-end;
+	margin: 0;
+}
+
+.more-details__btn.history-prev,
+.more-details__btn.history-next {
+	background: #f5f8fc;
+}
+
+.more-details__btn.history-prev .prev,
+.more-details__btn.history-next .next {
+	border-bottom: 2px solid #4f538c;
+	border-left: 2px solid #4f538c;
+}
+
+.more-details__btn.history-prev .prev {
+	margin-left: 22px;
+}
+
+.more-details__btn.history-next .next {
+	margin-right: 22px;
+}
+
+.more-details__btn.history-prev:hover,
+.more-details__btn.history-next:hover {
+	background: #4f538c;
+}
+
+.more-details__btn.history-prev:hover .prev,
+.more-details__btn.history-next:hover .next {
+	border-bottom: 2px solid #f5f8fc;
+	border-left: 2px solid #f5f8fc;
+}
+
 .about-history__date-title {
 	font-family: 'Geologica';
 	font-size: 32px;
@@ -426,6 +463,10 @@
 	line-height: 1.25;
 	background-clip: text;
 	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .about-history__item-date p {
