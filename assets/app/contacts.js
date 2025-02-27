@@ -5,6 +5,7 @@ import ModalRegistration from './modules/modalRegistration.js'
 import ModalAuthorization from './modules/modalAuthorization.js'
 import ModalRecovery from './modules/modalRecovery.js'
 import modalMessage from './modules/modalMessage.js'
+import DefaultPicture from './modules/defaultPicture.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 	const stickyHeader = new StickyHeader({
@@ -54,6 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		],
 		shadowMenu: '.popup-shadow',
 		popupLinkSelectors: '.popup-link',
+	})
+
+	const defaultPicture = new DefaultPicture({
+		placeholderImage: 'assets/img/default.png',
+		mapContainerSelector: '.contacts-map',
 	})
 
 	const contactUpdater = new ContactUpdater({
