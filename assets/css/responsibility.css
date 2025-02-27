@@ -217,7 +217,8 @@
 		margin: 25px 0 50px;
 	}
 
-	.responsibility-mission__popup-text {
+	.responsibility-mission__popup-text,
+	.responsibility-mission__popup-item {
 		font-size: 16px;
 	}
 
@@ -229,6 +230,18 @@
 @media (max-width: 425px) {
 	.responsibility-mission__popup-text {
 		width: 100%;
+	}
+
+	.responsibility-mission__header {
+		grid-template-columns: auto 66px;
+	}
+
+	.section-title {
+		max-width: none;
+	}
+
+	.section-header span {
+		display: none;
 	}
 }
 
