@@ -85,8 +85,16 @@
 	gap: 40px;
 }
 
+@media (max-width: 500px) {
+	.main-links__container {
+		justify-content: start;
+	}
+}
+
 .main-about__content {
 	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	margin: 0 0 200px;
 	gap: 40px;
 }
@@ -97,36 +105,49 @@
 	}
 }
 
-@media (max-width: 500px) {
-	.main-links__container {
-		justify-content: start;
-	}
-}
-
-.main-about__links {
+.main-about__gallery {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	gap: 20px;
 	margin: 0;
 }
 
-.main-about__img {
-	width: 360px;
-	height: 240px;
+.main-about__gallery-main {
+	width: 100%;
+	height: 480px;
+	margin: 0;
 	border-left: 2px solid #4f538c;
+}
+
+@media (max-width: 938px) {
+	.main-about__gallery-main {
+		height: 53vw;
+	}
+}
+
+.gallery-main__img img {
+	width: 100%;
+	height: 100%;
+}
+
+.main-about__gallery-list {
+	display: flex;
 	margin: 0;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 20px;
 }
 
-@media (max-width: 810px) {
-	.main-about__img {
-		width: 229px;
-	}
+.main-about__gallery-item {
+	width: 120px;
+	height: 60px;
+	cursor: pointer;
+	border-left: none !important;
 }
 
-@media (max-width: 425px) {
-	.main-about__img {
-		width: 100%;
-	}
+.gallery-img img {
+	width: 100%;
+	height: 100%;
 }
 
 .main-about__title {
@@ -137,7 +158,7 @@
 	line-height: 1.5;
 }
 
-.main-about__text--desktop {
+.main-about__text {
 	font-family: 'Source Sans 3';
 	font-size: 20px;
 	font-weight: 400;
@@ -145,53 +166,41 @@
 	line-height: 1.5;
 }
 
-.main-about__text--desktop b,
-.main-about__text--mobile b {
+.main-about__text b {
 	font-weight: 700;
 	color: #2d97c1;
 }
 
-.main-about__text--desktop span,
-.main-about__text--mobile span {
+.main-about__text span {
 	display: block;
 	margin: 2em 0;
 }
 
-.main-about__text--mobile {
-	display: none;
-	font-family: 'Source Sans 3';
-	font-size: 20px;
-	font-weight: 400;
-	color: #2f2f47;
-	line-height: 1.5;
-}
-
-.main-about__btn--mobile {
-	display: none;
+.main-about__buttons {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+	margin: 20px 0 0;
 }
 
 @media (max-width: 630px) {
-	.main-about__text--desktop {
-		display: none;
+	.main-about__buttons {
+		flex-direction: column-reverse;
 	}
+}
 
-	.main-about__text--mobile {
-		display: block;
-		margin: 20px 0;
-	}
+.main-action__row {
+	flex-direction: row;
+}
 
-	.main-about__btn--mobile {
-		display: flex;
+@media (max-width: 880px) {
+	.main-action__row {
+		flex-direction: column;
 	}
 }
 
 .main-about__btn {
 	display: flex;
-}
-
-.main-about__btn,
-.main-about__btn--mobile {
-	margin-top: 60px;
 	align-items: center;
 	justify-content: center;
 	font-family: 'Source Sans 3';
@@ -208,13 +217,12 @@
 }
 
 @media (max-width: 425px) {
-	.main-about__btn--mobile {
+	.main-about__btn {
 		width: 100%;
 	}
 }
 
-.main-about__btn::before,
-.main-about__btn--mobile::before {
+.main-about__btn::before {
 	content: '';
 	display: inline-block;
 	width: 8px;
@@ -226,15 +234,64 @@
 	transform: rotate(45deg);
 }
 
-.main-about__btn:hover,
-.main-about__btn--mobile:hover {
+.main-about__btn:hover {
 	background-color: #1f7aab;
 }
 
-.background-figure--first-item {
-	top: 100px;
+.background-logo__career-item {
+	top: -560px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	bottom: 0;
+	margin: 0;
+	background: inherit;
 }
 
-.background-logo-item {
-	top: -955px;
+@media (max-width: 768px) {
+	.background-logo__career-item {
+		top: -970px;
+	}
+}
+
+@media (max-width: 550px) {
+	.background-logo__career-item {
+		width: 80%;
+	}
+}
+
+.background-figure__career--first-item {
+	top: 30px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	background: inherit;
+	z-index: -1;
+}
+
+@media (max-width: 768px) {
+	.background-figure__career--first-item {
+		top: -970px;
+	}
+}
+
+@media (max-width: 550px) {
+	.background-figure__career--first-item {
+		top: -1230px;
+	}
+}
+
+.background-gradient {
+	position: absolute;
+	width: 2012px;
+	height: 3012px;
+	top: -2000px;
+	left: -952px;
+	background: radial-gradient(
+		50% 50% at 50% 50%,
+		rgba(116, 129, 191, 0.3) 0%,
+		rgba(116, 129, 191, 0) 100%
+	);
 }

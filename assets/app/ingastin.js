@@ -6,6 +6,7 @@ import ModalAuthorization from './modules/modalAuthorization.js'
 import ModalRecovery from './modules/modalRecovery.js'
 import modalMessage from './modules/modalMessage.js'
 import ModalShare from './modules/modalShare.js'
+import PreparationCard from './modules/preparationCard.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 	const stickyHeader = new StickyHeader({
@@ -62,6 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		],
 		shadowMenu: '.popup-shadow',
 		popupLinkSelectors: '.popup-link',
+	})
+
+	const card = new PreparationCard({
+		cardSelector: '.main-about__gallery',
+		cardListSelector: '.main-about__gallery-list li',
+		cardMainSelector: '.main-about__gallery-main',
 	})
 
 	const contactUpdater = new ContactUpdater({
