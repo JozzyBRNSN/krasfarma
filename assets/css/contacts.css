@@ -100,6 +100,16 @@
 	gap: 8px;
 }
 
+.contacts-subtitle {
+	text-transform: uppercase;
+	font-family: 'Source Sans 3';
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.5;
+	color: #2f2f47;
+	margin: 5px 0;
+}
+
 .contacts-manager__title,
 .contacts-address__title,
 .contacts-secretariat__title {
@@ -220,6 +230,7 @@
 		rgba(167, 190, 232, 0.3) 0%,
 		rgba(167, 190, 232, 0) 100%
 	);
+	z-index: -1;
 }
 
 .background-gradient__second {
@@ -233,6 +244,7 @@
 		rgba(124, 235, 255, 0.15) 0%,
 		rgba(124, 235, 255, 0) 100%
 	);
+	z-index: -1;
 }
 
 .background-pattern__item--first {
