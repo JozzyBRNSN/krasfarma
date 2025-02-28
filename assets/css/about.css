@@ -215,6 +215,14 @@
 }
 
 .more-details__btn.btn-popup {
+	background-color: #53d2eb;
+}
+
+.more-details__btn.btn-popup.popup-article__show {
+	background-color: #ff781f;
+}
+
+.more-details__btn.btn-popup {
 	transition: background 0.3s ease;
 }
 
