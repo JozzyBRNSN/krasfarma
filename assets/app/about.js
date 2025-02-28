@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			'popup-burger--bottom',
 		],
 		shadowMenu: '.popup-shadow',
-		popupLinkSelectors: '.popup-link'
+		popupLinkSelectors: '.popup-link',
 	})
 
 	const draggableScroll = new DraggableScroll('.about-history__timeline')
@@ -73,5 +73,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		cityElementsSelector: '.places-item',
 		addressElementsSelector: '.footer-address__link ',
 		phoneLinksSelector: '.footer-phone__link',
+	})
+
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		anchor.addEventListener('click', function (e) {
+			e.preventDefault()
+			const targetId = this.getAttribute('href').substring(1) 
+			const targetElement = document.getElementById(targetId)
+
+			if (targetElement) {
+				targetElement.scrollIntoView({
+					behavior: 'smooth',
+					block: 'center',
+				})
+			}
+		})
 	})
 })
