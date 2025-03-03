@@ -543,4 +543,8 @@
 	.network-popup.popup-article__show {
 		display: block;
 	}
+
+	.main-network__title {
+		white-space: wrap;
+	}
 }
