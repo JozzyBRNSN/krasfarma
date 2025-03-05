@@ -10,6 +10,7 @@ class CoverSlider {
 		intervalTime = 3000,
 		hoverSelector,
 	}) {
+		this.slidesSelector = slidesSelector
 		this.slides = document.querySelectorAll(slidesSelector)
 		this.controls = document.querySelectorAll(controlsSelector)
 		this.controlsArrow = document.querySelectorAll(controlsArrowSelector)
@@ -22,6 +23,7 @@ class CoverSlider {
 		this.intervalTime = intervalTime
 		this.slideInterval = null
 		this.isAnimating = false
+		this.visibleSlides = [] 
 
 		this.startX = 0
 		this.endX = 0
@@ -34,6 +36,7 @@ class CoverSlider {
 		this.addHoverEffect()
 		this.setupResizeObserver()
 		this.updateSwipeListeners()
+		this.updateSlidesVisibility() 
 	}
 
 	init() {
@@ -41,7 +44,6 @@ class CoverSlider {
 		this.controls.forEach(control => {
 			control.addEventListener('click', event => this.handleControlClick(event))
 		})
-
 		this.controlsArrow.forEach(arrow => {
 			arrow.addEventListener('click', event => this.handleControlClick(event))
 		})
@@ -49,7 +51,15 @@ class CoverSlider {
 
 	showSlide(index) {
 		requestAnimationFrame(() => {
-			this.slides.forEach((slide, i) => {
+			this.visibleSlides = Array.from(this.slides).filter(
+				slide =>
+					(window.innerWidth > 1024 &&
+						slide.classList.contains('slider-desktop')) ||
+					(window.innerWidth <= 1024 &&
+						slide.classList.contains('slider-mobile'))
+			)
+
+			this.visibleSlides.forEach((slide, i) => {
 				slide.style.transform = `translateX(${(i - index) * 100}%)`
 				slide.style.transition = 'transform 0.5s ease'
 			})
@@ -60,16 +70,35 @@ class CoverSlider {
 			this.throbbers.forEach(throbber =>
 				throbber.classList.remove('slider-show')
 			)
-			this.borders[index].classList.add('slider-show')
-			this.slogans[index].classList.add('slider-show')
-			this.numbers[index].classList.add('slider-show')
-			this.throbbers[index].classList.add('slider-show')
-			this.sliderIndex = index
+
+			if (this.visibleSlides[index]) {
+				this.borders[index].classList.add('slider-show')
+				this.slogans[index].classList.add('slider-show')
+				this.numbers[index].classList.add('slider-show')
+				this.throbbers[index].classList.add('slider-show')
+				this.sliderIndex = index
+			}
 		})
 	}
 
+	updateSlidesVisibility() {
+		const desktopSlides = document.querySelectorAll('.slider-desktop')
+		const mobileSlides = document.querySelectorAll('.slider-mobile')
+
+		if (window.innerWidth > 1024) {
+			desktopSlides.forEach(slide => (slide.style.display = 'block'))
+			mobileSlides.forEach(slide => (slide.style.display = 'none'))
+		} else {
+			desktopSlides.forEach(slide => (slide.style.display = 'none'))
+			mobileSlides.forEach(slide => (slide.style.display = 'block'))
+		}
+
+		this.slides = document.querySelectorAll(this.slidesSelector) 
+		this.showSlide(0) 
+	}
+
 	waitForAnimation() {
-		const activeSlide = this.slides[this.sliderIndex]
+		const activeSlide = this.visibleSlides[this.sliderIndex]
 
 		const onTransitionEnd = () => {
 			this.isAnimating = false
@@ -83,7 +112,7 @@ class CoverSlider {
 		if (this.isAnimating) return
 		this.isAnimating = true
 
-		const nextSlide = (this.sliderIndex + 1) % this.slides.length
+		const nextSlide = (this.sliderIndex + 1) % this.visibleSlides.length 
 		this.showSlide(nextSlide)
 
 		this.waitForAnimation()
@@ -94,7 +123,8 @@ class CoverSlider {
 		this.isAnimating = true
 
 		const prevSlide =
-			(this.sliderIndex - 1 + this.slides.length) % this.slides.length
+			(this.sliderIndex - 1 + this.visibleSlides.length) %
+			this.visibleSlides.length 
 		this.showSlide(prevSlide)
 
 		this.waitForAnimation()
@@ -178,6 +208,7 @@ class CoverSlider {
 
 	setupResizeObserver() {
 		const resizeObserver = new ResizeObserver(() => {
+			this.updateSlidesVisibility() 
 			this.updateSwipeListeners()
 		})
 		resizeObserver.observe(document.body)
