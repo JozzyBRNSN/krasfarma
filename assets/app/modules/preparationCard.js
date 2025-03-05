@@ -1,8 +1,14 @@
 class PreparationCard {
-	constructor({ cardSelector, cardListSelector, cardMainSelector }) {
+	constructor({
+		cardSelector,
+		cardListSelector,
+		cardMainSelector,
+		modalWrapperSelector,
+	}) {
 		this.card = document.querySelector(cardSelector)
 		this.cardList = document.querySelectorAll(cardListSelector)
 		this.cardMain = document.querySelector(cardMainSelector)
+		this.modalWrapper = document.querySelector(modalWrapperSelector)
 
 		this.updateMainImage(this.cardList[0].querySelector('picture img').src)
 
@@ -14,6 +20,12 @@ class PreparationCard {
 				this.updateMainImage(imgSrc)
 				this.highlightActiveThumbnail(item)
 			})
+		})
+
+		this.cardMain.addEventListener('click', () => {
+			this.cardMain.classList.toggle('full-image')
+			this.modalWrapper.classList.toggle('open-modal')
+			document.body.classList.toggle('hidden')
 		})
 	}
 

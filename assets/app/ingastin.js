@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		cardSelector: '.main-about__gallery',
 		cardListSelector: '.main-about__gallery-list li',
 		cardMainSelector: '.main-about__gallery-main',
+		modalWrapperSelector: '.modal-overlay',
 	})
 
 	const contactUpdater = new ContactUpdater({

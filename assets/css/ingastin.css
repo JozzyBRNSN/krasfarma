@@ -119,10 +119,29 @@
 	border-left: 2px solid #4f538c;
 }
 
+.main-about__gallery-main.full-image {
+	display: flex;
+	position: fixed;
+	left: 0;
+	top: 20%;
+	justify-content: center;
+	width: 100%;
+	z-index: 10;
+	margin: 0;
+}
+
 @media (max-width: 938px) {
 	.main-about__gallery-main {
 		height: 53vw;
 	}
+}
+
+.main-about__gallery-main.full-image .gallery-main__img {
+	margin: 0;
+}
+
+.main-about__gallery-main.full-image .gallery-main__img img {
+	height: 200%;
 }
 
 .gallery-main__img img {
