@@ -53,10 +53,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		modalWrapperSelector: '.modal-overlay',
 	})
 
-	const popupCertificates = new PopupArticle(
-		'.certificates-popup',
-		'.main-certificates__item-content'
-	)
+	const popupCertificates = new PopupArticle({
+		articlesSelector: '.certificates-popup',
+		buttonSelector: '.main-certificates__item-content',
+	})
+
+	const popupDocuments = new PopupArticle({
+		articlesSelector: '.popup-more__documents',
+		buttonSelector: '.certificates-popup__item-more',
+	})
 
 	const popupNetwork = new PopupAdaptive('.network-popup', [
 		'.main-network__item-content',
@@ -81,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		addressElementsSelector: '.footer-address__link ',
 		phoneLinksSelector: '.footer-phone__link',
 	})
-	
+
 	document.querySelector('.js-print').addEventListener('click', function () {
 		window.print()
 	})

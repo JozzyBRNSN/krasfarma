@@ -245,6 +245,7 @@
 .certificates-popup__item {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr auto auto;
 	gap: 40px;
 	padding: 20px;
 	border-bottom: 1px solid #615c8e;
@@ -258,6 +259,40 @@
 	font-weight: 400;
 	line-height: 1.5;
 	color: #2f2f47;
+}
+
+.certificates-popup__item-more {
+	display: flex;
+	font-family: 'Source Sans 3';
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 1.5;
+	color: #7481bf;
+	width: 100%;
+	border: none;
+	background-color: inherit;
+	grid-column: 1;
+	grid-row: 2;
+	transition: color 0.1s ease;
+}
+
+.certificates-popup__item-more.popup-article__show,
+.certificates-popup__item-more:hover {
+	color: #2f2f47;
+}
+
+.popup-more__documents {
+	grid-row: 3;
+	grid-column: 1 / 4;
+	position: relative;
+	margin: 0;
+	max-height: 0;
+	overflow-y: hidden;
+	transition: max-height 0.3s ease-in-out;
+}
+
+.popup-more__documents.popup-article__show {
+	max-height: 5000px;
 }
 
 @media (max-width: 1024px) {

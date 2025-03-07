@@ -1,5 +1,5 @@
 class PopupArticle {
-	constructor(articlesSelector, buttonSelector) {
+	constructor({ articlesSelector, buttonSelector }) {
 		this.articles = document.querySelectorAll(articlesSelector)
 		this.buttons = document.querySelectorAll(buttonSelector)
 
