@@ -50,9 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		formId: '#recovery-form',
 	})
 
-	const popupMission = new PopupArticle('.about-mission__popup', '.mission-btn')
+	const popupMission = new PopupArticle({
+		articlesSelector: '.about - mission__popup',
+		buttonSelector: '.mission - btn',
+	})
 
-	const popupValues = new PopupArticle('.about-values__popup', '.values-btn')
+	const popupValues = new PopupArticle({
+		articlesSelector: '.about-values__popup',
+		buttonSelector: '.values-btn',
+	})
 
 	const popupHeader = new PopupHeader({
 		menuButtonId: 'header-nav__menu',
@@ -78,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 		anchor.addEventListener('click', function (e) {
 			e.preventDefault()
-			const targetId = this.getAttribute('href').substring(1) 
+			const targetId = this.getAttribute('href').substring(1)
 			const targetElement = document.getElementById(targetId)
 
 			if (targetElement) {

@@ -44,7 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		formId: '#recovery-form',
 	})
 
-	const popupMission = new PopupArticle('.responsibility-mission__popup', '.mission-btn')
+	const popupMission = new PopupArticle({
+		articlesSelector: '.responsibility - mission__popup',
+		buttonSelector: '.mission - btn',
+	})
 
 	const popupHeader = new PopupHeader({
 		menuButtonId: 'header-nav__menu',
