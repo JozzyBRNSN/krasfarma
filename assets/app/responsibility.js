@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	const popupMission = new PopupArticle({
-		articlesSelector: '.responsibility - mission__popup',
-		buttonSelector: '.mission - btn',
+		articlesSelector: '.responsibility-mission__popup',
+		buttonSelector: '.mission-btn',
 	})
 
 	const popupHeader = new PopupHeader({
