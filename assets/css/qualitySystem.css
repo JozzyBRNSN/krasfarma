@@ -310,4 +310,12 @@
 	.background-gradient__first {
 		display: none;
 	}
+
+	.main-quality__content {
+		flex-direction: column;
+	}
+
+	.main-quality__title {
+		font-size: 48px;
+	}
 }

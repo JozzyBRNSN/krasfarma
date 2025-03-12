@@ -630,5 +630,15 @@
 
 	.main-network__title {
 		white-space: wrap;
+		font-size: 32px;
+	}
+
+	.main-info,
+	.main-network__content {
+		flex-direction: column;
+	}
+
+	.main-info__img img {
+		width: 100%;
 	}
 }

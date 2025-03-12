@@ -227,5 +227,13 @@
 	.header-logo img {
 		top: 10px;
 	}
+
+	.innovation-about__content {
+		flex-direction: column;
+	}
+
+	.innovation-about__img img {
+		width: 100%;
+	}
 }
 

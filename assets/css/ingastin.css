@@ -315,3 +315,9 @@
 		rgba(116, 129, 191, 0) 100%
 	);
 }
+
+@media print {
+	.background-logo {
+		display: none;
+	}
+}

@@ -450,4 +450,14 @@
 	.background-gradient__first {
 		display: none;
 	}
+
+	.production-quote,
+	.production-content {
+		flex-direction: column;
+	}
+
+	.production-quote__image,
+	.production-aside__image {
+		width: 100%;
+	}
 }
