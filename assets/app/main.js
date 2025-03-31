@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		controlsArrowSelector: '.cover-arrow',
 		throbberSelector: '.cover-progressbar__item',
 		hoverSelector: '.main-cover__content',
+		linkSelector: '.cover-link',
 	})
 
 	const productSlider = new ProductSlider({

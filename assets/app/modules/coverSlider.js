@@ -9,6 +9,7 @@ class CoverSlider {
 		throbberSelector,
 		intervalTime = 3000,
 		hoverSelector,
+		linkSelector,
 	}) {
 		this.slidesSelector = slidesSelector
 		this.slides = document.querySelectorAll(slidesSelector)
@@ -19,11 +20,14 @@ class CoverSlider {
 		this.throbbers = document.querySelectorAll(throbberSelector)
 		this.borders = document.querySelectorAll(borderSelector)
 		this.hoverEl = document.querySelector(hoverSelector)
+		this.link = document.querySelector(linkSelector)
 		this.sliderIndex = 0
 		this.intervalTime = intervalTime
 		this.slideInterval = null
 		this.isAnimating = false
-		this.visibleSlides = [] 
+		this.visibleSlides = []
+
+		this.linkIndex = 0
 
 		this.startX = 0
 		this.endX = 0
@@ -36,7 +40,8 @@ class CoverSlider {
 		this.addHoverEffect()
 		this.setupResizeObserver()
 		this.updateSwipeListeners()
-		this.updateSlidesVisibility() 
+		this.updateSlidesVisibility()
+		this.updateCoverLinks()
 	}
 
 	init() {
@@ -81,6 +86,17 @@ class CoverSlider {
 		})
 	}
 
+	updateCoverLinks() {
+		const coverLinks = [
+			'products.html',
+			'about.html',
+			'innovation.html',
+			'production.html',
+		]
+
+		this.link.href = coverLinks[this.linkIndex]
+	}
+
 	updateSlidesVisibility() {
 		const desktopSlides = document.querySelectorAll('.slider-desktop')
 		const mobileSlides = document.querySelectorAll('.slider-mobile')
@@ -93,8 +109,8 @@ class CoverSlider {
 			mobileSlides.forEach(slide => (slide.style.display = 'block'))
 		}
 
-		this.slides = document.querySelectorAll(this.slidesSelector) 
-		this.showSlide(0) 
+		this.slides = document.querySelectorAll(this.slidesSelector)
+		this.showSlide(0)
 	}
 
 	waitForAnimation() {
@@ -112,8 +128,11 @@ class CoverSlider {
 		if (this.isAnimating) return
 		this.isAnimating = true
 
-		const nextSlide = (this.sliderIndex + 1) % this.visibleSlides.length 
+		const nextSlide = (this.sliderIndex + 1) % this.visibleSlides.length
 		this.showSlide(nextSlide)
+
+		this.linkIndex = (this.linkIndex + 1) % 4
+		this.updateCoverLinks()
 
 		this.waitForAnimation()
 	}
@@ -124,8 +143,11 @@ class CoverSlider {
 
 		const prevSlide =
 			(this.sliderIndex - 1 + this.visibleSlides.length) %
-			this.visibleSlides.length 
+			this.visibleSlides.length
 		this.showSlide(prevSlide)
+
+		this.linkIndex = (this.linkIndex - 1 + 4) % 4
+		this.updateCoverLinks()
 
 		this.waitForAnimation()
 	}
@@ -208,7 +230,7 @@ class CoverSlider {
 
 	setupResizeObserver() {
 		const resizeObserver = new ResizeObserver(() => {
-			this.updateSlidesVisibility() 
+			this.updateSlidesVisibility()
 			this.updateSwipeListeners()
 		})
 		resizeObserver.observe(document.body)
