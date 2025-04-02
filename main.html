@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.css">
     <title>КрасФарма</title>
 </head>
 
@@ -515,16 +516,15 @@
                     <div class="products-services__header">
                         <span></span>
                         <div class="products-services__btn">
-                            <a class="more-details__btn services-prev products-btn">
+                            <a class="more-details__btn services-prev products-btn swiper-button-prev">
                                 <div class="arrow prev"></div>
                             </a>
-                            <button class="more-details__btn services-next products-btn">
+                            <button class="more-details__btn services-next products-btn swiper-button-next">
                                 <div class="arrow next"></div>
                             </button>
                         </div>
                     </div>
-
-                    <div class="products-services__list">
+                    <!-- <div class="products-services__list">
                         <div class="products-services__item">
                             <div class="products-services__item--wrapper">
                                 <img class="services-img" src="assets/img/services1.png" alt="">
@@ -605,6 +605,95 @@
                                 <button class="products-services__item-btn">Подробнее
                                     <div class="arrow next"></div>
                                 </button>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="swiper">
+                        <div class="swiper-wrapper products-services__list">
+                            <div class="swiper-slide products-services__item">
+                                <div class="products-services__item--wrapper">
+                                    <img class="services-img" src="assets/img/services1.png" alt="">
+                                    <div class="overlay"></div>
+                                    <div class="products-services__item--title">
+                                        <b>антибиотики</b>
+                                        <p>порошки, лиофилизаты и растворы</p>
+                                    </div>
+                                </div>
+                                <div class="products-services__item--content">
+                                    <div class="products-services__item--content-text">
+                                        <b>Антимикробные препараты производства ПАО «Красфарма»</b>
+                                        <p>обладают неоспоримыми преимуществами и характеризуются качеством,
+                                            эффективностью
+                                            и
+                                            безопасностью</p>
+                                    </div>
+                                    <button class="products-services__item-btn">Подробнее
+                                        <div class="arrow next"></div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-services__item">
+                                <div class="products-services__item--wrapper">
+                                    <img class="services-img" src="assets/img/services2.png" alt="">
+                                    <div class="overlay"></div>
+                                    <div class="products-services__item--title">
+                                        <b>противотуберкулезные препараты</b>
+                                        <p>порошки, лиофилизаты и растворы</p>
+                                    </div>
+                                </div>
+                                <div class="products-services__item--content">
+                                    <div class="products-services__item--content-text">
+                                        <b>В фокусе – эффективная терапия тяжелых форм туберкулеза,</b>
+                                        <p>в том числе вызванного возбудителями со множественной лекарственной
+                                            устойчивостью
+                                        </p>
+                                    </div>
+                                    <button class="products-services__item-btn">Подробнее
+                                        <div class="arrow next"></div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-services__item">
+                                <div class="products-services__item--wrapper">
+                                    <img class="services-img" src="assets/img/services3.png" alt="">
+                                    <div class="overlay"></div>
+                                    <div class="products-services__item--title">
+                                        <b>плазмо заменители</b>
+                                        <p>стерильные растворы</p>
+                                    </div>
+                                </div>
+                                <div class="products-services__item--content">
+                                    <div class="products-services__item--content-text">
+                                        <b>Основные плазмозамещающие растворы,</b>
+                                        <p>незаменимые для оказания качественной медицинской помощи в условиях
+                                            стационара
+                                        </p>
+                                    </div>
+                                    <button class="products-services__item-btn">Подробнее
+                                        <div class="arrow next"></div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-services__item">
+                                <div class="products-services__item--wrapper">
+                                    <img class="services-img" src="assets/img/services4.png" alt="">
+                                    <div class="overlay"></div>
+                                    <div class="products-services__item--title">
+                                        <b>лечение язвенной болезни и гэрб</b>
+                                        <p>порошки и лиофилизаты</p>
+                                    </div>
+                                </div>
+                                <div class="products-services__item--content">
+                                    <div class="products-services__item--content-text">
+                                        <b>Препараты для эффективной терапии кислотозависимых состояний,</b>
+                                        <p>лечение и профилактика
+                                            желудочно-кишечных
+                                            кровотечений и осложнений</p>
+                                    </div>
+                                    <button class="products-services__item-btn">Подробнее
+                                        <div class="arrow next"></div>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -948,6 +1037,7 @@
     </footer>
     <script type="module" defer src="assets/app/main.js"></script>
     <script type="module" defer src="assets/app/imask.js"></script>
+    <!-- <script src="/node_modules/swiper/swiper-bundle.js"></script> -->
 </body>
 
 </html>
