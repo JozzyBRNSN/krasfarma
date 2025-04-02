@@ -430,6 +430,23 @@
 	line-height: 1.5;
 }
 
+.swiper {
+	width: 100%;
+	overflow: hidden;
+}
+
+.swiper-slide {
+	width: 275px !important;
+	margin-right: unset !important;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 .products-services {
 	display: flex;
 	flex-direction: column;

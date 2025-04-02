@@ -1,12 +1,13 @@
 import StickyHeader from './modules/headerSticky.js'
 import PopupHeader from './modules/popupHeader.js'
 import CoverSlider from './modules/coverSlider.js'
-import ProductSlider from './modules/productSlider.js'
+import ProductSlider from './modules/swiperModule.js'
 import ContactUpdater from './modules/footerAddress.js'
 import ModalRegistration from './modules/modalRegistration.js'
 import ModalAuthorization from './modules/modalAuthorization.js'
 import ModalRecovery from './modules/modalRecovery.js'
 import modalMessage from './modules/modalMessage.js'
+import initializeSwiper from './modules/swiperModule.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 	const stickyHeader = new StickyHeader({
@@ -69,13 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		hoverSelector: '.main-cover__content',
 	})
 
-	const productSlider = new ProductSlider({
-		cardsSelector: '.products-services__item',
-		nextButtonSelector: '.services-next',
-		prevButtonSelector: '.services-prev',
-		containerSelector: '.products-services__list',
-	})
-
 	const contactUpdater = new ContactUpdater({
 		cityElementsSelector: '.places-item',
 		addressElementsSelector: '.footer-address__link',
@@ -84,4 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		mapPhoneSelector: '.map-contacts__phone-item',
 		mapIframeSelectors: '.map iframe',
 	})
+
+	const swiper = initializeSwiper('.swiper', {})
 })
