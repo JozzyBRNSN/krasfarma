@@ -1,13 +1,11 @@
 import StickyHeader from './modules/headerSticky.js'
 import PopupHeader from './modules/popupHeader.js'
 import CoverSlider from './modules/coverSlider.js'
-import ProductSlider from './modules/swiperModule.js'
 import ContactUpdater from './modules/footerAddress.js'
 import ModalRegistration from './modules/modalRegistration.js'
 import ModalAuthorization from './modules/modalAuthorization.js'
 import ModalRecovery from './modules/modalRecovery.js'
 import modalMessage from './modules/modalMessage.js'
-import initializeSwiper from './modules/swiperModule.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 	const stickyHeader = new StickyHeader({
@@ -79,5 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		mapIframeSelectors: '.map iframe',
 	})
 
-	const swiper = initializeSwiper('.swiper', {})
+	const swiper = new Swiper('.swiper', {
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		watchOverflow: false,
+		loop: false,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	})
 })

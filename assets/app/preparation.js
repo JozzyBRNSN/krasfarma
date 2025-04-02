@@ -6,7 +6,6 @@ import ModalAuthorization from './modules/modalAuthorization.js'
 import ModalRecovery from './modules/modalRecovery.js'
 import modalMessage from './modules/modalMessage.js'
 import ModalWarning from './modules/modalWarning.js'
-import PreparationSlider from './modules/preparationSlider.js'
 import PreparationCard from './modules/preparationCard.js'
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -71,17 +70,46 @@ document.addEventListener('DOMContentLoaded', () => {
 		cardMainSelector: '.preparation-about__card-main',
 	})
 
-	const slider = new PreparationSlider({
-		containerSelector: '.preparation-other__list',
-		itemsSelector: '.preparation-other__item',
-		prevButtonSelector: '.preparation-prev',
-		nextButtonSelector: '.preparation-next',
-		cardMargin: 40,
-	})
-
 	const contactUpdater = new ContactUpdater({
 		cityElementsSelector: '.places-item',
 		addressElementsSelector: '.footer-address__link',
 		phoneLinksSelector: '.footer-phone__link',
+	})
+
+	const swiperOther = new Swiper('.swiper', {
+		slidesPerView: 'auto',
+		spaceBetween: 40,
+		watchOverflow: false,
+		loop: false,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	})
+
+	const swiperCard = new Swiper('.swiper-card', {
+		slidesPerView: 'auto',
+		spaceBetween: 40,
+		watchOverflow: false,
+		loop: false,
+		navigation: {
+			nextEl: '.swiper-card-button-next',
+			prevEl: '.swiper-card-button-prev',
+		},
+		direction: 'vertical',
+		breakpoints: {
+			978: {
+				direction: 'vertical',
+			},
+			724: {
+				direction: 'horizontal',
+			},
+			385: {
+				direction: 'vertical',
+			},
+			0: {
+				direction: 'horizontal',
+			},
+		},
 	})
 })

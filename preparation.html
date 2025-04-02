@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="assets/css/preparation.css">
   <link rel="stylesheet" href="assets/css/footer.css">
   <link rel="stylesheet" href="assets/css/modal.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.css">
   <title>Детальная страница продукта</title>
 </head>
 
@@ -348,23 +349,32 @@
         </div>
         <div class="preparation-about__content">
           <div class="preparation-about__card">
-            <ul class="preparation-about__card-list">
-              <li class="preparation-about__card-item">
-                <picture>
-                  <img src="assets/img/амикацин.png" alt="">
-                </picture>
-              </li>
-              <li class="preparation-about__card-item">
-                <picture>
-                  <img src="assets/img/амикацин_миниатюра2.png" alt="">
-                </picture>
-              </li>
-              <li class="preparation-about__card-item">
-                <picture>
-                  <img src="assets/img/амикацин_миниатюра3.png" alt="">
-                </picture>
-              </li>
-            </ul>
+            <div class="swiper swiper-card">
+              <button class="swiper-card-button-prev">
+                <div class="arrow prev"></div>
+              </button>
+              <ul class="swiper-wrapper preparation-about__card-list">
+                <li class="swiper-slide preparation-about__card-item">
+                  <picture>
+                    <img src="assets/img/амикацин.png" alt="">
+                  </picture>
+                </li>
+                <li class="swiper-slide preparation-about__card-item">
+                  <picture>
+                    <img src="assets/img/амикацин_миниатюра2.png" alt="">
+                  </picture>
+                </li>
+                <li class="swiper-slide preparation-about__card-item">
+                  <picture>
+                    <img src="assets/img/амикацин_миниатюра3.png" alt="">
+                  </picture>
+                </li>
+              </ul>
+              <button class="swiper-card-button-next">
+                <div class="arrow next"></div>
+              </button>
+            </div>
+
             <div class="preparation-about__card-main">
               <img src="assets/img/амикацин.png" alt="">
             </div>
@@ -466,79 +476,87 @@
             Другие аминогликозоиды
           </div>
           <div class="preparation-other__btn">
-            <button class="more-details__btn preparation-prev products-btn">
+            <button class="more-details__btn preparation-prev products-btn swiper-button-prev">
               <div class="arrow prev"></div>
             </button>
-            <button class="more-details__btn preparation-next products-btn">
+            <button class="more-details__btn preparation-next products-btn swiper-button-next">
               <div class="arrow next"></div>
             </button>
           </div>
         </div>
-        <ul class="preparation-other__list">
-          <li class="preparation-other__item">
-            <div class="preparation-other__item-content">
-              <img class="preparation-other__item-img" src="assets/img/productCategories_item.png" alt="аминогликозиды">
-              <p class="preparation-other__item-text">
-                аминогликозиды
-              </p>
-            </div>
-            <a class="preparation-other__item-btn">Подробнее</a>
-          </li>
-          <li class="preparation-other__item">
-            <div class="preparation-other__item-content">
-              <img class="preparation-other__item-img" src="assets/img/productCategories_item.png" alt="аминогликозиды">
-              <p class="preparation-other__item-text">
-                аминогликозиды
-              </p>
-            </div>
-            <a class="preparation-other__item-btn">Подробнее</a>
-          </li>
-          <li class="preparation-other__item">
-            <div class="preparation-other__item-content">
-              <img class="preparation-other__item-img" src="assets/img/productCategories_item.png" alt="аминогликозиды">
-              <p class="preparation-other__item-text">
-                аминогликозиды
-              </p>
-            </div>
-            <a class="preparation-other__item-btn">Подробнее</a>
-          </li>
-          <li class="preparation-other__item">
-            <div class="preparation-other__item-content">
-              <img class="preparation-other__item-img" src="assets/img/productCategories_item.png" alt="аминогликозиды">
-              <p class="preparation-other__item-text">
-                аминогликозиды
-              </p>
-            </div>
-            <a class="preparation-other__item-btn">Подробнее</a>
-          </li>
-          <li class="preparation-other__item">
-            <div class="preparation-other__item-content">
-              <img class="preparation-other__item-img" src="assets/img/productCategories_item.png" alt="аминогликозиды">
-              <p class="preparation-other__item-text">
-                аминогликозиды
-              </p>
-            </div>
-            <a class="preparation-other__item-btn">Подробнее</a>
-          </li>
-          <li class="preparation-other__item">
-            <div class="preparation-other__item-content">
-              <img class="preparation-other__item-img" src="assets/img/productCategories_item.png" alt="аминогликозиды">
-              <p class="preparation-other__item-text">
-                аминогликозиды
-              </p>
-            </div>
-            <a class="preparation-other__item-btn">Подробнее</a>
-          </li>
-        </ul>
+        <div class="swiper">
+          <ul class="swiper-wrapper preparation-other__list">
+            <li class="swiper-slide preparation-other__item">
+              <div class="preparation-other__item-content">
+                <img class="preparation-other__item-img" src="assets/img/productCategories_item.png"
+                  alt="аминогликозиды">
+                <p class="preparation-other__item-text">
+                  аминогликозиды
+                </p>
+              </div>
+              <a class="preparation-other__item-btn">Подробнее</a>
+            </li>
+            <li class="swiper-slide preparation-other__item">
+              <div class="preparation-other__item-content">
+                <img class="preparation-other__item-img" src="assets/img/productCategories_item.png"
+                  alt="аминогликозиды">
+                <p class="preparation-other__item-text">
+                  аминогликозиды
+                </p>
+              </div>
+              <a class="preparation-other__item-btn">Подробнее</a>
+            </li>
+            <li class="swiper-slide preparation-other__item">
+              <div class="preparation-other__item-content">
+                <img class="preparation-other__item-img" src="assets/img/productCategories_item.png"
+                  alt="аминогликозиды">
+                <p class="preparation-other__item-text">
+                  аминогликозиды
+                </p>
+              </div>
+              <a class="preparation-other__item-btn">Подробнее</a>
+            </li>
+            <li class="swiper-slide preparation-other__item">
+              <div class="preparation-other__item-content">
+                <img class="preparation-other__item-img" src="assets/img/productCategories_item.png"
+                  alt="аминогликозиды">
+                <p class="preparation-other__item-text">
+                  аминогликозиды
+                </p>
+              </div>
+              <a class="preparation-other__item-btn">Подробнее</a>
+            </li>
+            <li class="swiper-slide preparation-other__item">
+              <div class="preparation-other__item-content">
+                <img class="preparation-other__item-img" src="assets/img/productCategories_item.png"
+                  alt="аминогликозиды">
+                <p class="preparation-other__item-text">
+                  аминогликозиды
+                </p>
+              </div>
+              <a class="preparation-other__item-btn">Подробнее</a>
+            </li>
+            <li class="swiper-slide preparation-other__item">
+              <div class="preparation-other__item-content">
+                <img class="preparation-other__item-img" src="assets/img/productCategories_item.png"
+                  alt="аминогликозиды">
+                <p class="preparation-other__item-text">
+                  аминогликозиды
+                </p>
+              </div>
+              <a class="preparation-other__item-btn">Подробнее</a>
+            </li>
+          </ul>
+        </div>
         <div class="preparation-other__header--mobile">
           <div class="preparation-other__title">
             Другие аминогликозоиды
           </div>
           <div class="preparation-other__btn">
-            <button class="more-details__btn preparation-prev products-btn">
+            <button class="more-details__btn preparation-prev products-btn swiper-button-prev">
               <div class="arrow prev"></div>
             </button>
-            <button class="more-details__btn preparation-next products-btn">
+            <button class="more-details__btn preparation-next products-btn swiper-button-next">
               <div class="arrow next"></div>
             </button>
           </div>
@@ -633,5 +651,5 @@
   </footer>
   <script type="module" defer src="assets/app/preparation.js"></script>
   <script defer src="assets/app/imask.js"></script>
-  <script type="module" defer src="assets/app/modules/preparationSlider.js"></script>
+  <script src="assets/app/swiper-bundle.min.js"></script>
 </body>
