@@ -101,10 +101,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			978: {
 				direction: 'vertical',
 			},
-			724: {
+			725: {
 				direction: 'horizontal',
 			},
-			385: {
+			441: {
 				direction: 'vertical',
 			},
 			0: {

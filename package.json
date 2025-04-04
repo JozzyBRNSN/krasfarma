@@ -16,8 +16,5 @@
     "url": "https://github.com/JozzyBRNSN/krasfarma/issues"
   },
   "homepage": "https://github.com/JozzyBRNSN/krasfarma#readme",
-  "description": "",
-  "dependencies": {
-    "swiper": "^11.2.6"
-  }
+  "description": ""
 }
