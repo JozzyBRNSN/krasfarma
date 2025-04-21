@@ -4189,6 +4189,7 @@
 		if (inputLength < 11) {
 			phoneTooltip.style.display = 'block'
 			isValid = false
+			eve
 		} else {
 			phoneTooltip.style.display = 'none'
 		}
